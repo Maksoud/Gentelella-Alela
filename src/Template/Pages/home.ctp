@@ -438,8 +438,8 @@
                             <td class="text-left"><?= date('d/m', strtotime('2020-01-01')); ?></td>
                             <td class="text-right"><?= $this->Number->precision(1234.56, 2); ?></td>
                             <td class="btn-actions-group">
-                                <?= $this->Html->link('', ['action' => 'view', 'controller' => 'Controller'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar')]); ?>
-                                <?= $this->Html->link('', ['action' => 'low', 'controller' => 'Controller'], ['class' => 'btn btn-actions btn_modal fa fa-arrow-circle-o-down', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Baixar Lançamento'), 'title' => __('Baixar')]); ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar')]); ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-arrow-circle-o-down', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Baixar Lançamento'), 'title' => __('Baixar')]); ?>
                             </td>
                         </tr>
                     </tbody>
@@ -517,8 +517,8 @@
                             <td><?= __('Histórico do lançamento'); ?></td>
                             <td class="text-right"><?= $this->Number->precision(1234.56, 2); ?></td>
                             <td class="btn-actions-group">
-                                <?= $this->Html->link('', ['action' => 'view', 'controller' => 'Controller'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar')]); ?>
-                                <?= $this->Html->link('', ['action' => 'low', 'controller' => 'Controller'], ['class' => 'btn btn-actions btn_modal fa fa-arrow-circle-o-down', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Baixar Lançamento'), 'title' => __('Baixar')]); ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar')]); ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-arrow-circle-o-down', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Baixar Lançamento'), 'title' => __('Baixar')]); ?>
                             </td>
                         </tr>
                     </tbody>
@@ -573,55 +573,48 @@
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('CONTAS P/R'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Nova Conta a Pagar/Receber'), 'title' => __('Incluir Registro')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'report'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos Financeiros'), 'title' => __('Movimentos Financeiros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Nova Conta a Pagar/Receber'), 'title' => __('Incluir Registro')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos Financeiros'), 'title' => __('Movimentos Financeiros')]); ?>
                                 </div> 
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('CAIXAS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Movimento de Caixa'), 'title' => __('Incluir Registro')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'report'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Caixa'), 'title' => __('Movimentos de Caixa')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Movimento de Caixa'), 'title' => __('Incluir Registro')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Caixa'), 'title' => __('Movimentos de Caixa')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('BANCOS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Movimento de Banco'), 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'report'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Banco'), 'title' => 'Movimentos de Banco']); ?>
-                                </div>
-                            </li>
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="text-right" style="color:#777;"><?= __('CHEQUES'); ?></div>
-                                <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'report'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Cheques'), 'title' => __('Movimentos de Cheques')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Movimento de Banco'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Banco'), 'title' => 'Movimentos de Banco']); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="pull-right" style="color:#777;"><?= __('CARTÕES'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => 'Novo Movimento de Cartões', 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'report'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Cartões'), 'title' => __('Movimentos de Cartões')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => 'Novo Movimento de Cartões', 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Cartões'), 'title' => __('Movimentos de Cartões')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('TRANSFERÊNCIAS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => 'Nova Transferência', 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'report'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Transferência'), 'title' => __('Movimentos de Transferências')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => 'Nova Transferência', 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Transferência'), 'title' => __('Movimentos de Transferências')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('PLANEJAMENTOS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Incluir Registros'), 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Incluir Registros'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                         </ul>
@@ -639,64 +632,64 @@
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('FORNECEDORES'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Fornecedor'), 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Fornecedor'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('CLIENTES'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Cliente'), 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Cliente'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('BANCOS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Banco'), 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Banco'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('CAIXAS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Caixa'), 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Caixa'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('CARTÕES'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Cartão'), 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Cartão'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('P. CONTAS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Plano de Contas'), 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Plano de Contas'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('C. CUSTOS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Centro de Custos'), 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Centro de Custos'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('T. DOCUMENTOS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Tipo de Documento'), 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Tipo de Documento'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('T. EVENTOS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Tipo de Evento'), 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Tipo de Evento'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                         </ul>
@@ -752,10 +745,10 @@
                             <td class="text-right text-nowrap"><i class="fa fa-calendar"></i></td>
                             <td class="text-right text-nowrap"><?= $this->Number->precision(1234.56, 2); ?></td>
                             <td class="btn-actions-group">
-                                <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'view'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar')]); ?>
-                                <?= $this->Form->postLink('', ['controller' => 'Controller', 'action' => 'confirm'], ['confirm' => __('Você tem certeza que deseja confimar a transferência na data programada?'), 'class' => 'btn btn-actions fa fa-check', 'data-loading-text' => __('Carregando...'), 'title' => 'Confirmar']); ?>
-                                <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'edit'], ['class' => 'btn btn-actions btn_modal fa fa-pencil', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Editar')]); ?>
-                                <?= $this->Form->postLink('', ['controller' => 'Controller', 'action' => 'delete'], ['confirm' => __('Você tem certeza que deseja EXCLUIR o registro?'), 'class' => 'btn btn-actions fa fa-trash-o', 'title' => 'Excluir']); ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar')]); ?>
+                                <?= $this->Form->postLink('', ['controller' => 'Pages', 'action' => 'content'], ['confirm' => __('Você tem certeza que deseja confimar a transferência na data programada?'), 'class' => 'btn btn-actions fa fa-check', 'data-loading-text' => __('Carregando...'), 'title' => 'Confirmar']); ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-pencil', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Editar')]); ?>
+                                <?= $this->Form->postLink('', ['controller' => 'Pages', 'action' => 'delete'], ['confirm' => __('Você tem certeza que deseja EXCLUIR o registro?'), 'class' => 'btn btn-actions fa fa-trash-o', 'title' => 'Excluir']); ?>
                             </td>
                         </tr>
                     </tbody>
@@ -819,10 +812,10 @@
                             </td>
                             <td class="text-center col-xs-1"><?= __('Aberto'); ?></td>
                             <td class="btn-actions-group">
-                                <?= $this->Html->link('', ['action' => 'view', 'controller' => 'Controller'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar'), 'escape' => false]); ?>
-                                <?= $this->Html->link('', ['action' => 'low', 'controller' => 'Controller'], ['class' => 'btn btn-actions btn_modal fa fa-arrow-circle-o-down', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Baixar Lançamento'), 'title' => __('Baixar'), 'escape' => false]); ?>
-                                <?= $this->Html->link('', ['action' => 'edit', 'controller' => 'Controller'], ['class' => 'btn btn-actions btn_modal fa fa-pencil', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Editar Cadastro'), 'title' => __('Editar'), 'escape' => false]); ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', 'controller' => 'Controller'], ['confirm' => __('Você tem certeza que deseja EXCLUIR o registro?'), 'class' => 'btn btn-actions fa fa-trash-o', 'title' => __('Excluir'), 'escape' => false]); ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar'), 'escape' => false]); ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-arrow-circle-o-down', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Baixar Lançamento'), 'title' => __('Baixar'), 'escape' => false]); ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-pencil', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Editar Cadastro'), 'title' => __('Editar'), 'escape' => false]); ?>
+                                <?= $this->Form->postLink('', ['controller' => 'Pages', 'action' => 'delete'], ['confirm' => __('Você tem certeza que deseja EXCLUIR o registro?'), 'class' => 'btn btn-actions fa fa-trash-o', 'title' => __('Excluir'), 'escape' => false]); ?>
                             </td>
                         </tr>
                     </tbody>
@@ -889,10 +882,10 @@
                             </td>
                             <td class="text-center col-xs-1"><?= __('Aberto'); ?></td>
                             <td class="btn-actions-group">
-                                <?= $this->Html->link('', ['action' => 'view', 'controller' => 'Controller'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar')]); ?>
-                                <?= $this->Html->link('', ['action' => 'low', 'controller' => 'Controller'], ['class' => 'btn btn-actions btn_modal fa fa-arrow-circle-o-down', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Baixar Lançamento'), 'title' => __('Baixar')]); ?>
-                                <?= $this->Html->link('', ['action' => 'edit', 'controller' => 'Controller'], ['class' => 'btn btn-actions btn_modal fa fa-pencil', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Editar Cadastro'), 'title' => __('Editar')]); ?>
-                                <?= $this->Form->postLink('', ['action' => 'delete', 'controller' => 'Controller'], ['confirm' => __('Você tem certeza que deseja EXCLUIR o registro?'), 'class' => 'btn btn-actions fa fa-trash-o', 'title' => 'Excluir']); ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar')]); ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-arrow-circle-o-down', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Baixar Lançamento'), 'title' => __('Baixar')]); ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-pencil', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Editar Cadastro'), 'title' => __('Editar')]); ?>
+                                <?= $this->Form->postLink('', ['controller' => 'Pages', 'action' => 'delete'], ['confirm' => __('Você tem certeza que deseja EXCLUIR o registro?'), 'class' => 'btn btn-actions fa fa-trash-o', 'title' => 'Excluir']); ?>
                             </td>
                         </tr>
                     </tbody>

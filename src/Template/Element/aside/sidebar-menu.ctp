@@ -50,13 +50,13 @@ use Cake\Core\Configure;
             </span>
         </a>
         <ul class="treeview-menu menu">
-            <li><?= $this->Html->link('<i class="fa fa-folder-open-o"></i> '.__('Contas a Pagar/Receber'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-money"></i> '.__('Movimentos de Caixa'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-university"></i> '.__('Movimentos de Banco'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-cc"></i> '.__('Movimentos de Cheque'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-credit-card-alt"></i> '.__('Lançamentos de Cartão'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-exchange"></i> '.__('Transferências'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-trophy"></i> '.__('Planejamentos & Metas'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-folder-open-o"></i> '.__('Contas a Pagar/Receber'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-money"></i> '.__('Movimentos de Caixa'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-university"></i> '.__('Movimentos de Banco'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-cc"></i> '.__('Movimentos de Cheque'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-credit-card-alt"></i> '.__('Lançamentos de Cartão'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-exchange"></i> '.__('Transferências'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-trophy"></i> '.__('Planejamentos & Metas'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
         </ul>
     </li>
 
@@ -68,13 +68,13 @@ use Cake\Core\Configure;
             </span>
         </a>
         <ul class="treeview-menu menu">
-            <li><?= $this->Html->link('<i class="fa fa-briefcase"></i> '.__('Pedidos de Vendas'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-shopping-cart"></i> '.__('Pedidos de Compras'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-paw"></i> '.__('Faturamentos'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-bullhorn"></i> '.__('Ordens de Fabricação'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-check-square-o"></i> '.__('Solicitações de Compra'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-shopping-basket"></i> '.__('Requisições'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-file-text-o"></i> '.__('Inventários'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-briefcase"></i> '.__('Pedidos de Vendas'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-shopping-cart"></i> '.__('Pedidos de Compras'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-paw"></i> '.__('Faturamentos'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-bullhorn"></i> '.__('Ordens de Fabricação'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-check-square-o"></i> '.__('Solicitações de Compra'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-shopping-basket"></i> '.__('Requisições'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-file-text-o"></i> '.__('Inventários'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
         </ul>
     </li>
     
@@ -86,15 +86,15 @@ use Cake\Core\Configure;
             </span>
         </a>
         <ul class="treeview-menu menu">
-            <li><?= $this->Html->link('<i class="fa fa-briefcase"></i> '.__('Clientes'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-shopping-cart"></i> '.__('Fornecedores'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-money"></i> '.__('Caixas'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-university"></i> '.__('Bancos'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-credit-card-alt"></i> '.__('Cartões'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-sort-amount-asc"></i> '.__('Planos de Contas'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-arrows-alt"></i> '.__('Centros de Custos'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-files-o"></i> '.__('Tipos de Documentos'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-random"></i> '.__('Tipos de Eventos'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-briefcase"></i> '.__('Clientes'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-shopping-cart"></i> '.__('Fornecedores'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-money"></i> '.__('Caixas'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-university"></i> '.__('Bancos'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-credit-card-alt"></i> '.__('Cartões'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-sort-amount-asc"></i> '.__('Planos de Contas'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-arrows-alt"></i> '.__('Centros de Custos'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-files-o"></i> '.__('Tipos de Documentos'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-random"></i> '.__('Tipos de Eventos'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
         </ul>
     </li>
 
@@ -106,14 +106,14 @@ use Cake\Core\Configure;
             </span>
         </a>
         <ul class="treeview-menu menu">
-            <li><?= $this->Html->link('<i class="fa fa-bar-chart"></i> '.__('Relatório Geral'), ['controller' => 'Controller', 'action' => 'report'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório Geral'), 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-folder-open-o"></i> '.__('Contas a Pagar/Receber'), ['controller' => 'Controller', 'action' => 'report'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos Financeiros'), 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-money"></i> '.__('Movimentos de Caixa'), ['controller' => 'Controller', 'action' => 'report'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Caixa'), 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-university"></i> '.__('Movimentos de Banco'), ['controller' => 'Controller', 'action' => 'report'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Banco'), 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-cc"></i> '.__('Movimentos de Cheque'), ['controller' => 'Controller', 'action' => 'report'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Cheques'), 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-credit-card-alt"></i> '.__('Lançamentos de Cartão'), ['controller' => 'Controller', 'action' => 'report'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Cartões'), 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-exchange"></i> '.__('Transferências'), ['controller' => 'Controller', 'action' => 'report'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Transferência'), 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-list-ul"></i> '.__('Relação de Pagamentos'), ['controller' => 'Controller', 'action' => 'report'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Relação de Pagamentos'), 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-bar-chart"></i> '.__('Relatório Geral'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório Geral'), 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-folder-open-o"></i> '.__('Contas a Pagar/Receber'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos Financeiros'), 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-money"></i> '.__('Movimentos de Caixa'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Caixa'), 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-university"></i> '.__('Movimentos de Banco'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Banco'), 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-cc"></i> '.__('Movimentos de Cheque'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Cheques'), 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-credit-card-alt"></i> '.__('Lançamentos de Cartão'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Cartões'), 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-exchange"></i> '.__('Transferências'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Transferência'), 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-list-ul"></i> '.__('Relação de Pagamentos'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Relação de Pagamentos'), 'escape' => false]) ?></li>
         </ul>
     </li>
 
@@ -124,7 +124,7 @@ use Cake\Core\Configure;
     <li>
         <?= $this->Html->link($this->Html->tag('i', '',['class' => 'fa fa-comments-o']).
                               $this->Html->tag('span', __(' Chamados de Suporte')), 
-                              ['controller' => 'Controller', 'action' => 'index'], 
+                              ['controller' => 'Pages', 'action' => 'content'], 
                               ['escape' => false]
                              ) ?>
     </li>

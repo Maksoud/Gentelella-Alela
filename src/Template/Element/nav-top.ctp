@@ -112,16 +112,16 @@
         <ul class="dropdown-menu">
           <li>
             <ul class="control-sidebar-menu menu list-group" style="max-height:unset;">
-              <li><?= $this->Html->link($this->Html->image($locale, ['width' => '15px']).$text_idioma, ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
-              <li><?= $this->Html->link('<i class="fa fa-database"></i> '.__('Meus Dados'), ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
-              <li><?= $this->Html->link('<i class="fa fa-user-plus"></i> '.__('Usuários'), ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
-              <li><?= $this->Html->link('<i class="fa fa-usd"></i> '.__('Pagamentos do Sistema'), ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
-              <li><?= $this->Html->link('<i class="fa fa-file-text-o"></i> '.__('Log de Registros'), ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
-              <li><?= $this->Html->link('<i class="fa fa-file-text-o"></i> '.__('System Logs'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn_modal', 'data-loading-text' => __('Loading...'), 'data-title' => __('System and Debug Logs'), 'escape' => false]) ?></li>
-              <li><?= $this->Html->link('<i class="fa fa-file-text-o"></i> '.__('Update Logs'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn_modal', 'data-loading-text' => __('Loading...'), 'data-title' => __('Update Logs'), 'escape' => false]) ?></li>
-              <li><?= $this->Html->link('<i class="fa fa-download"></i> '.__('Backup do Sistema'), ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
-              <li><?= $this->Html->link('<i class="fa fa-cloud-download"></i> '.__('Atualizar Sistema'), ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
-              <li><?= $this->Html->link('<i class="fa fa-comments-o"></i> '.__('Chamados de Suporte'), ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link($this->Html->image($locale, ['width' => '15px']).$text_idioma, ['controller' => 'Pages', 'action' => 'content'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-database"></i> '.__('Meus Dados'), ['controller' => 'Pages', 'action' => 'content'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-user-plus"></i> '.__('Usuários'), ['controller' => 'Pages', 'action' => 'content'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-usd"></i> '.__('Pagamentos do Sistema'), ['controller' => 'Pages', 'action' => 'content'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-file-text-o"></i> '.__('Log de Registros'), ['controller' => 'Pages', 'action' => 'content'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-file-text-o"></i> '.__('System Logs'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Loading...'), 'data-title' => __('System and Debug Logs'), 'escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-file-text-o"></i> '.__('Update Logs'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Loading...'), 'data-title' => __('Update Logs'), 'escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-download"></i> '.__('Backup do Sistema'), ['controller' => 'Pages', 'action' => 'content'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-cloud-download"></i> '.__('Atualizar Sistema'), ['controller' => 'Pages', 'action' => 'content'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-comments-o"></i> '.__('Chamados de Suporte'), ['controller' => 'Pages', 'action' => 'content'], ['escape' => false]) ?></li>
             </ul>
           </li>
         </ul>

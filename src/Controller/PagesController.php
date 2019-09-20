@@ -29,7 +29,7 @@ class PagesController extends AppController
         parent::initialize();
 
         //Autoriza a exibição das páginas
-        $this->Auth->allow(['login', 'logout', 'home']);
+        $this->Auth->allow(['login', 'logout', 'home', 'content', 'modalContent']);
 
         //Carrega janela com informações sobre a validade do sistema
         $this->validade();
@@ -207,6 +207,16 @@ class PagesController extends AppController
         
         /**********************************************************************/
         
+    }
+
+    public function content()
+    {
+        //
+    }
+
+    public function modalContent()
+    {
+        //
     }
     
     public function login() 
