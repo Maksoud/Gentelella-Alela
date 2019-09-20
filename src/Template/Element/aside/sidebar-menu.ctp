@@ -137,7 +137,7 @@ use Cake\Core\Configure;
             </span>
         </a>
         <ul class="treeview-menu menu">
-            <li class="text-nowrap"><a href="#"><i class="fa fa-calendar"></i> <?= __('Validade: ').$this->request->Session()->read('validade') ?></a></li>
+            <li class="text-nowrap"><a href="#"><i class="fa fa-calendar"></i> <?= __('Validade: ').date('d/m/Y', strtotime($this->request->Session()->read('validade'))) ?></a></li>
             <li class="text-nowrap"><a href="#"><i class="fa fa-briefcase"></i> <?= __('Plano: ').$this->request->Session()->read('plan') ?></a></li>
             <li class="text-nowrap"><a href="#"><i class="fa fa-code"></i> <?= __('Versão: ').$this->request->Session()->read('version') ?></a></li>
             <li class="text-nowrap"><a href="#"><i class="fa fa-picture-o"></i> <?= __('Res. Janela: ') ?><span class="window-size"></span></a></li>

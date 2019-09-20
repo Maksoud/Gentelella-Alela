@@ -69,10 +69,8 @@ class MyFormHelper extends FormHelper
 
     public function decimal($campo)
     {
-
         $precision = new Number();
 
         return $precision->precision($campo, 2);
-
     }
 }

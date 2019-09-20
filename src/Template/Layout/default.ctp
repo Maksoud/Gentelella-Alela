@@ -37,8 +37,8 @@ use Cake\Core\Configure;
                         <?= $this->Html->link($this->Html->image("Reiniciando.png", ['alt'   => 'logomarca',
                                                                                      'style' => 'margin:-10px;width:138px;clip-path:inset(0px 108px 0px 0px); -webkit-clip-path: inset(0px 108px 0px 0px);'
                                                                                     ]), 
-                                                                                    ['controller' => 'UsersParameters', 
-                                                                                     'action'     => 'changeParameter'
+                                                                                    ['controller' => 'Pages', 
+                                                                                     'action'     => 'modalContent'
                                                                                     ], 
                                                                                     ['class'             => 'btn btn_modal font-16', 
                                                                                      'data-size'         => 'sm', 
@@ -51,8 +51,8 @@ use Cake\Core\Configure;
                         <?= $this->Html->link($this->Html->image("Reiniciando.png", ['alt'   => 'logomarca',
                                                                                      'style' => 'width:142px;margin-top:-13px;'
                                                                                     ]), 
-                                                                                    ['controller' => 'UsersParameters', 
-                                                                                     'action'     => 'changeParameter'
+                                                                                    ['controller' => 'Pages', 
+                                                                                     'action'     => 'modalContent'
                                                                                     ], 
                                                                                     ['class'             => 'btn btn_modal font-16', 
                                                                                      'data-size'         => 'sm', 

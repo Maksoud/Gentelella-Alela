@@ -83,8 +83,6 @@ Router::prefix('api', function ($routes) {
 
     $routes->extensions(['json', 'xml']);
    
-    $routes->connect('/gerencianet/notificacao', ['controller' => 'GerenciaNet', 'action' => 'notificacao']);
-
     $routes->fallbacks(); 
 
 });
@@ -94,13 +92,3 @@ Router::prefix('api', function ($routes) {
  * how to customize the loading of plugin routes.
  */
 Plugin::routes();
-
-/*
-Router::scope('/', function ($routes) {
-    
-    $routes->extensions(['json']);
-    
-    $routes->connect('/moviments/json', ['controller' => 'Moviments', 'action' => 'json']);
-    
-});
-*/

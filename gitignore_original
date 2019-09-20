@@ -1,0 +1,6 @@
+/config/app.php
+/tmp/*
+/logs/*
+/webroot/img/uploads/*
+*.log
+*.DS_Store

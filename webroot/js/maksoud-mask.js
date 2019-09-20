@@ -1,8 +1,6 @@
 /**
- * Desenvolvido por:
+ * Developed by:
  *     Renée Maksoud
- *     Cristian John
- *     Thomas Kanzig
  * 
  * All rights reserved - 2015-2019
  */
@@ -113,11 +111,6 @@
 		$('#modal_item2').on('shown.bs.modal', function () {
 			Masks('#modal_item_body2');
         });
-		
-		//Máscaras para o modal3
-		$('#modal_item3').on('shown.bs.modal', function () {
-			Masks('#modal_item_body3');
-        });
         
         /**********************************************************************/
 		
@@ -162,32 +155,6 @@
 			Datepicker('#modal_item_body2');
         	DataInical('#modal_item_body2');
         });
-		
-		//Datas para o modal3
-		$('#modal_item3').on('shown.bs.modal', function () {
-			Datepicker('#modal_item_body3');
-        	DataInical('#modal_item_body3');
-        });
-		
-		/*
-        $('.controldate').bind('focusout', function (){
-            var today = new Date(),
-                dd    = today.getDate(),
-                mm    = today.getMonth() + 1, //January is 0!
-                yyyy  = today.getFullYear();
-                
-            if(dd < 10) {
-                dd = '0' + dd;
-            }
-            
-            if(mm < 10) {
-                mm = '0' + mm;
-            }
-            
-            today = dd + '/' + mm + '/' + yyyy;
-            //document.write(today);
-        });
-		*/
         
         /**********************************************************************/
 		

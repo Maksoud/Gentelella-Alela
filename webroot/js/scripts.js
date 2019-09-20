@@ -1,8 +1,6 @@
 /**
- * Desenvolvido por:
+ * Developed by:
  *     Renée Maksoud
- *     Cristian John
- *     Thomas Kanzig
  * 
  * All rights reserved - 2015-2019
  */
@@ -10,31 +8,6 @@
 ;
 (function($){
     $(document).ready(function($){
-
-        /**********************************************************************/
-
-        //CONTROLA VISUALIZAÇÃO DE SENHA NO LOGIN
-        $('#btn_esqueci_senha, #btn_voltar_login').on('click', function(){
-            $('#form_entrar').collapse('toggle');
-            $('#form_recuperar_senha').collapse('toggle');
-        });
-
-        //visualizar senha no login
-        var ver_senha = false;
-
-        $('#form_entrar .add-on').on('click', function () {
-            if (!ver_senha) {
-                $('#login_senha').attr('type', 'text');
-                $('.fa-eye').removeClass('fa-eye').addClass('fa-eye-slash');
-                ver_senha = true;
-            } else {
-                $('#login_senha').attr('type', 'password');
-                $('.fa-eye-slash').removeClass('fa-eye-slash').addClass('fa-eye');
-                ver_senha = false;
-            }
-
-            return false;
-        });
 
         /**********************************************************************/
 
@@ -65,27 +38,6 @@
             }
             
         }, 1000);
-
-        /**********************************************************************/
-
-        //CONTROLA O SCROLLDOWN
-        $(".scroll").click(function(event){
-            event.preventDefault();
-            $('html,body').animate({
-                //scrollTop:$(this.hash).offset().top + 1000
-                //scrollTop:$(window.location.hash).offset().top + 1000
-                scrollTop:$(this.hash).offset() ? $(this.hash).offset().top : 0
-            }, 800);
-        });
-
-        $(".scroll-modal").click(function(event){
-            event.preventDefault();
-            $('#modal_item').animate({
-                //scrollTop:$(this.hash).offset().top + 500
-                //scrollTop:$(window.location.hash).offset().top + 500
-                scrollTop:$(this.hash).offset() ? $(this.hash).offset().top : 0
-            }, 800);
-        });
 
         /**********************************************************************/
         //EVITA MULTIPLOS CADASTROS AO SER PRESSIONADO DIVERSAS VEZES O BOTÃO GRAVAR
@@ -190,50 +142,6 @@
             });
 
             e.preventDefault();
-        });
-        
-        /*********/
-
-        //controle abrir modal3
-        $(document).on('click', '.btn_modal3', function(e){
-            var this_js = $(this),
-                btn     = this_js.button('loading'),
-                url     = this_js.attr('href'),
-                titulo  = this_js.attr('data-title'),
-                size    = this_js.attr('data-size');
-
-            if( size == 'sm' )
-                $('#modal_item3 .modal-lg').removeClass('modal-lg').addClass('modal-sm');
-            else
-                $('#modal_item3 .modal-sm').removeClass('modal-sm').addClass('modal-lg');
-
-            $('#modal_item_body3').html(''); //limpar modal
-            $('#modal_item_title3').html(''); //limpar titulo do modal
-            $('#modal_item_title3').append(titulo); //colocar o novo titulo do modal
-
-            $.get(url,
-                    { titulo: titulo },
-                    function(data){
-                        $('#modal_item_body3').append(data); //colocar no modal o formulario de edicao
-                    }
-                 )
-            .done(function() {
-                btn.button('reset'); //voltar estado do btn
-                $('#modal_item3').modal('toggle'); //abrir modal com o formulario
-            })
-            .fail(function() {
-                confirm('Desculpe, ocorreu um erro. Por favor atualize a pagina e tente novamente.');
-                location.reload();
-            });
-
-            e.preventDefault();
-        });
-        
-        /*********/
-        
-        //correção no scroll quando fecha o 3 modal
-        $('#modal_item3').on('hidden.bs.modal', function (e) {
-            $('body').addClass('modal-open');
         });
         
         /*********/
@@ -371,8 +279,6 @@
         });
         
         $('.bg_ajax').fadeOut('fast');
-        
-        /**********************************************************************/
         
         //ativar tooltip
         $('[data-toggle="tooltip"]').tooltip();

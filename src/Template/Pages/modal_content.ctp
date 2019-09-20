@@ -15,10 +15,7 @@
 <?= $this->Html->css('bootstrap-multiselect.min') ?>
 <?= $this->Html->script('bootstrap-multiselect.min') ?>
 <?= $this->Html->script(['add-items.min',
-                         'maksoud-text.min',
-                         //Lista de itens
-                         'list-customers.min',
-                         'list-products.min'
+                         'maksoud-text.min'
                         ]) ?>
 
 <?php 
@@ -27,6 +24,31 @@
     $quad   = 'col-xs-12 col-sm-3 bottom-10';
     $label  = 'control-label text-nowrap';
     $input  = 'form-control';
+    
+    //Ordenado por importância
+    $unidades = ['UN' => 'UN',  //Unidade
+                 'PÇ' => 'PÇ',  //Peça
+                 'PR' => 'PR',  //Par
+                 'RL' => 'RL',  //Rolo
+                 'PT' => 'PT',  //Pacote
+                 'CT' => 'CT',  //Cartela
+                 'CX' => 'CX',  //Caixa
+                 'ML' => 'ML',  //Mililitro
+                 'L'  => 'L',   //Litros
+                 'TN' => 'TN',  //Toneladas
+                 'KG' => 'KG',  //Kilograma
+                 'G'  => 'G',   //Grama
+                 'MM' => 'MM',  //Milímetro
+                 'CM' => 'CM',  //Centímetro
+                 'M'  => 'M',   //Metro
+                 'KM' => 'KM',  //Kilômetro
+                 'MM²'=> 'MM²', //Milímetro quadrado
+                 'CM²'=> 'CM²', //Centímetro quadrado
+                 'M²' => 'M²',  //Metro quadrado
+                 'MM³'=> 'MM³', //Milímetro cúbico
+                 'CM³'=> 'CM³', //Centímetro cúbico
+                 'M³' => 'M³',  //Metro cúbico
+                ];
 ?>
 
     <div class="container-fluid">
@@ -42,7 +64,7 @@
                             <?= __('Código') ?>
                             <i class="fa fa-info-circle" data-toggle="tooltip" title="<?= __('Código única com 6 dígitos para identificação do registro.') ?>"></i>
                         </label>
-                        <?= $this->Form->control('code', ['label' => false, 'type' => 'text', 'maxlength' => '6', 'class' => $input, 'value' => str_pad($code, 6, '0', STR_PAD_LEFT), 'disabled' => true]) ?>
+                        <?= $this->Form->control('code', ['label' => false, 'type' => 'text', 'maxlength' => '6', 'class' => $input, 'value' => str_pad(1234, 6, '0', STR_PAD_LEFT), 'disabled' => true]) ?>
                     </div>
                     <div class="<?= $double ?>">
                         <label class="<?= $label ?>">
@@ -66,7 +88,7 @@
                         </label>
                         <div class="input-group">
                             <div class="input-group-addon input-border-left">
-                                <?= $this->Html->link('', ['controller' => 'Customers', 'action' => 'add'], ['class' => 'btn_modal2 btn btn-primary btn-custom fa fa-plus', 'data-loading-text' => '', 'data-title' => __('Novo Cliente'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Adicionar Cliente'), 'escape' => false]) ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal2 btn btn-primary btn-custom fa fa-plus', 'data-loading-text' => '', 'data-title' => __('Novo Cliente'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Adicionar Cliente'), 'escape' => false]) ?>
                             </div>
                             <input id="customers_title" class="form-control input-border-right" type="text" autocomplete="off" placeholder="<?= __('Digite o nome do cliente ou adicione') ?>"><div class="loadingCustomers"></div>
                         </div>
@@ -133,7 +155,7 @@
                                 </label>
                                 <div class="input-group">
                                     <div class="input-group-addon input-border-left">
-                                        <?= $this->Html->link('', ['controller' => 'Products', 'action' => 'add'], ['class' => 'btn_modal2 btn btn-primary btn-custom fa fa-plus', 'data-loading-text' => '', 'data-title' => __('Novo Produto'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Adicionar Produto'), 'escape' => false]) ?>
+                                        <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal2 btn btn-primary btn-custom fa fa-plus', 'data-loading-text' => '', 'data-title' => __('Novo Produto'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Adicionar Produto'), 'escape' => false]) ?>
                                     </div>
                                     <input id="products_title" class="form-control input-border-right" type="text" autocomplete="off" placeholder="<?= __('Digite o nome do produto ou adicione') ?>"><div class="loadingProducts" style="right:37px;"></div>
                                     <div style="padding:6px 16px; font-size:14px; font-weight:400; line-height:1; color:#555; text-align:center; border:1px solid #ccc; width:1%; white-space:nowrap; vertical-align:middle; display:table-cell; margin:0;">
@@ -142,7 +164,7 @@
                                         </i>
                                     </div>
                                 </div>
-                                <input name="products_id" id="products_id" type="hidden"><!-- 'id' => 'edt_product' -->
+                                <input name="products_id" id="products_id" type="hidden">
                             </div>
                         </div>
 
@@ -216,24 +238,14 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="<?= $quad ?>">
+                                <div class="<?= $double ?>">
                                     <div class="row">
-                                        <label class="<?= $label ?>">
-                                            <?= __('ICMS Subst') ?>(%)
-                                        </label>
-                                        <?= $this->Form->control('pericmssubst', ['label' => false, 'type' => 'text', 'class' => $input.' valuemask', 'id' => 'edt_pericmssubst']) ?>
+                                        <!-- -->
                                     </div>
                                 </div>
                                 <div class="<?= $quad ?>">
                                     <div class="row">
-                                        <label class="<?= $label ?>">
-                                            <?= __('ICMS Subst') ?>(<?= __('R$') ?>)
-                                        </label>
-                                        <?= $this->Form->control('icmssubst', ['label' => false, 'type' => 'text', 'class' => $input.' valuemask', 'id' => 'edt_icmssubst']) ?>
-                                    </div>
-                                </div>
-                                <div class="<?= $quad ?>">
-                                    <div class="row">
+                                        <!-- -->
                                     </div>
                                 </div>
                                 <div class="<?= $quad ?> box">
@@ -279,14 +291,7 @@
                                     </th>
                                 </tr>
                                 <tr>
-                                    <th><?= __('ICMS Subst. Total') ?></th>
-                                    <th class="text-right">
-                                        <input type="hidden" name="totalicmssubst" id="vltotalicmssubst" value="0.00">
-                                        <span id="totalicmssubst"><?= __('0,00') ?></span>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th><?= __('Total Geral') ?> <?= __('(Produtos + IPI + Subst)') ?></th>
+                                    <th><?= __('Total Geral') ?> <?= __('(Produtos + IPI)') ?></th>
                                     <th class="text-right">
                                         <input type="hidden" name="grandtotal" id="vlgrandtotal" value="0.00">
                                         <span id="grandtotal"><?= __('0,00') ?></span>
@@ -313,7 +318,6 @@
                             <th class="text-center text-nowrap col-xs-1"><?= __('Desconto') ?> (<?= __('R$') ?>)</th>
                             <th class="text-center text-nowrap col-xs-1"><?= __('IPI') ?> (<?= __('R$') ?>)/(%)</th>
                             <th class="text-center text-nowrap col-xs-1"><?= __('ICMS') ?> (<?= __('R$') ?>)/(%)</th>
-                            <th class="text-center text-nowrap col-xs-1"><?= __('ICMS Subs.') ?> (<?= __('R$') ?>)/(%)</th>
                             <th class="text-center text-nowrap col-xs-1"><?= __('Total') ?> (<?= __('R$') ?>)</th>
                         </tr>
                     </thead>

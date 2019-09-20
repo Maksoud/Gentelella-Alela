@@ -115,7 +115,7 @@
                                 <?= $this->Number->precision(1234.56, 2); ?>
                             </td>
                             <td class="text-right">
-                                <!-- LIMITE DO CARTÃO UTILIZADO -->
+                                <!-- PERCENTUAL DO LIMITE DO CARTÃO UTILIZADO -->
                                 <?= '100' ?>%
                             </td>
                             <td class="text-right">
@@ -163,7 +163,7 @@
                     <thead>
                         <tr>
                             <th class="text-left"><?= __('Descrição'); ?></th>
-                            <th class="text-right"><?= __('Planejamento'); ?></th>
+                            <th class="text-right"><?= __('Meta'); ?></th>
                             <th class="text-center"><?= __('Progresso'); ?></th>
                             <th class="text-right text-nowrap"><?= __('Total Poupado'); ?></th>
                         </tr>
@@ -171,7 +171,7 @@
                     <tbody>
                         <tr>
                             <th class="text-nowrap">
-                                <?= __('Título do Planejamento'); ?>
+                                <?= __('Detalhamento'); ?>
                             </th>
                             <td class="text-right">
                                 <?= $this->Number->precision(2469.12, 2); ?>
@@ -748,7 +748,7 @@
                                 <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar')]); ?>
                                 <?= $this->Form->postLink('', ['controller' => 'Pages', 'action' => 'content'], ['confirm' => __('Você tem certeza que deseja confimar a transferência na data programada?'), 'class' => 'btn btn-actions fa fa-check', 'data-loading-text' => __('Carregando...'), 'title' => 'Confirmar']); ?>
                                 <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-pencil', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Editar')]); ?>
-                                <?= $this->Form->postLink('', ['controller' => 'Pages', 'action' => 'delete'], ['confirm' => __('Você tem certeza que deseja EXCLUIR o registro?'), 'class' => 'btn btn-actions fa fa-trash-o', 'title' => 'Excluir']); ?>
+                                <?= $this->Form->postLink('', ['controller' => 'Pages', 'action' => 'content'], ['confirm' => __('Você tem certeza que deseja EXCLUIR o registro?'), 'class' => 'btn btn-actions fa fa-trash-o', 'title' => 'Excluir']); ?>
                             </td>
                         </tr>
                     </tbody>
@@ -815,7 +815,7 @@
                                 <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar'), 'escape' => false]); ?>
                                 <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-arrow-circle-o-down', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Baixar Lançamento'), 'title' => __('Baixar'), 'escape' => false]); ?>
                                 <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-pencil', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Editar Cadastro'), 'title' => __('Editar'), 'escape' => false]); ?>
-                                <?= $this->Form->postLink('', ['controller' => 'Pages', 'action' => 'delete'], ['confirm' => __('Você tem certeza que deseja EXCLUIR o registro?'), 'class' => 'btn btn-actions fa fa-trash-o', 'title' => __('Excluir'), 'escape' => false]); ?>
+                                <?= $this->Form->postLink('', ['controller' => 'Pages', 'action' => 'content'], ['confirm' => __('Você tem certeza que deseja EXCLUIR o registro?'), 'class' => 'btn btn-actions fa fa-trash-o', 'title' => __('Excluir'), 'escape' => false]); ?>
                             </td>
                         </tr>
                     </tbody>
@@ -885,7 +885,7 @@
                                 <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar')]); ?>
                                 <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-arrow-circle-o-down', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Baixar Lançamento'), 'title' => __('Baixar')]); ?>
                                 <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-pencil', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Editar Cadastro'), 'title' => __('Editar')]); ?>
-                                <?= $this->Form->postLink('', ['controller' => 'Pages', 'action' => 'delete'], ['confirm' => __('Você tem certeza que deseja EXCLUIR o registro?'), 'class' => 'btn btn-actions fa fa-trash-o', 'title' => 'Excluir']); ?>
+                                <?= $this->Form->postLink('', ['controller' => 'Pages', 'action' => 'content'], ['confirm' => __('Você tem certeza que deseja EXCLUIR o registro?'), 'class' => 'btn btn-actions fa fa-trash-o', 'title' => 'Excluir']); ?>
                             </td>
                         </tr>
                     </tbody>
