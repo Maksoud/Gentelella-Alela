@@ -2,11 +2,11 @@
 /**
  * Developed by:
  *     Renée Maksoud
- *     Cristian John
- *     Thomas Kanzig
  * 
  * All rights reserved - 2015-2019
  */
+
+/* File: src/Template/Element/footer.ctp */
 ?>
 
 <?= $this->Html->script(['jquery-2.2.4.min',

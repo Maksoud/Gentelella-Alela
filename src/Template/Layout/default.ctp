@@ -2,13 +2,11 @@
 /**
  * Developed by:
  *     Renée Maksoud
- *     Cristian John
- *     Thomas Kanzig
  * 
  * All rights reserved - 2015-2019
  */
 
-/* File: src/Template/Layout/default-lte.ctp */
+/* File: src/Template/Layout/default.ctp */
 
 use Cake\Core\Configure;
 ?>
@@ -24,7 +22,7 @@ use Cake\Core\Configure;
 
         <div class="bg_ajax">
             <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><br><br>
-            Carregando
+            <?= __('Carregando'); ?>
         </div>
 
         <!-- Site wrapper -->

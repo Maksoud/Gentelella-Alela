@@ -1,15 +1,12 @@
 <?php
-
 /**
  * Developed by:
  *     Renée Maksoud
- *     Cristian John
- *     Thomas Kanzig
  * 
  * All rights reserved - 2015-2019
  */
 
-/* File: src/Template/Element/Flash/warni.ctp */
+/* File: src/Template/Element/Flash/warning.ctp */
 
 if (!isset($params['escape']) || $params['escape'] !== false) {
     $message = h($message);

@@ -2,8 +2,6 @@
 /**
  * Developed by:
  *     Renée Maksoud
- *     Cristian John
- *     Thomas Kanzig
  * 
  * All rights reserved - 2015-2019
  */
@@ -14,7 +12,7 @@
 <nav class="navbar navbar-static-top">
   <!-- Sidebar toggle button -->
   <a href="#" class="sidebar-toggle btn" data-toggle="offcanvas" role="button">
-    <span class="sr-only">Menu</span>
+    <span class="sr-only"><?= __('Menu'); ?></span>
   </a>
   
   <div class="navbar-custom-menu">
@@ -23,7 +21,7 @@
       <li class="notifications-menu hidden-xs">
         <span style="float:left;margin:16px 4px;font-weight:bold;white-space:nowrap;color:#FFF;">
           <?= $this->request->Session()->read('debug') ? '<i class="fa fa-bug"></i>&nbsp;' : ''; ?>
-          <?= date('d/m/Y ') ?> &nbsp;|&nbsp; <span id="timer"><?= date('H:i:s') ?></span>&nbsp;|&nbsp;
+          <?= date('d/m/Y') ?> &nbsp;|&nbsp; <span id="timer"><?= date('H:i:s') ?></span>&nbsp;|&nbsp;
         </span>
       </li>
 
@@ -84,70 +82,14 @@
           </span>
       </li>
 
-      <!-- Notifications: style can be found in dropdown.less
-      <li class="dropdown notifications-menu">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <i class="fa fa-bell-o"></i>
-          <span class="label label-warning">10</span>
-        </a>
-        <ul class="dropdown-menu">
-          <li class="header">You have 10 notifications</li>
-          <li>
-              inner menu: contains the actual data 
-            <ul class="menu">
-              <li>
-                <a href="#">
-                  <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                  page and may cause design problems
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-users text-red"></i> 5 new members joined
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="fa fa-user text-red"></i> You changed your username
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="footer"><a href="#">View all</a></li>
-        </ul>
-      </li>
-      -->
-
       <!-- User Account: style can be found in dropdown.less -->
       <li class="dropdown user user-menu">
-        <?php 
-          if ($this->request->Session()->read('logomarca')) {
-              $this->Html->link($this->Html->image($this->request->Session()->read('logomarca'), ['alt'    => 'logomarca',
-                                                                                                  'height' => '38px'
-                                                                                                  ]),
-                                      ['controller'        => 'UsersParameters', 'action' => 'changeParameter'],
-                                      ['class'             => 'btn btn_modal font-16',
-                                        'data-size'         => 'sm',
-                                        'data-loading-text' => '',
-                                        'data-title'        => 'Mudar de Perfil',
-                                        'escape'            => false
-                                      ]);
-          } else { ?>
-            <span style="color:#f6f6f6;font-size:14px;margin:16px 12px;position:relative;display:block;"><?= __('Olá, ') ?><?= $this->request->Session()->read('user_name') ?></span>
-            <?php 
-          }//else if ($this->request->Session()->read('logomarca'))
-        ?>
+          <span style="color:#f6f6f6;font-size:14px;margin:16px 12px;position:relative;display:block;">
+            <?= __('Olá, ') ?>
+            <?= $this->request->Session()->read('username') ?>
+          </span>
       </li>
+
       <?php 
       if ($this->request->Session()->read('locale') == 'pt_BR') {
           
@@ -161,6 +103,7 @@
           
       } 
       ?>
+
       <!-- Control Sidebar Toggle Button -->
       <li class="dropdown notifications-menu">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -169,42 +112,21 @@
         <ul class="dropdown-menu">
           <li>
             <ul class="control-sidebar-menu menu list-group" style="max-height:unset;">
-              <li><?= $this->Html->link($this->Html->image($locale, ['width' => '15px']).$text_idioma, ['controller' => 'Pages', 'action' => 'changeLocale'], ['escape' => false]) ?></li>
-              <li><?= $this->Html->link('<i class="fa fa-database"></i> '.__('Meus Dados'), ['controller' => 'Parameters', 'action' => 'index'], ['escape' => false]) ?></li>
-              <?php 
-              if ($this->request->Session()->read('sessionRule') != 'cont') { ?>
-                <li><?= $this->Html->link(__('<i class="fa fa-user-plus"></i> '.'Usuários'), ['controller' => 'Users', 'action' => 'index'], ['escape' => false]) ?></li>
-                <li><?= $this->Html->link(__('<i class="fa fa-usd"></i> '.'Pagamentos do Sistema'), ['controller' => 'Payments', 'action' => 'index'], ['escape' => false]) ?></li>
-                <?php 
-              } 
-              if ($this->request->Session()->read('sessionRule') == 'super') { ?>
-                <li><?= $this->Html->link(__('<i class="fa fa-repeat"></i> '.'Gerar Recorrentes'), ['controller' => 'Cron', 'action' => 'recurrent'], ['target' => '_blank', 'escape' => false]) ?></li>
-                <li><?= $this->Html->link(__('<i class="fa fa-archive"></i> '.'Lista de Backups'), ['controller' => 'Backups', 'action' => 'index'], ['escape' => false]) ?></li>
-                <li><?= $this->Html->link(__('<i class="fa fa-users"></i> '.'Vínculo de Usuários'), ['controller' => 'UsersParameters', 'action' => 'index'], ['escape' => false]) ?></li>
-                <li><?= $this->Html->link(__('<i class="fa fa-plus-circle"></i> '.'Atualizar Saldos'), ['controller' => 'Balances', 'action' => 'superAddBalance'], ['class' => 'btn_modal', 'data-loading-text' => 'Carregando...', 'data-title' => 'Atualizar Saldos', 'escape' => false]) ?></li>
-                <li><?= $this->Html->link(__('<i class="fa fa-check"></i> '.'Conferir Bancos'), ['controller' => 'Balances', 'action' => 'checkBalanceBanks'], ['class' => 'btn_modal', 'data-loading-text' => 'Carregando...', 'data-title' => 'Conferir Saldos de Bancos', 'escape' => false]) ?></li>
-                <li><?= $this->Html->link(__('<i class="fa fa-check"></i> '.'Conferir Caixas'), ['controller' => 'Balances', 'action' => 'checkBalanceBoxes'], ['class' => 'btn_modal', 'data-loading-text' => 'Carregando...', 'data-title' => 'Conferir Saldos de Caixas', 'escape' => false]) ?></li>
-                <li><?= $this->Html->link(__('<i class="fa fa-usd"></i> '.'Saldos Financeiros'), ['controller' => 'Balances', 'action' => 'index'], ['target' => '_blank', 'escape' => false]) ?></li>
-                <li><?= $this->Html->link(__('<i class="fa fa-cube"></i> '.'Saldos de Estoque'), ['controller' => 'StockBalances', 'action' => 'index'], ['target' => '_blank', 'escape' => false]) ?></li>
-                <?php 
-              } 
-              if ($this->request->Session()->read('sessionRule') == 'admin' || $this->request->Session()->read('sessionRule') == 'super') { ?>
-                <li><?= $this->Html->link(__('<i class="fa fa-file-text-o"></i> '.'Log de Registros'), ['controller' => 'Regs', 'action' => 'index'], ['escape' => false]) ?></li>
-                <li><?= $this->Html->link(__('<i class="fa fa-file-text-o"></i> '.'System Logs'), ['controller' => 'Pages', 'action' => 'viewSystemLog'], ['class' => 'btn_modal', 'data-loading-text' => __('Loading...'), 'data-title' => __('System and Debug Logs'), 'escape' => false]) ?></li>
-                <li><?= $this->Html->link(__('<i class="fa fa-file-text-o"></i> '.'Update Logs'), ['controller' => 'Pages', 'action' => 'viewUpdateLog'], ['class' => 'btn_modal', 'data-loading-text' => __('Loading...'), 'data-title' => __('Update Logs'), 'escape' => false]) ?></li>
-                <li><?= $this->Html->link(__('<i class="fa fa-download"></i> '.'Backup do Sistema'), ['controller' => 'Backups', 'action' => 'backupFTP'], ['escape' => false]) ?></li>
-                <li><?= $this->Html->link(__('<i class="fa fa-cloud-download"></i> '.'Atualizar Sistema'), ['controller' => 'Pages', 'action' => 'update?token=y5eehc123avse6463asd35k3cb6'], ['escape' => false]) ?></li>
-                <?php 
-              } ?>
-              <li><?= $this->Html->link(__('<i class="fa fa-comments-o"></i> '.'Chamados de Suporte'), ['controller' => 'SupportContacts', 'action' => 'index'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link($this->Html->image($locale, ['width' => '15px']).$text_idioma, ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-database"></i> '.__('Meus Dados'), ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-user-plus"></i> '.__('Usuários'), ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-usd"></i> '.__('Pagamentos do Sistema'), ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-file-text-o"></i> '.__('Log de Registros'), ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-file-text-o"></i> '.__('System Logs'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn_modal', 'data-loading-text' => __('Loading...'), 'data-title' => __('System and Debug Logs'), 'escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-file-text-o"></i> '.__('Update Logs'), ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn_modal', 'data-loading-text' => __('Loading...'), 'data-title' => __('Update Logs'), 'escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-download"></i> '.__('Backup do Sistema'), ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-cloud-download"></i> '.__('Atualizar Sistema'), ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-comments-o"></i> '.__('Chamados de Suporte'), ['controller' => 'Controller', 'action' => 'index'], ['escape' => false]) ?></li>
             </ul>
           </li>
         </ul>
       </li>
-
       <li><?= $this->Html->link('<i class="fa fa-sign-out"></i>', ['controller' => 'Pages', 'action' => 'logout'], ['title' => 'Sair', 'escape' => false]) ?></li>
-
-      <!-- <li><a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a></li> -->
     </ul>
   </div>
 </nav>

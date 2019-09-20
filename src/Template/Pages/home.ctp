@@ -2,11 +2,10 @@
 /**
  * Developed by:
  *     Renée Maksoud
- *
- * All rights reserved - 2019
+ * 
+ * All rights reserved - 2015-2019
  */
 
-/* Pages */
 /* File: src/Template/Pages/home.ctp */
 ?>
 
@@ -16,7 +15,7 @@
 
 <div class="col-xs-12 panel">
     <div class="col-xs-12 col-sm-4 text-nowrap">
-        <h4><?= __('Bem vindo(a),'); ?> <?= h($username); ?></h4>
+        <h4><?= __('Bem vindo(a),'); ?> <?= $this->request->Session()->read('username'); ?></h4>
     </div>
     <div class="col-xs-12 col-sm-4 text-nowrap text-right pull-right">
         <span style="color:#777777;">
@@ -57,7 +56,7 @@
                                 <i class="fa fa-university"></i> <?= __('Nome do Banco'); ?>
                             </th>
                             <td class="text-right"> 
-                                1.234,56
+                                <?= $this->Number->precision(1234.56, 2); ?>
                             </td>
                         </tr>
                         <tr>
@@ -65,7 +64,7 @@
                                 <i class="fa fa-money"></i> <?= __('Nome do Caixa'); ?>
                             </th>
                             <td class="text-right"> 
-                                1.234,56
+                                <?= $this->Number->precision(1234.56, 2); ?>
                             </td>
                         </tr>
                     </tbody>
@@ -73,7 +72,7 @@
                         <tr class="bg-gray">
                             <th><?= __('SALDO TOTAL'); ?> - <small><?= __('Bancos e Caixas'); ?></small></th>
                             <th class="text-right">
-                                2.469,12
+                                <?= $this->Number->precision(2469.12, 2); ?>
                             </th>
                         </tr>
                     </tfoot>
@@ -113,14 +112,14 @@
                                 <?= __('Nome do Cartão'); ?>
                             </th>
                             <td class="text-right">
-                                1.234,56
+                                <?= $this->Number->precision(1234.56, 2); ?>
                             </td>
                             <td class="text-right">
                                 <!-- LIMITE DO CARTÃO UTILIZADO -->
-                                100%
+                                <?= '100' ?>%
                             </td>
                             <td class="text-right">
-                                0,00
+                                <?= $this->Number->precision(0.00, 2); ?>
                             </td>
                         </tr>
                     </tbody>
@@ -128,13 +127,13 @@
                         <tr class="bg-gray">
                             <th colspan="3"><?= __('CRÉDITO DISPONÍVEL'); ?></th>
                             <th class="text-right">
-                                0,00
+                                <?= $this->Number->precision(0.00, 2); ?>
                             </th>
                         </tr>
                         <tr class="bg-gray">
                             <th colspan="3"><?= __('CRÉDITO UTILIZADO'); ?></th>
                             <th class="text-right">
-                                1.234,56
+                                <?= $this->Number->precision(1234.56, 2); ?>
                             </th>
                         </tr>
                     </tfoot>
@@ -175,13 +174,13 @@
                                 <?= __('Título do Planejamento'); ?>
                             </th>
                             <td class="text-right">
-                                2.469,12
+                                <?= $this->Number->precision(2469.12, 2); ?>
                             </td>
                             <td class="text-center">
-                                50%
+                                <?= '50' ?>%
                             </td>
                             <td class="text-right">
-                                1.234,56
+                                <?= $this->Number->precision(1234.56, 2); ?>
                             </td>
                         </tr>
                     </tbody>
@@ -189,7 +188,7 @@
                         <tr class="bg-gray">
                             <th colspan="3"><?= __('TOTAL POUPADO'); ?> </th>
                             <th class="text-right">
-                                1.234,56
+                                <?= $this->Number->precision(1234.56, 2); ?>
                             </th>
                         </tr>
                     </tfoot>
@@ -203,7 +202,7 @@
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" id="numero2" style="background-color:#fcf8e3;">
             <span class="text-bold"><i class="fa fa-list-ul"></i> <?= __('Extratos Financeiros'); ?>*</span>
-            <h5><small>(*) <?= __('Com vencimento até'); ?> <?= utf8_encode(strftime('%B de %Y', strtotime('today'))); ?></small></h5>
+            <h5><small>(*) <?= __('Vencimento até'); ?> <?= date('t/m/Y'); ?></small></h5>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -234,15 +233,15 @@
                             </td>
                             <!-- VENCIDOS-->
                             <td class="text-center padding-15">
-                                1.234,56 (99)
+                                <?= $this->Number->precision(1234.56, 2); ?> (<?= '99' ?>)
                             </td>
                             <!-- VENCEM HOJE-->
                             <td class="text-center padding-15">
-                                1.234,56 (99)
+                                <?= $this->Number->precision(1234.56, 2); ?> (<?= '99' ?>)
                             </td>
                             <!-- A VENCER-->
                             <td class="text-center padding-15">
-                                1.234,56 (99)
+                                <?= $this->Number->precision(1234.56, 2); ?> (<?= '99' ?>)
                             </td>
                         </tr>
                         <!-- DESPESAS-->
@@ -252,15 +251,15 @@
                             </td>
                             <!-- ATRASADOS-->
                             <td class="text-center padding-15">
-                                1.234,56 (99)
+                                <?= $this->Number->precision(1234.56, 2); ?> (<?= '99' ?>)
                             </td>
                             <!-- VENCEM HOJE-->
                             <td class="text-center padding-15">
-                                1.234,56 (99)
+                                <?= $this->Number->precision(1234.56, 2); ?> (<?= '99' ?>)
                             </td>
                             <!-- A VENCER-->
                             <td class="text-center padding-15">
-                                1.234,56 (99)
+                                <?= $this->Number->precision(1234.56, 2); ?> (<?= '99' ?>)
                             </td>
                         </tr>
                     </tbody>
@@ -413,7 +412,7 @@
         <div class="panel-heading box-header" style="background-color:#fcf8e3;">
             <span class="text-bold"><?= __('Faturas dos Cartões de Crédito'); ?>**</span>
             <h5>
-                <small>(*) <?= __('Vencimentos até'); ?> <?= date('t/m/Y', strtotime('+ 60 days')); ?></small><br/>
+                <small>(*) <?= __('Vencimentos até'); ?> <?= date('t/m/Y'); ?></small><br/>
                 <small>(**) <?= __('Títulos recorrentes são gerados após o vencimento.'); ?></small>
             </h5>
             <div class="box-tools pull-right">
@@ -454,7 +453,7 @@
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" id="numero4">
             <span class="text-bold"><i class="fa fa-newspaper-o"></i> <?= __('Títulos por Plano de Contas'); ?>*</span>
-            <h5><small>(*) <?= __('Vencimentos em '); ?><?= utf8_encode(strftime('%B de %Y', strtotime('today'))); ?></small></h5>
+            <h5><small>(*) <?= __('Vencimentos até '); ?> <?= date('t/m/Y'); ?></small></h5>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -463,8 +462,8 @@
             </div>
         </div>
         <div class="box-body panel-body table-responsive" style="max-height:277px;">
-            <span class="text-bold"><?= mb_strtoupper('99 em aberto'); ?></span>
-            <span class="pull-right text-bold"><?= 'R$ ' . $this->Number->precision(1.234,56, 2); ?></span>
+            <span class="text-bold"><?= __('Em Aberto'); ?></span>
+            <span class="pull-right text-bold"><?= 'R$ ' . $this->Number->precision(2469.12, 2); ?></span>
             <table class="table no-margin font-12" style="margin-bottom:0;">
                 <tbody>
                     <tr>
@@ -472,7 +471,15 @@
                             <?= __('01.01 - Plano de Contas'); ?>
                         </td>
                         <td class="text-right">
-                            <?= $this->Number->precision(1.234,56, 2); ?>
+                            <?= $this->Number->precision(1234.56, 2); ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <?= __('01.02 - Plano de Contas 2'); ?>
+                        </td>
+                        <td class="text-right">
+                            <?= $this->Number->precision(1234.56, 2); ?>
                         </td>
                     </tr>
                 </tbody>
@@ -485,7 +492,7 @@
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" style="background-color:#fcf8e3;">
             <span class="text-bold"><?= __('Planejamentos & Metas'); ?>*</span>
-            <h5><small>(*) <?= __('Vencimentos até'); ?> <?= date('t/m/Y', strtotime('+ 60 days')); ?></small></h5>
+            <h5><small>(*) <?= __('Vencimentos até'); ?> <?= date('t/m/Y'); ?></small></h5>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -520,8 +527,6 @@
         </div>
     </div>
     
-    <!-- /////////////////////////////////////////////////////////////////// -->
-
 </div>
 
 <!-- /////////////////////////////////////////////////////////////////////// -->
@@ -615,8 +620,8 @@
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('PLANEJAMENTOS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Plannings', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Incluir Registros'), 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Plannings', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'add'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Incluir Registros'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Controller', 'action' => 'index'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                         </ul>
@@ -709,7 +714,7 @@
 
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" style="background-color:#F4F2F3;">
-            <span class="text-bold"><i class="fa fa-clock-o"></i> <?= __('TRANSFERÊNCIAS PROGRAMADAS').' (99)'; ?></span>
+            <span class="text-bold"><i class="fa fa-clock-o"></i> <?= __('TRANSFERÊNCIAS PROGRAMADAS'); ?> (<?= '99' ?>)</span>
             <h5><small>(*) <?= __('Agendamentos de Resgates/Aplicações (Transferências)'); ?></small></h5>
 
             <div class="box-tools pull-right">
@@ -772,8 +777,8 @@
 
     <div class="box panel panel-default bg-info box-shadow" style="padding:0;">
         <div class="panel-heading box-header" style="background-color:#D9EDF7;">
-            <span class="text-bold"><?= __('CONTAS A RECEBER').' (99)'; ?></span>
-            <h5><small>(*) <?= __('Com vencimento até'); ?> <?= date('t/m/Y'); ?></small></h5>
+            <span class="text-bold"><?= __('CONTAS A RECEBER'); ?> (<?= '99' ?>)</span>
+            <h5><small>(*) <?= __('Vencimentos até'); ?> <?= date('t/m/Y'); ?></small></h5>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -842,8 +847,8 @@
 
     <div class="box panel panel-default bg-danger box-shadow" style="padding:0;">
         <div class="panel-heading box-header" style="background-color:#f2dede;">
-            <span class="text-bold"><?= __('CONTAS A PAGAR').' (99)'; ?></span>
-            <h5><small>(*) <?= __('Com vencimento até') ?> <?= date('t/m/Y'); ?></small></h5>
+            <span class="text-bold"><?= __('CONTAS A PAGAR'); ?> (<?= '99' ?>)</span>
+            <h5><small>(*) <?= __('Vencimentos até') ?> <?= date('t/m/Y'); ?></small></h5>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse">

@@ -2,11 +2,11 @@
 /**
  * Developed by:
  *     Renée Maksoud
- *     Cristian John
- *     Thomas Kanzig
  * 
  * All rights reserved - 2015-2019
  */
+
+/* File: src/Template/Element/head.ctp */
 
 use Cake\Core\Configure;
 ?>
@@ -46,9 +46,6 @@ use Cake\Core\Configure;
                       'bootstrap-treeview.min'
                      ])
 ?>
-
-<!-- Google -->
-<?= $this->Html->script(['analystics']) ?>
 
 <!--Fonte utilizada no 'Você sabia?' e login-->
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet" type="text/css">

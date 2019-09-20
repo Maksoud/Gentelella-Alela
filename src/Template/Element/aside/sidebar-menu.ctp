@@ -3,8 +3,10 @@
  * Developed by:
  *     Renée Maksoud
  * 
- * All rights reserved - 2019
+ * All rights reserved - 2015-2019
  */
+
+/* File: src/Template/Element/aside/sidebar-menu.ctp */
 
 use Cake\Core\Configure;
 

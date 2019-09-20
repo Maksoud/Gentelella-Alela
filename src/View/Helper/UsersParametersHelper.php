@@ -3,11 +3,11 @@
 /**
  * Developed by:
  *     Renée Maksoud
- *     Cristian John
- *     Thomas Kanzig
  * 
  * All rights reserved - 2015-2019
  */
+
+/* File: src/View/Helper/UsersParametersHelper.php */
 
 namespace App\View\Helper;
 use Cake\View\Helper\HtmlHelper;
