@@ -9,43 +9,34 @@
 (function($){
     $(document).ready(function($){
 
-        /**********************************************************************/
-
         //CONTROLA O RELÓGIO DO SISTEMA
         function addZero(i) {
+
             if (i < 10) {
                 i = "0" + i;
-            }
+            }//if (i < 10)
             return i;
+
         }
+
+        /*********/
 
         setInterval(function () {
 
             var date = new Date();
             var time = document.getElementById("timer");
 
-            /*
-            localTime = date.getTime();
-            bombay    = date.getTimezoneOffset() * 60000;
-            utc       = localTime + bombay;
-            offset    = 4;
-            bombay    = utc - (3600000 * offset);
-            nd        = new Date(bombay);
-            */
-
             if (time) { 
                 time.innerHTML = addZero(date.getHours())+":"+addZero(date.getMinutes())+":"+addZero(date.getSeconds());
-            }
+            }//if (time)
             
         }, 1000);
 
         /**********************************************************************/
-        //EVITA MULTIPLOS CADASTROS AO SER PRESSIONADO DIVERSAS VEZES O BOTÃO GRAVAR
-        //ESTÁ EM MAKSOUD-CUSTOM, DEVIDO A NÃO FUNCIONAMENTO, QUANDO NESSE ARQUIVO 04/01/2019
-        /**********************************************************************/
 
         //AJUSTA VISUAL DA TABELA INDEX (LISTAGENS) PARA CONDENSADO QUANDO A TELA POSSUIR TAMANHO PEQUENO
         function sizeOfThings() {
+
             var windowWidth  = window.innerWidth,
                 windowHeight = window.innerHeight,
                 screenWidth  = screen.width,
@@ -57,13 +48,18 @@
                 $("#adjustable").addClass("table-condensed");
             } else {
                 $("#adjustable").removeClass("table-condensed");
-            }
+            }//else if (windowWidth < 1305)
 
             if (windowSize) { windowSize.innerHTML = windowWidth + 'x' + windowHeight; }
             if (screenSize) { screenSize.innerHTML = screenWidth + 'x' + screenHeight; }
+
         };
 
+        /*********/
+
         sizeOfThings();
+
+        /*********/
 
         window.addEventListener('resize', function () {
             sizeOfThings();
@@ -95,10 +91,12 @@
                         $('.modal-body').append(data); //colocar no modal o formulario de edicao
                     }
                  )
+
             .done(function() {
                 btn.button('reset'); //voltar estado do btn
                 $('#modal_item').modal('toggle'); //abrir modal com o formulario
             })
+
             .fail(function() {
                 confirm('Desculpe, ocorreu um erro. Por favor atualize a pagina e tente novamente.');
                 location.reload();
@@ -132,10 +130,12 @@
                         $('#modal_item_body2').append(data); //colocar no modal o formulario de edicao
                     }
                  )
+
             .done(function() {
                 btn.button('reset'); //voltar estado do btn
                 $('#modal_item2').modal('toggle'); //abrir modal com o formulario
             })
+
             .fail(function() {
                 confirm('Desculpe, ocorreu um erro. Por favor atualize a pagina e tente novamente.');
                 location.reload();
@@ -166,14 +166,16 @@
             dados_get = [];
 
         partes.forEach(function (parte) {
+
             var chaveValor = parte.split('='),
-                chave = chaveValor[0],
-                valor = chaveValor[1];
+                     chave = chaveValor[0],
+                     valor = chaveValor[1];
 
             dados_get[chave] = valor;
+
         });
 
-        if (dados_get['iniciar_busca'] ) $('#btn-resetar-form').toggle('slow');
+        if (dados_get['iniciar_busca']) $('#btn-resetar-form').toggle('slow');
 
         /**********************************************************************/
         
@@ -195,7 +197,8 @@
                     //caso já tenha dado algum erro, remover as class de erro
                     $('.has-error').removeClass('has-error');
                     
-                    if( data['status'] == 'error' ){
+                    if (data['status'] == 'error') {
+
                         var retorno  = '<div class="alert alert-danger" role="alert">' + btn_close_alert + data['mensagem'] + '</div>';
                         
                         $('#ajax-retorno').html(''); //limpar a div que aparece os retornos
@@ -219,13 +222,13 @@
                         console.log('/*******************/');
                         
                     } else {
+
                         var retorno = '<div class="alert alert-success" role="alert">' + btn_close_alert + data['mensagem'] + '</div>';
                         
-                        //$('#ajax-sucesso-retorno').html(''); //limpar a div que aparece os retornos
-                        //$('#ajax-sucesso-retorno').append(retorno); //informar msg principal de sucesso
-                        //$('#modal_item').modal('hide'); //fecha modal
                         window.location.href = window.location.href.replace( /[\?#].*|$/, "?action=ok" );
-                    }
+
+                    }//else if (data['status'] == 'error')
+
                 },
                 error: function (xhr, desc, err){
                     var btn_close_alert = '<button type="button" class="close" data-dismiss="alert" aria-label="Close">&times;</button>',

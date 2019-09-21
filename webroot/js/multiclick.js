@@ -12,6 +12,8 @@ function MultiClick() {
         var    submit = $('button[onclick="MultiClick()"]');
         const oldtext = submit[0].innerText;
 
+        /*********/
+
         setTimeout(function(){
 
             //Muda o texto do botão
@@ -24,6 +26,8 @@ function MultiClick() {
             submit.attr('type', 'button');
 
         }, 50);
+
+        /*********/
 
         setTimeout(function(){ 
 

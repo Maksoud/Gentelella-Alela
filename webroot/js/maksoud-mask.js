@@ -69,7 +69,6 @@
                 field.mask(SPMaskBehavior.apply({}, arguments), options);
               }
           };
-        //$('.sp_celphones').mask(SPMaskBehavior, spOptions);
         
         /**********************************************************************/
         
@@ -99,13 +98,19 @@
 				$($modal + ' .cpfcnpjmask').mask('00.000.000/0000-00', options);
 			}
 		}
+
+        /*********/
 		
 		Masks('');
+
+        /*********/
         
 		//Máscaras para o modal
         $('#modal_item').on('shown.bs.modal', function () {
         	Masks('#modal_item_body');
         });
+
+        /*********/
 		
 		//Máscaras para o modal2
 		$('#modal_item2').on('shown.bs.modal', function () {
@@ -126,8 +131,12 @@
 				$($modal + ' #dtfinal').val("");
 			});
 		}
+
+        /*********/
         
 		DataInical('');
+
+        /*********/
 		
         //controle do campo de data, mostrar ano e depois o mes para selecionar *sem dia
 		function Datepicker($modal)
@@ -141,14 +150,20 @@
 				disableTouchKeyboard: true
 			});
 		}
+
+        /*********/
 		
 		Datepicker('');
+
+        /*********/
 		
 		//Datas para o modal
         $('#modal_item').on('shown.bs.modal', function () {
         	Datepicker('#modal_item_body');
         	DataInical('#modal_item_body');
         });
+
+        /*********/
 		
 		//Datas para o modal2
 		$('#modal_item2').on('shown.bs.modal', function () {

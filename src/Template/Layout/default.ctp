@@ -41,7 +41,6 @@ use Cake\Core\Configure;
                                                                                      'action'     => 'modalContent'
                                                                                     ], 
                                                                                     ['class'             => 'btn btn_modal font-16', 
-                                                                                     'data-size'         => 'sm', 
                                                                                      'data-loading-text' => '', 
                                                                                      'data-title'        => __('Mudar de Perfil'),
                                                                                      'escape'            => false
@@ -55,7 +54,6 @@ use Cake\Core\Configure;
                                                                                      'action'     => 'modalContent'
                                                                                     ], 
                                                                                     ['class'             => 'btn btn_modal font-16', 
-                                                                                     'data-size'         => 'sm', 
                                                                                      'data-loading-text' => '', 
                                                                                      'data-title'        => __('Mudar de Perfil'),
                                                                                      'escape'            => false

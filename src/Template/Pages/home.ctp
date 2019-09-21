@@ -646,49 +646,49 @@
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('BANCOS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Banco'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Banco'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('CAIXAS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Caixa'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Caixa'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('CARTÕES'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Cartão'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Cartão'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('P. CONTAS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Plano de Contas'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Plano de Contas'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('C. CUSTOS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Centro de Custos'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Centro de Custos'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('T. DOCUMENTOS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Tipo de Documento'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Tipo de Documento'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
                             <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
                                 <div class="text-right" style="color:#777;"><?= __('T. EVENTOS'); ?></div>
                                 <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-size' => 'sm', 'data-title' => __('Novo Tipo de Evento'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Tipo de Evento'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>

@@ -16,25 +16,32 @@
         
         var lastChecked = null;
         var handleChecked = function(e) {
+
             if (lastChecked && e.shiftKey) {
+                
                 var i = $('input[type="checkbox"]').index(lastChecked);
                 var j = $('input[type="checkbox"]').index(e.target);
                 var checkboxes = [];
+
                 if (j > i) {
                     checkboxes = $('input[type="checkbox"]:gt('+ (i-1) +'):lt('+ (j-i) +')');
                 } else {
                     checkboxes = $('input[type="checkbox"]:gt('+ j +'):lt('+ (i-j) +')');
-                }
+                }//else if (j > i)
 
                 if (!$(e.target).is(':checked')) {
                     $(checkboxes).removeAttr('checked');
                 } else {
                     $(checkboxes).attr('checked', 'checked');
-                }
-            }
+                }//else if (!$(e.target).is(':checked'))c
+
+            }//if (lastChecked && e.shiftKey)
+
             lastChecked = e.target;
             // Other click action code.
+
         };
+        
         $('input[type=checkbox]').click(handleChecked);
         
         //select all checkboxes
