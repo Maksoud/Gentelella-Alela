@@ -51,16 +51,6 @@ class AppController extends Controller
         
         I18n::locale($this->request->Session()->read('locale'));
         
-        // Allow the display action so our pages controller
-        //$this->Auth->allow(['display']);
-
-        /*
-         * Enable the following components for recommended CakePHP security settings.
-         * see http://book.cakephp.org/3.0/en/controllers/components/security.html
-         */
-        //$this->loadComponent('Security');
-        //$this->loadComponent('Csrf');
-        
     }
     
     public function beforeRender(Event $event)

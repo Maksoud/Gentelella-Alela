@@ -203,11 +203,11 @@
 
             var row1 = $('<tr style="font-size: 11px;">'), list_product, list_unity, list_quantity, actionButtons;
             
-            list_product  = '<td colspan="4" class="text-nowrap">\n\
+            list_product  = '<td colspan="3" class="text-nowrap">\n\
                                 <input type="hidden" name="ProductList[' + idx + '][products_id]" id="list_id_product" value="' + id_product.value + '">\n\
                                 <input type="hidden" name="ProductList[' + idx + '][products_title]" id="list_product" value="' + product.value + '">\n\
                                 <input type="hidden" name="ProductList[' + idx + '][imobilizado]" id="list_imobilizado" value="' + imobilizado.checked + '">\n\
-                                &nbsp;'+ id_product.value + ' - ' + product.value + 
+                                &nbsp;' + product.value + 
                             '</td>';
             list_unity    = '<td class="text-center">\n\
                                 <input type="hidden" name="ProductList[' + idx + '][unity]" id="list_unity" value="' + unity.value + '">\n\

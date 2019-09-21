@@ -88,7 +88,7 @@
                         </label>
                         <div class="input-group">
                             <div class="input-group-addon input-border-left">
-                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal2 btn btn-primary btn-custom fa fa-plus', 'data-loading-text' => '', 'data-title' => __('Novo Cliente'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Adicionar Cliente'), 'escape' => false]) ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modal2'], ['class' => 'btn_modal2 btn btn-primary btn-custom fa fa-plus', 'data-loading-text' => '', 'data-title' => __('Novo Cliente'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Adicionar Cliente'), 'escape' => false]) ?>
                             </div>
                             <input id="customers_title" class="form-control input-border-right" type="text" autocomplete="off" placeholder="<?= __('Digite o nome do cliente ou adicione') ?>"><div class="loadingCustomers"></div>
                         </div>
@@ -155,7 +155,7 @@
                                 </label>
                                 <div class="input-group">
                                     <div class="input-group-addon input-border-left">
-                                        <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal2 btn btn-primary btn-custom fa fa-plus', 'data-loading-text' => '', 'data-title' => __('Novo Produto'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Adicionar Produto'), 'escape' => false]) ?>
+                                        <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modal2'], ['class' => 'btn_modal2 btn btn-primary btn-custom fa fa-plus', 'data-loading-text' => '', 'data-title' => __('Novo Produto'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Adicionar Produto'), 'escape' => false]) ?>
                                     </div>
                                     <input id="products_title" class="form-control input-border-right" type="text" autocomplete="off" placeholder="<?= __('Digite o nome do produto ou adicione') ?>"><div class="loadingProducts" style="right:37px;"></div>
                                     <div style="padding:6px 16px; font-size:14px; font-weight:400; line-height:1; color:#555; text-align:center; border:1px solid #ccc; width:1%; white-space:nowrap; vertical-align:middle; display:table-cell; margin:0;">
@@ -308,7 +308,7 @@
                 <table id="products-table" class="table table-hover table-bordered table-condensed table-striped" style="margin-bottom: -1px;">
                     <thead class="bg-gray">
                         <tr style="font-size: 12px;">
-                            <th colspan="4" class="text-nowrap"><?= __('Descrição') ?></th>
+                            <th colspan="3" class="text-nowrap"><?= __('Descrição') ?></th>
                             <th class="text-center col-xs-1"><?= __('Unidade') ?></th>
                             <th class="text-center text-nowrap col-xs-1"><?= __('Quantidade') ?></th>
                             <th rowspan="2" class="col-xs-1 text-center" style="vertical-align: middle;"><?= __('Ações') ?></th>
@@ -318,7 +318,7 @@
                             <th class="text-center text-nowrap col-xs-1"><?= __('Desconto') ?> (<?= __('R$') ?>)</th>
                             <th class="text-center text-nowrap col-xs-1"><?= __('IPI') ?> (<?= __('R$') ?>)/(%)</th>
                             <th class="text-center text-nowrap col-xs-1"><?= __('ICMS') ?> (<?= __('R$') ?>)/(%)</th>
-                            <th class="text-center text-nowrap col-xs-1"><?= __('Total') ?> (<?= __('R$') ?>)</th>
+                            <th class="text-center text-nowrap"><?= __('Total') ?> (<?= __('R$') ?>)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -339,6 +339,11 @@
         </div>
     </div>
 </div> <!-- É para encerrar o corpo do modal e poder iniciar o rodape do modal aqui -->
+
+<div class="col-xs-12 box text-left">
+    <?= $this->Html->link(__(' Visualizar Lançamento'), ['controller' => 'Pages', 'action' => 'modal2'], ['class' => 'btn_modal2 box-shadow scroll-modal btn btn-warning btn-shortcut fa fa-eye ', 'role' => 'button', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Visualizar'), 'escape' => false]) ?>
+    <?= $this->Html->link(__(' Saldos de Bancos/Carteiras'), ['controller' => 'Pages', 'action' => 'modal2'], ['class' => 'btn_modal2 box-shadow btn btn-warning btn-shortcut fa fa-usd ', 'role' => 'button', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Saldos de Bancos e Carteiras'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Visualizar'), 'escape' => false]) ?>
+</div>
 
 <div class="modal-footer">
     <?= $this->Form->button(__('Gravar'), ['type' => 'cancel', 'class' => 'btn btn-primary scroll-modal', 'data-dismiss' => 'modal', 'div' => false]) ?>

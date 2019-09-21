@@ -11,16 +11,10 @@
 
 namespace App\Controller;
 
-use Cake\ORM\TableRegistry;
-use Cake\Filesystem\Folder;
-use Cake\Filesystem\File;
 use Cake\Core\Configure;
 use Cake\Network\Exception\ForbiddenException;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
-use Cake\Datasource\ConnectionManager;
-use Cake\I18n\I18n;
-use Cake\Log\Log;
 
 class PagesController extends AppController
 {
@@ -29,15 +23,17 @@ class PagesController extends AppController
         parent::initialize();
 
         //Autoriza a exibição das páginas
-        $this->Auth->allow(['login', 'logout', 'home', 'content', 'modalContent']);
-
-        //Carrega janela com informações sobre a validade do sistema
-        $this->validade();
+        $this->Auth->allow(['login', 'logout', 'home', 'content', 'modalContent', 'modal2']);
 
     }
     
     public function home()
     {
+        //Carrega janela com informações sobre a validade do sistema
+        $this->validade();
+
+        /**********************************************************************/
+
         //Variáveis:
         $this->set('id', 0);
 
@@ -286,6 +282,11 @@ class PagesController extends AppController
     }
 
     public function modalContent()
+    {
+        //Modais
+    }
+
+    public function modal2()
     {
         //Modais
     }
