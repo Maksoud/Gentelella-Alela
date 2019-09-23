@@ -118,7 +118,7 @@
               <li><?= $this->Html->link('<i class="fa fa-file-text-o"></i> ' . __('System Logs'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Loading...'), 'data-title' => __('System and Debug Logs'), 'escape' => false]) ?></li>
               <li><?= $this->Html->link('<i class="fa fa-file-text-o"></i> ' . __('Update Logs'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Loading...'), 'data-title' => __('Update Logs'), 'escape' => false]) ?></li>
               <li><?= $this->Html->link('<i class="fa fa-download"></i> ' . __('Backup do Sistema'), ['controller' => 'Pages', 'action' => 'content'], ['escape' => false]) ?></li>
-              <li><?= $this->Html->link('<i class="fa fa-cloud-download"></i> ' . __('Atualizar Sistema'), ['controller' => 'Pages', 'action' => 'content'], ['escape' => false]) ?></li>
+              <li><?= $this->Html->link('<i class="fa fa-cloud-download"></i> ' . __('Atualizar Sistema'), ['controller' => 'Pages', 'action' => 'update'], ['escape' => false]) ?></li>
               <li><?= $this->Html->link('<i class="fa fa-comments-o"></i> ' . __('Chamados de Suporte'), ['controller' => 'Pages', 'action' => 'content'], ['escape' => false]) ?></li>
             </ul>
           </li>

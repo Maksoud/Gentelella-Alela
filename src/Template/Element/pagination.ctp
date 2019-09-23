@@ -24,7 +24,7 @@
 
             <li class="page-item"></li>
 
-            <li class="last"><a href="/#?page=999">Último</a></li>
+            <li class="last"><a href="#?page=999">Último</a></li>
 
             <!-- <li class="page-item disabled">
                 <= $this->Paginator->first(__('Primeiro'), ['class' => 'paginate_button', 'tag' => 'li', 'escape' => false]); ?>

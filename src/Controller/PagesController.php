@@ -23,7 +23,7 @@ class PagesController extends AppController
         parent::initialize();
 
         //Autoriza a exibição das páginas
-        $this->Auth->allow(['login', 'logout', 'home', 'content', 'modalContent', 'modal2']);
+        $this->Auth->allow(['login', 'logout', 'home', 'content', 'modalContent', 'modal2', 'update']);
 
     }
     
@@ -318,6 +318,40 @@ class PagesController extends AppController
         $this->Flash->success(__('Sessão Finalizada'));
         return $this->redirect('/');
         //return $this->redirect($this->Auth->logout());
+    }
+    
+    public function update()
+    {
+        if ($this->request->is(['get'])) {
+            
+            //CRIA DIRETÓRIO SE NÃO EXISTIR
+            if (!file_exists('log.log')) {
+                @fopen('log.log', 'x+');
+            }//if (!file_exists('log.log'))
+            
+            //O USO DESSA OPÇÃO É PREJUDICIAL AOS ARQUIVOS DE LOG QUE SERÃO SOBRESCRITOS
+            $shell = shell_exec("git reset --hard FETCH_HEAD 2>&1");
+            $shell .= shell_exec("git clean -df 2>&1");
+            
+            $shell .= shell_exec("git pull origin master 2>&1");
+            
+            $textoLog  = PHP_EOL . '================================================ <br />';
+            $textoLog .= PHP_EOL . "Data: " . date('d'."/".'m'."/".'Y'." - ".'H'.":".'i'.":".'s') . '<br>';
+            $textoLog .= PHP_EOL . $shell . '<br>';
+            $textoLog .= PHP_EOL . '================================================ <br />';
+            
+            if ($arquivoLog = @fopen('log.log', 'r+')) {
+                fwrite($arquivoLog, $textoLog);
+                fclose($arquivoLog);
+            }//if ($arquivoLog = @fopen('log.log', 'r+'))
+            
+            $this->Flash->success(__('Atualização realizada com sucesso'));
+            return $this->redirect($this->referer());
+            
+        }//if ($this->request->is(['get']))
+        
+        $this->Flash->error(__('Sistema NÃO atualizado'));
+        return $this->redirect($this->referer());
     }
     
     public function display(...$path)

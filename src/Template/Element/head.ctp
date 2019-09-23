@@ -16,11 +16,11 @@ use Cake\Core\Configure;
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <?= $this->Html->charset() ?>
-<?= $this->Html->meta('icon', '/favicon.png') ?>
-<?= $this->Html->meta('icon', '/favicon.png', ['rel'   => 'apple-touch-icon',
-                                               'type'  => 'image/png',
-                                               'sizes' => '192x192'
-                                              ]) ?>
+<?= $this->Html->meta('icon', 'favicon.png') ?>
+<?= $this->Html->meta('icon', 'favicon.png', ['rel'   => 'apple-touch-icon',
+                                              'type'  => 'image/png',
+                                              'sizes' => '192x192'
+                                             ]) ?>
     
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
