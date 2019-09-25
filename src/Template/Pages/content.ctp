@@ -12,7 +12,7 @@
 <div class="col-xs-12 col-md-12 col-sm-12 container top-20">
 
     <div class="col-xs-12 panel" style="float: none;">
-        <div class="pull-right"><?= $this->Html->link(__(' Incluir'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-primary fa fa-plus-circle top-20 right-10 btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Cadastro'), 'escape' => false]) ?></div>
+        <div class="pull-right"><?= $this->Html->link(__('Incluir'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-primary fa fa-plus-circle top-20 right-10 btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Cadastro'), 'escape' => false]) ?></div>
         <h3 class="page-header top-20"><?= __('Página Interna') ?></h3>
     </div>
 
@@ -37,7 +37,7 @@
                                                                'value' => @$this->request->query['status_search']]); ?>
                     <?= $this->Form->button(__('Buscar'), ['type' => 'submit', 'class' => 'btn btn-primary fa fa-search top-5', 'data-loading-text' => __('Buscando...'), 'div' => false]) ?>
                     <input type="hidden" name="iniciar_busca" value="true">
-                    <?= $this->Html->link(__(' Listar Todos'), ['controller' => 'Pages', 'action' => 'content'], ['class'=>'btn btn-default fa fa-list top-5', 'id' => 'btn-resetar-form', 'style' => 'display:none;', 'escape' => false]); ?>
+                    <?= $this->Html->link(__('Listar Todos'), ['controller' => 'Pages', 'action' => 'content'], ['class'=>'btn btn-default fa fa-list top-5', 'id' => 'btn-resetar-form', 'style' => 'display:none;', 'escape' => false]); ?>
                 <?= $this->Form->end(); ?>
             </div>
         </div>

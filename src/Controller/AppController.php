@@ -75,11 +75,17 @@ class AppController extends Controller
                                           'debug'           => Configure::read('debug'),
                                           'version'         => '90.20-2019',
                                           'validade'        => date('Y-m-d', strtotime('+ 5 days')),
-                                          'plan'            => 'Completo',
-                                          'locale'          => 'pt_BR',
+                                          'plan'            => __('Completo'),
                                           'Session.timeout' => 30,
                                           'debug'           => true
                                          ]);
+        
+        /**********************************************************************/
+
+        //Define o locale
+        if (!$this->request->Session()->read('locale')) {
+            $this->request->Session()->write('locale', 'pt_BR');
+        }//if (!$this->request->Session()->read('locale'))
 
     }
     

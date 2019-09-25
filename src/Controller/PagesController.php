@@ -23,7 +23,7 @@ class PagesController extends AppController
         parent::initialize();
 
         //Autoriza a exibição das páginas
-        $this->Auth->allow(['login', 'logout', 'home', 'content', 'modalContent', 'modal2', 'update']);
+        $this->Auth->allow(['login', 'logout', 'home', 'content', 'modalContent', 'modal2', 'update', 'changeLocale']);
 
     }
     
@@ -351,6 +351,27 @@ class PagesController extends AppController
         }//if ($this->request->is(['get']))
         
         $this->Flash->error(__('Sistema NÃO atualizado'));
+        return $this->redirect($this->referer());
+    }
+    
+    public function changeLocale()
+    {
+        $locale = $this->request->Session()->read('locale');
+            
+        /**********************************************************************/
+
+        if ($locale == 'pt_BR') {
+
+            $this->request->Session()->write('locale', 'en_US');
+
+        } else {
+            
+            $this->request->Session()->write('locale', 'pt_BR');
+
+        }//else if ($locale == 'pt_BR')
+            
+        /**********************************************************************/
+        
         return $this->redirect($this->referer());
     }
     

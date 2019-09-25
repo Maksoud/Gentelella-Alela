@@ -36,7 +36,7 @@ use Cake\Core\Configure;
 
     <li>
         <?= $this->Html->link($this->Html->tag('i', '',['class' => 'fa fa-dashboard']).
-                              $this->Html->tag('span', __(' Início')), 
+                              $this->Html->tag('span', __('Início')), 
                               ['controller' => 'Pages', 'action' => 'home'], 
                               ['escape' => false]
                              ) ?>
@@ -44,7 +44,7 @@ use Cake\Core\Configure;
 
     <li class="treeview">
         <a href="#">
-            <i class="fa fa-list-ul"></i> <span><?= __(' Lançamentos Financeiros') ?></span>
+            <i class="fa fa-list-ul"></i><span> <?= __('Lançamentos Financeiros') ?></span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -53,7 +53,6 @@ use Cake\Core\Configure;
             <li><?= $this->Html->link('<i class="fa fa-folder-open-o"></i> '.__('Contas a Pagar/Receber'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-money"></i> '.__('Movimentos de Caixa'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-university"></i> '.__('Movimentos de Banco'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-cc"></i> '.__('Movimentos de Cheque'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-credit-card-alt"></i> '.__('Lançamentos de Cartão'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-exchange"></i> '.__('Transferências'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-trophy"></i> '.__('Planejamentos & Metas'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
@@ -62,7 +61,7 @@ use Cake\Core\Configure;
 
     <li class="treeview">
         <a href="#">
-            <i class="fa fa-cubes"></i><span><?= __(' Lançamentos de Estoque') ?></span>
+            <i class="fa fa-cubes"></i><span> <?= __('Lançamentos de Estoque') ?></span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -80,7 +79,7 @@ use Cake\Core\Configure;
     
     <li class="treeview">
         <a href="#">
-            <i class="fa fa-pencil-square-o"></i><span><?= __(' Cadastros') ?></span>
+            <i class="fa fa-pencil-square-o"></i><span> <?= __('Cadastros') ?></span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -93,14 +92,12 @@ use Cake\Core\Configure;
             <li><?= $this->Html->link('<i class="fa fa-credit-card-alt"></i> '.__('Cartões'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-sort-amount-asc"></i> '.__('Planos de Contas'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-arrows-alt"></i> '.__('Centros de Custos'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-files-o"></i> '.__('Tipos de Documentos'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-random"></i> '.__('Tipos de Eventos'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
         </ul>
     </li>
 
     <li class="treeview">
         <a href="#">
-            <i class="fa fa-file-text-o"></i><span><?= __(' Relatórios') ?></span>
+            <i class="fa fa-file-text-o"></i><span> <?= __('Relatórios') ?></span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -110,7 +107,6 @@ use Cake\Core\Configure;
             <li><?= $this->Html->link('<i class="fa fa-folder-open-o"></i> '.__('Contas a Pagar/Receber'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos Financeiros'), 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-money"></i> '.__('Movimentos de Caixa'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Caixa'), 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-university"></i> '.__('Movimentos de Banco'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Banco'), 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-cc"></i> '.__('Movimentos de Cheque'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Cheques'), 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-credit-card-alt"></i> '.__('Lançamentos de Cartão'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Cartões'), 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-exchange"></i> '.__('Transferências'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Transferência'), 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-list-ul"></i> '.__('Relação de Pagamentos'), ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn_modal', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Relação de Pagamentos'), 'escape' => false]) ?></li>
@@ -123,7 +119,7 @@ use Cake\Core\Configure;
 
     <li>
         <?= $this->Html->link($this->Html->tag('i', '',['class' => 'fa fa-comments-o']).
-                              $this->Html->tag('span', __(' Chamados de Suporte')), 
+                              $this->Html->tag('span', __('Chamados de Suporte')), 
                               ['controller' => 'Pages', 'action' => 'content'], 
                               ['escape' => false]
                              ) ?>
@@ -131,7 +127,7 @@ use Cake\Core\Configure;
 
     <li class="treeview">
         <a href="#">
-            <i class="fa fa-question-circle-o"></i><span><?= __(' Sistema') ?></span>
+            <i class="fa fa-question-circle-o"></i><span><?= __('Sistema') ?></span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
             </span>

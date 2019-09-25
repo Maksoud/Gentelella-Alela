@@ -341,8 +341,8 @@
 </div> <!-- É para encerrar o corpo do modal e poder iniciar o rodape do modal aqui -->
 
 <div class="col-xs-12 box text-left">
-    <?= $this->Html->link(__(' Visualizar Lançamento'), ['controller' => 'Pages', 'action' => 'modal2'], ['class' => 'btn_modal2 box-shadow scroll-modal btn btn-warning btn-shortcut fa fa-eye ', 'role' => 'button', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Visualizar'), 'escape' => false]) ?>
-    <?= $this->Html->link(__(' Saldos de Bancos/Carteiras'), ['controller' => 'Pages', 'action' => 'modal2'], ['class' => 'btn_modal2 box-shadow btn btn-warning btn-shortcut fa fa-usd ', 'role' => 'button', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Saldos de Bancos e Carteiras'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Visualizar'), 'escape' => false]) ?>
+    <?= $this->Html->link(__('Visualizar Lançamento'), ['controller' => 'Pages', 'action' => 'modal2'], ['class' => 'btn_modal2 box-shadow scroll-modal btn btn-warning btn-shortcut fa fa-eye ', 'role' => 'button', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Visualizar'), 'escape' => false]) ?>
+    <?= $this->Html->link(__('Saldos de Bancos/Carteiras'), ['controller' => 'Pages', 'action' => 'modal2'], ['class' => 'btn_modal2 box-shadow btn btn-warning btn-shortcut fa fa-usd ', 'role' => 'button', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Saldos de Bancos e Carteiras'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Visualizar'), 'escape' => false]) ?>
 </div>
 
 <div class="modal-footer">

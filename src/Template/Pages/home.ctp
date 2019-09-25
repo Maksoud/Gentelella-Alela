@@ -31,7 +31,7 @@
     <!-- SALDOS FINANCEIROS -->
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" id="numero1" style="background-color:#d9edf7;">
-            <span class="text-bold"><i class="fa fa-university"></i> <?= __('Saldos de Bancos e Caixas'); ?>*</span>
+            <span class="text-bold"><i class="fa fa-university"></i><?= __('Saldos de Bancos e Caixas'); ?>*</span>
             <h5><small>(*) <?= __('Saldos atualizados em'); ?> <?= date('d/m/Y'); ?></small></h5>
 
             <div class="box-tools pull-right">
@@ -53,7 +53,7 @@
                     <tbody>
                         <tr>
                             <th>
-                                <i class="fa fa-university"></i> <?= __('Nome do Banco'); ?>
+                                <i class="fa fa-university"></i><?= __('Nome do Banco'); ?>
                             </th>
                             <td class="text-right"> 
                                 <?= $this->Number->precision(1234.56, 2); ?>
@@ -61,7 +61,7 @@
                         </tr>
                         <tr>
                             <th>
-                                <i class="fa fa-money"></i> <?= __('Nome do Caixa'); ?>
+                                <i class="fa fa-money"></i><?= __('Nome do Caixa'); ?>
                             </th>
                             <td class="text-right"> 
                                 <?= $this->Number->precision(1234.56, 2); ?>
@@ -85,7 +85,7 @@
             
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" id="numero1" style="background-color:#d9edf7;">
-            <span class="text-bold"><i class="fa fa-credit-card-alt"></i> <?= __('Limite de Cartões'); ?>*</span>
+            <span class="text-bold"><i class="fa fa-credit-card-alt"></i><?= __('Limite de Cartões'); ?>*</span>
             <h5><small>(*) <?= __('Saldos atualizados em'); ?> <?= date('d/m/Y'); ?></small></h5>
 
             <div class="box-tools pull-right">
@@ -147,7 +147,7 @@
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" id="numero1">
             <span class="text-bold">
-                <i class="fa fa-trophy"></i> <?= __('Progresso dos Planejamentos'); ?>
+                <i class="fa fa-trophy"></i><?= __('Progresso dos Planejamentos'); ?>
             </span>
 
             <div class="box-tools pull-right">
@@ -201,7 +201,7 @@
     
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" id="numero2" style="background-color:#fcf8e3;">
-            <span class="text-bold"><i class="fa fa-list-ul"></i> <?= __('Extratos Financeiros'); ?>*</span>
+            <span class="text-bold"><i class="fa fa-list-ul"></i><?= __('Extratos Financeiros'); ?>*</span>
             <h5><small>(*) <?= __('Vencimento até'); ?> <?= date('t/m/Y'); ?></small></h5>
 
             <div class="box-tools pull-right">
@@ -229,7 +229,7 @@
                         <!-- RECEITAS-->
                         <tr>
                             <td class="text-left">
-                                <?= $this->Html->link(__(' Receitas'), '#relacaoReceitas', ['class' => 'btn btn-default top-5 width-90 fa fa-plus-circle scroll', 'escape' => false]); ?>
+                                <?= $this->Html->link(__('Receitas'), '#relacaoReceitas', ['class' => 'btn btn-default top-5 width-90 fa fa-plus-circle scroll', 'escape' => false]); ?>
                             </td>
                             <!-- VENCIDOS-->
                             <td class="text-center padding-15">
@@ -247,7 +247,7 @@
                         <!-- DESPESAS-->
                         <tr>
                             <td class="text-left">
-                                <?= $this->Html->link(__(' Despesas'), '#relacaoDespesas', ['class' => 'btn btn-default top-5 width-90 fa fa-minus-circle scroll', 'escape' => false]); ?>
+                                <?= $this->Html->link(__('Despesas'), '#relacaoDespesas', ['class' => 'btn btn-default top-5 width-90 fa fa-minus-circle scroll', 'escape' => false]); ?>
                             </td>
                             <!-- ATRASADOS-->
                             <td class="text-center padding-15">
@@ -275,8 +275,8 @@
 <div class="col-xs-12 col-sm-5">
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" id="numero3" style="background-color:#fcf8e3;">
-            <span class="text-bold"><i class="fa fa-line-chart"></i> <?= __('Receitas x Despesas'); ?>*</span>
-            <h5><small>(*) <?= __('Vencimentos contábeis em '); ?><?= date('Y'); ?><?= __(', provisionando os movimentos recorrentes.'); ?></small></h5>
+            <span class="text-bold"><i class="fa fa-line-chart"></i><?= __('Receitas x Despesas'); ?>*</span>
+            <h5><small>(*) <?= __('Vencimentos contábeis em '); ?><?= date('Y'); ?>, <?= __('provisionando os movimentos recorrentes.'); ?></small></h5>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -285,7 +285,7 @@
             </div>
         </div>
         <div class="box-body panel-body">
-            <div class="text-center"><span class="text-bold"><?= __('Saúde Financeira ').(date('Y')); ?></span></div>
+            <div class="text-center"><span class="text-bold"><?= __('Saúde Financeira').' '.(date('Y')); ?></span></div>
             <div class="progress" style="background-color:#777777;">
             <?php 
                 //APRESENTA MENSAGEM
@@ -295,7 +295,7 @@
                     echo "<div class='progress-bar progress-bar-warning' title='".__('Média Anual')."' style='width:".$saude_media_ano."%;max-width:100%;'></div>";
                 } elseif ($saude_media_ano > 20) {
                     echo "<div class='progress-bar progress-bar-info' title='".__('Média Anual')."' style='width:".$saude_media_ano."%;max-width:100%;'></div>";
-                }
+                }//elseif ($saude_media_ano > 20)
                 echo "<div style='width:100%;position:absolute;text-align:center;color:white;'>".$saude_media_ano."%</div>";
             ?>
             </div>
@@ -324,7 +324,7 @@
                                  "Novembro", 
                                  "Dezembro"],
                         datasets: [{
-                            label: "Realizado",
+                            label: '<?= __('Realizado') ?>',
                             fill: false,
                             lineTension: 0.1,
                             backgroundColor: "rgba(75,192,192,0.4)",
@@ -344,7 +344,7 @@
                             pointHitRadius: 10,
                             data: [<?= implode(', ', $saude_realizado); ?>]
                         },{
-                            label: "Orçado",
+                            label: '<?= __('Orçado') ?>',
                             backgroundColor: "rgba(179,181,198,0.2)",
                             borderColor: "rgba(179,181,198,1)",
                             pointBackgroundColor: "rgba(179,181,198,1)",
@@ -373,7 +373,7 @@
                     <table class="table no-margin table-condensed">
                         <thead>
                             <tr>
-                                <th class="text-nowrap"><?= $this->MyHtml->mesPorExtenso(date('m')).' de '.date('Y'); ?></th>
+                                <th class="text-nowrap"><?= date('F Y'); ?></th>
                                 <td class="text-right" title="<?= __('Não considera transferências ou lançamentos que não estejam no CPR.'); ?>"><?= __('Orçado') ?></td>
                                 <td class="text-right" title="<?= __('Despesas e Receitas contábeis que já foram finalizadas.'); ?>"><?= __('Realizado') ?></td>
                                 <td class="text-right" title="<?= __('Despesas e Receitas que ainda não foram pagas.'); ?>"><?= __('Em aberto') ?></td>
@@ -452,7 +452,7 @@
     
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" id="numero4">
-            <span class="text-bold"><i class="fa fa-newspaper-o"></i> <?= __('Títulos por Plano de Contas'); ?>*</span>
+            <span class="text-bold"><i class="fa fa-newspaper-o"></i><?= __('Títulos por Plano de Contas'); ?>*</span>
             <h5><small>(*) <?= __('Vencimentos até '); ?> <?= date('t/m/Y'); ?></small></h5>
 
             <div class="box-tools pull-right">
@@ -535,7 +535,7 @@
     
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" id="numero6" style="background-color:#dff0d8;">
-            <span class="text-bold"><i class="fa fa-bell-o"></i> <?= __('Você Sabia?'); ?></span>
+            <span class="text-bold"><i class="fa fa-bell-o"></i><?= __('Você Sabia?'); ?></span>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -554,7 +554,7 @@
     
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" id="numero5" style="background-color:#fcf8e3">
-            <span class="text-bold"><i class="fa fa-bolt"></i> <?= __('Atalhos'); ?></span>
+            <span class="text-bold"><i class="fa fa-bolt"></i><?= __('Atalhos'); ?></span>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -565,7 +565,7 @@
         <div class="box-body panel-group bottom-0" id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="headingOne">
-                    <?= $this->Html->link(__(' Lançamentos'), '#collapseOne', ['class' => 'btn fa fa-list-ul font-12', 'role' => 'button', 'data-toggle' => 'collapse', 'data-parent' => '#accordion', 'href' => '#collapseOne', 'aria-expanded' => true, 'aria-controls' => 'collapseOne', 'escape' => false]); ?>
+                    <?= $this->Html->link(__('Lançamentos'), '#collapseOne', ['class' => 'btn fa fa-list-ul fa-fw font-12', 'role' => 'button', 'data-toggle' => 'collapse', 'data-parent' => '#accordion', 'href' => '#collapseOne', 'aria-expanded' => true, 'aria-controls' => 'collapseOne', 'escape' => false]); ?>
                 </div>
                 <div id="collapseOne" class="panel-collapse collapse font-10" role="tabpanel" aria-labelledby="headingOne">
                     <div class="panel-body">
@@ -624,7 +624,7 @@
 
             <div class="panel panel-default top-0">
                 <div class="panel-heading" role="tab" id="headingTwo">
-                    <?= $this->Html->link(__(' Cadastros'), '#collapseTwo', ['class' => 'btn collapsed fa fa-pencil-square-o font-12', 'role' => 'button', 'data-toggle' => 'collapse', 'data-parent' => '#accordion', 'href' => '#collapseTwo', 'aria-expanded' => false, 'aria-controls' => 'collapseTwo', 'escape' => false]); ?>
+                    <?= $this->Html->link(__('Cadastros'), '#collapseTwo', ['class' => 'btn collapsed fa fa-pencil-square-o fa-fw font-12', 'role' => 'button', 'data-toggle' => 'collapse', 'data-parent' => '#accordion', 'href' => '#collapseTwo', 'aria-expanded' => false, 'aria-controls' => 'collapseTwo', 'escape' => false]); ?>
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse font-10" role="tabpanel" aria-labelledby="headingTwo">
                     <div class="panel-body">
@@ -678,20 +678,6 @@
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
                             </li>
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="text-right" style="color:#777;"><?= __('T. DOCUMENTOS'); ?></div>
-                                <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Tipo de Documento'), 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
-                                </div>
-                            </li>
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="text-right" style="color:#777;"><?= __('T. EVENTOS'); ?></div>
-                                <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Tipo de Evento'), 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
-                                </div>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -707,7 +693,7 @@
 
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" style="background-color:#F4F2F3;">
-            <span class="text-bold"><i class="fa fa-clock-o"></i> <?= __('TRANSFERÊNCIAS PROGRAMADAS'); ?> (<?= '99' ?>)</span>
+            <span class="text-bold"><i class="fa fa-clock-o"></i><?= __('TRANSFERÊNCIAS PROGRAMADAS'); ?> (<?= '99' ?>)</span>
             <h5><small>(*) <?= __('Agendamentos de Resgates/Aplicações (Transferências)'); ?></small></h5>
 
             <div class="box-tools pull-right">

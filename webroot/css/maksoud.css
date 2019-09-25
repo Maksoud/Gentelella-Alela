@@ -18,6 +18,10 @@
   font-style: normal
 }
 
+.fa:before {
+    padding-right: 5px;
+}
+
 @page { 
     size: auto;    /* auto is the initial value */ 
     margin: 17mm 8mm 17mm 8mm;
