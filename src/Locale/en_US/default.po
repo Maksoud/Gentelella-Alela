@@ -129,8 +129,8 @@ msgstr "IN OPEN RECIPES"
 msgid "CONTAS A PAGAR"
 msgstr "IN OPEN EXPENSES"
 
-msgid ""
-msgstr ""
+msgid "Dicas aleatórias de uso do sistema"
+msgstr "Random tips about the system use"
 
 msgid ""
 msgstr ""
@@ -917,17 +917,11 @@ msgid "Padrão"
 msgstr "Default"
 
 /******************************************************************************/
-/*BUSCAS*/
+/* DATES */
 /******************************************************************************/
 
-msgid "- cartão -"
-msgstr "- card -"
-
-msgid "- mês -"
-msgstr "- month -"
-
-msgid "- ano -"
-msgstr "- year -"
+msgid "Hoje "
+msgstr "Today "
 
 msgid "Ontem "
 msgstr "Yesterday "

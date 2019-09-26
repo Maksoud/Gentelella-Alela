@@ -163,9 +163,9 @@
                     <thead>
                         <tr>
                             <th class="text-left"><?= __('Descrição'); ?></th>
-                            <th class="text-right"><?= __('Meta'); ?></th>
-                            <th class="text-center"><?= __('Progresso'); ?></th>
-                            <th class="text-right text-nowrap"><?= __('Total Poupado'); ?></th>
+                            <th class="text-right col-xs-1"><?= __('Meta'); ?></th>
+                            <th class="text-center col-xs-1"><?= __('Progresso'); ?></th>
+                            <th class="text-right text-nowrap col-xs-1"><?= __('Total Poupado'); ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -272,7 +272,8 @@
 
 <!-- /////////////////////////////////////////////////////////////////////// -->
 
-<div class="col-xs-12 col-sm-5">
+<div class="col-xs-12 col-sm-4">
+
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" id="numero3" style="background-color:#fcf8e3;">
             <span class="text-bold"><i class="fa fa-line-chart"></i><?= __('Receitas x Despesas'); ?>*</span>
@@ -311,18 +312,18 @@
                 var myChart = new Chart(ctx, {
                     type: 'line',
                     data: {
-                        labels: ["Janeiro", 
-                                 "Fevereiro", 
-                                 "Março", 
-                                 "Abril", 
-                                 "Maio", 
-                                 "Junho", 
-                                 "Julho", 
-                                 "Agosto", 
-                                 "Setembro", 
-                                 "Outubro", 
-                                 "Novembro", 
-                                 "Dezembro"],
+                        labels: ["<?= __('Janeiro') ?>", 
+                                 "<?= __('Fevereiro') ?>", 
+                                 "<?= __('Março') ?>", 
+                                 "<?= __('Abril') ?>", 
+                                 "<?= __('Maio') ?>", 
+                                 "<?= __('Junho') ?>", 
+                                 "<?= __('Julho') ?>", 
+                                 "<?= __('Agosto') ?>", 
+                                 "<?= __('Setembro') ?>", 
+                                 "<?= __('Outubro') ?>", 
+                                 "<?= __('Novembro') ?>", 
+                                 "<?= __('Dezembro') ?>"],
                         datasets: [{
                             label: '<?= __('Realizado') ?>',
                             fill: false,
@@ -531,7 +532,7 @@
 
 <!-- /////////////////////////////////////////////////////////////////////// -->
 
-<div class="col-xs-12 col-sm-2 pull-right">
+<div class="col-xs-12 col-sm-3 pull-right">
     
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" id="numero6" style="background-color:#dff0d8;">
@@ -545,7 +546,7 @@
         </div>
         <div class="box-body panel-body">
             <div class="table-responsive no-margin text-justify font-10" style="border:0;">
-                <?= '" Dicas aleatórias de uso do sistema "'; ?>
+                "<?= __('Dicas aleatórias de uso do sistema'); ?>"
             </div>
         </div>
     </div>
@@ -567,58 +568,86 @@
                 <div class="panel-heading" role="tab" id="headingOne">
                     <?= $this->Html->link(__('Lançamentos'), '#collapseOne', ['class' => 'btn fa fa-list-ul fa-fw font-12', 'role' => 'button', 'data-toggle' => 'collapse', 'data-parent' => '#accordion', 'href' => '#collapseOne', 'aria-expanded' => true, 'aria-controls' => 'collapseOne', 'escape' => false]); ?>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse font-10" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body">
-                        <ul class="nav">
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="text-right" style="color:#777;"><?= __('CONTAS P/R'); ?></div>
-                                <div class="btn-group pull-right">
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <ul class="list-unstyled top_profiles scroll-view">
+                        <li class="media event">
+                            <a class="pull-left border-blue profile_thumb">
+                                <i class="fa fa-folder-open-o blue"></i>
+                            </a>
+                            <div class="row media-body">
+                                <div class="media-title"><?= __('CONTAS P/R'); ?></div>
+                                <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Nova Conta a Pagar/Receber'), 'title' => __('Incluir Registro')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos Financeiros'), 'title' => __('Movimentos Financeiros')]); ?>
-                                </div> 
-                            </li>
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="text-right" style="color:#777;"><?= __('CAIXAS'); ?></div>
-                                <div class="btn-group pull-right">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="media event">
+                            <a class="pull-left border-blue profile_thumb">
+                                <i class="fa fa-money blue"></i>
+                            </a>
+                            <div class="row media-body">
+                                <div class="media-title"><?= __('CAIXAS'); ?></div>
+                                <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Movimento de Caixa'), 'title' => __('Incluir Registro')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Caixa'), 'title' => __('Movimentos de Caixa')]); ?>
                                 </div>
-                            </li>
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="text-right" style="color:#777;"><?= __('BANCOS'); ?></div>
-                                <div class="btn-group pull-right">
+                            </div>
+                        </li>
+                        <li class="media event">
+                            <a class="pull-left border-blue profile_thumb">
+                                <i class="fa fa-university blue"></i>
+                            </a>
+                            <div class="row media-body">
+                                <div class="media-title"><?= __('BANCOS'); ?></div>
+                                <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Movimento de Banco'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Banco'), 'title' => 'Movimentos de Banco']); ?>
                                 </div>
-                            </li>
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="pull-right" style="color:#777;"><?= __('CARTÕES'); ?></div>
-                                <div class="btn-group pull-right">
+                            </div>
+                        </li>
+                        <li class="media event">
+                            <div class="pull-left border-blue profile_thumb">
+                                <i class="fa fa-credit-card blue"></i>
+                            </div>
+                            <div class="row media-body">
+                                <div class="media-title"><?= __('CARTÕES'); ?></div>
+                                <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => 'Novo Movimento de Cartões', 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Cartões'), 'title' => __('Movimentos de Cartões')]); ?>
                                 </div>
-                            </li>
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="text-right" style="color:#777;"><?= __('TRANSFERÊNCIAS'); ?></div>
-                                <div class="btn-group pull-right">
+                            </div>
+                        </li>
+                        <li class="media event">
+                            <div class="pull-left border-blue profile_thumb">
+                                <i class="fa fa-exchange blue"></i>
+                            </div>
+                            <div class="row media-body">
+                                <div class="media-title"><?= __('TRANSFERÊNCIAS'); ?></div>
+                                <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => 'Nova Transferência', 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Transferência'), 'title' => __('Movimentos de Transferências')]); ?>
                                 </div>
-                            </li>
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="text-right" style="color:#777;"><?= __('PLANEJAMENTOS'); ?></div>
-                                <div class="btn-group pull-right">
+                            </div>
+                        </li>
+                        <li class="media event">
+                            <a class="pull-left border-blue profile_thumb">
+                                <i class="fa fa-trophy blue"></i>
+                            </a>
+                            <div class="row media-body">
+                                <div class="media-title"><?= __('PLANEJAMENTOS'); ?></div>
+                                <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Incluir Registros'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -626,60 +655,93 @@
                 <div class="panel-heading" role="tab" id="headingTwo">
                     <?= $this->Html->link(__('Cadastros'), '#collapseTwo', ['class' => 'btn collapsed fa fa-pencil-square-o fa-fw font-12', 'role' => 'button', 'data-toggle' => 'collapse', 'data-parent' => '#accordion', 'href' => '#collapseTwo', 'aria-expanded' => false, 'aria-controls' => 'collapseTwo', 'escape' => false]); ?>
                 </div>
-                <div id="collapseTwo" class="panel-collapse collapse font-10" role="tabpanel" aria-labelledby="headingTwo">
-                    <div class="panel-body">
-                        <ul class="nav">
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="text-right" style="color:#777;"><?= __('FORNECEDORES'); ?></div>
-                                <div class="btn-group pull-right">
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <ul class="list-unstyled top_profiles scroll-view">
+                        <li class="media event">
+                            <a class="pull-left border-blue profile_thumb">
+                                <i class="fa fa-shopping-cart blue"></i>
+                            </a>
+                            <div class="row media-body">
+                                <div class="media-title"><?= __('FORNECEDORES'); ?></div>
+                                <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Fornecedor'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
-                            </li>
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="text-right" style="color:#777;"><?= __('CLIENTES'); ?></div>
-                                <div class="btn-group pull-right">
+                            </div>
+                        </li>
+                        <li class="media event">
+                            <a class="pull-left border-blue profile_thumb">
+                                <i class="fa fa-briefcase blue"></i>
+                            </a>
+                            <div class="row media-body">
+                                <div class="media-title"><?= __('CLIENTES'); ?></div>
+                                <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Cliente'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
-                            </li>
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="text-right" style="color:#777;"><?= __('BANCOS'); ?></div>
-                                <div class="btn-group pull-right">
+                            </div>
+                        </li>
+                        <li class="media event">
+                            <a class="pull-left border-blue profile_thumb">
+                                <i class="fa fa-university blue"></i>
+                            </a>
+                            <div class="row media-body">
+                                <div class="media-title"><?= __('BANCOS'); ?></div>
+                                <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Banco'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
-                            </li>
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="text-right" style="color:#777;"><?= __('CAIXAS'); ?></div>
-                                <div class="btn-group pull-right">
+                            </div>
+                        </li>
+                        <li class="media event">
+                            <a class="pull-left border-blue profile_thumb">
+                                <i class="fa fa-money blue"></i>
+                            </a>
+                            <div class="row media-body">
+                                <div class="media-title"><?= __('CAIXAS'); ?></div>
+                                <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Caixa'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
-                            </li>
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="text-right" style="color:#777;"><?= __('CARTÕES'); ?></div>
-                                <div class="btn-group pull-right">
+                            </div>
+                        </li>
+                        <li class="media event">
+                            <a class="pull-left border-blue profile_thumb">
+                                <i class="fa fa-credit-card blue"></i>
+                            </a>
+                            <div class="row media-body">
+                                <div class="media-title"><?= __('CARTÕES'); ?></div>
+                                <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Cartão'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
-                            </li>
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="text-right" style="color:#777;"><?= __('P. CONTAS'); ?></div>
-                                <div class="btn-group pull-right">
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Plano de Contas'), 'title' => __('Incluir Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                            </div>
+                        </li>
+                        <li class="media event">
+                            <a class="pull-left border-blue profile_thumb">
+                                <i class="fa fa-sort-amount-asc blue"></i>
+                            </a>
+                            <div class="row media-body">
+                                <div class="media-title"><?= __('PLANO DE CONTAS'); ?></div>
+                                <div>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Plano de Contas'), 'title' => __('Incluir Registros')]); ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
-                            </li>
-                            <li class="row bottom-5" style="background-color:#F4F2F2;padding:5px;">
-                                <div class="text-right" style="color:#777;"><?= __('C. CUSTOS'); ?></div>
-                                <div class="btn-group pull-right">
+                            </div>
+                        </li>
+                        <li class="media event">
+                            <a class="pull-left border-blue profile_thumb">
+                                <i class="fa fa-arrows-alt blue"></i>
+                            </a>
+                            <div class="row media-body">
+                                <div class="media-title"><?= __('CENTRO DE CUSTOS'); ?></div>
+                                <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Centro de Custos'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

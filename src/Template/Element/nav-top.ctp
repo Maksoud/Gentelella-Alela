@@ -95,11 +95,13 @@
 
         $locale = 'brz.png';
         $text_idioma = ' Mudar Idioma';
+
       } elseif ($this->request->Session()->read('locale') == 'en_US') {
 
         $locale = 'usa.png';
         $text_idioma = ' Change Idiom';
-      }
+
+      }//elseif ($this->request->Session()->read('locale') == 'en_US')
       ?>
 
       <!-- Control Sidebar Toggle Button -->

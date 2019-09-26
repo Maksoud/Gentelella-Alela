@@ -16,9 +16,9 @@ use Cake\Core\Configure;
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <?= $this->Html->charset() ?>
-<?= $this->Html->meta('icon', 'favicon.png') ?>
-<?= $this->Html->meta('icon', 'favicon.png', ['rel'   => 'apple-touch-icon',
-                                              'type'  => 'image/png',
+<?= $this->Html->meta('icon', 'favicon.ico') ?>
+<?= $this->Html->meta('icon', 'favicon.ico', ['rel'   => 'apple-touch-icon',
+                                              'type'  => 'image/ico',
                                               'sizes' => '192x192'
                                              ]) ?>
     

@@ -89,7 +89,7 @@ use Cake\Core\Configure;
             <li><?= $this->Html->link('<i class="fa fa-shopping-cart"></i> '.__('Fornecedores'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-money"></i> '.__('Caixas'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-university"></i> '.__('Bancos'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
-            <li><?= $this->Html->link('<i class="fa fa-credit-card-alt"></i> '.__('Cartões'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
+            <li><?= $this->Html->link('<i class="fa fa-credit-card"></i> '.__('Cartões'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-sort-amount-asc"></i> '.__('Planos de Contas'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
             <li><?= $this->Html->link('<i class="fa fa-arrows-alt"></i> '.__('Centros de Custos'), ['controller' => 'Pages', 'action' => 'content'], ['class' => 'link_active', 'escape' => false]) ?></li>
         </ul>

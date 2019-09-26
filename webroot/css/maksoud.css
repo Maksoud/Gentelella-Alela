@@ -337,7 +337,6 @@
 .bg{
     position: absolute;
     background: url(../img/bg_login.jpg) no-repeat;
-/*    background-size: cover;*/
     min-height: 100%;
 }
 .bg-blue {
@@ -359,14 +358,9 @@
     display: table;
 }
 .box {
-    /*min-height: 20px;
-    border: 1px solid #e3e3e3;
-    border-radius: 5px;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);*/
     min-height: 20px;
     padding: 19px;
     margin-bottom: 20px;
-/*    background-color: #fff;*/
     border: 1px solid #e3e3e3;
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
@@ -377,6 +371,9 @@
 }
 .modal { /*Corrige escurecimento demasiado no modal pelo AdminLTE*/
     background: unset;
+}
+.sidebar-menu {
+    font-size: 13px;
 }
 
 .pull-bottom-developed {
@@ -421,4 +418,60 @@
 .alert a { /* Reescrita AdminLTE para corrigir mensagens Flash*/
     color:#337ab7;
     text-decoration:none;
+}
+
+/* MENU DE ATALHOS */
+
+ul.top_profiles {
+    width: 100%;
+}
+ul.top_profiles li {
+    margin: 0;
+    padding-top: 5px;
+}
+.list-unstyled {
+    padding: 4px;
+    list-style: none;
+}
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: top;
+}
+.media {
+    height: 60px;
+    display: inline-table;
+    padding: 7px;
+}
+.media .media-body .media-title {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 800;
+}
+.media .media-body .btn-actions {
+    border-radius: 50%;
+    padding: 5px;
+    width: 24px;
+    text-align: center;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+.media .event {
+    margin-top: 3px;
+}
+.media .profile_thumb {
+    border: 1px solid;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    padding: 12px 12px;
+    text-align: center;
+}
+.media .profile_thumb i {
+    font-size: 25px;
+}
+.blue {
+    color: #3498DB;
 }

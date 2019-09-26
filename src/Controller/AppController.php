@@ -84,7 +84,7 @@ class AppController extends Controller
 
         //Define o locale
         if (!$this->request->Session()->read('locale')) {
-            $this->request->Session()->write('locale', 'pt_BR');
+            $this->request->Session()->write('locale', 'en_US');
         }//if (!$this->request->Session()->read('locale'))
 
     }
