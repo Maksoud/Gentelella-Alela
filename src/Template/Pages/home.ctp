@@ -100,10 +100,10 @@
                 <table class="table no-margin font-12">
                     <thead>
                         <tr>
-                            <th class="text-left"><?= __('Descrição'); ?></th>
-                            <th class="text-center col-xs-1"><?= __('Limite'); ?></th>
-                            <th class="text-center col-xs-1"><?= __('Utilizado'); ?></th>
-                            <th class="text-right col-xs-1"><?= __('Disponível'); ?></th>
+                            <th class="text-left text-nowrap"><?= __('Descrição'); ?></th>
+                            <th class="text-center col-xs-1 text-nowrap"><?= __('Limite'); ?></th>
+                            <th class="text-center col-xs-1 text-nowrap"><?= __('Utilizado'); ?></th>
+                            <th class="text-right col-xs-1 text-nowrap"><?= __('Disponível'); ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -162,10 +162,10 @@
                 <table class="table no-margin font-12">
                     <thead>
                         <tr>
-                            <th class="text-left"><?= __('Descrição'); ?></th>
-                            <th class="text-right col-xs-1"><?= __('Meta'); ?></th>
-                            <th class="text-center col-xs-1"><?= __('Progresso'); ?></th>
-                            <th class="text-right text-nowrap col-xs-1"><?= __('Total Poupado'); ?></th>
+                            <th class="text-left text-nowrap"><?= __('Descrição'); ?></th>
+                            <th class="text-right col-xs-1 text-nowrap"><?= __('Meta'); ?></th>
+                            <th class="text-center col-xs-1 text-nowrap"><?= __('Progresso'); ?></th>
+                            <th class="text-right col-xs-1 text-nowrap"><?= __('Total Poupado'); ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -427,10 +427,10 @@
                 <table class="table no-margin font-12">
                     <thead>
                         <tr>
-                            <th class="text-left"><?= __('Cartão'); ?></th>
-                            <th class="text-left col-xs-1"><?= __('Venc.'); ?></th>
-                            <th class="text-center col-xs-1"><?= __('Valor'); ?></th>
-                            <th class="text-center col-xs-1"><?= __('Ações'); ?></th>
+                            <th class="text-left text-nowrap"><?= __('Cartão'); ?></th>
+                            <th class="text-left col-xs-1 text-nowrap"><?= __('Venc.'); ?></th>
+                            <th class="text-center col-xs-1 text-nowrap"><?= __('Valor'); ?></th>
+                            <th class="text-center col-xs-1 text-nowrap"><?= __('Ações'); ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -454,7 +454,7 @@
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" id="numero4">
             <span class="text-bold"><i class="fa fa-newspaper-o"></i><?= __('Títulos por Plano de Contas'); ?>*</span>
-            <h5><small>(*) <?= __('Vencimentos até '); ?> <?= date('t/m/Y'); ?></small></h5>
+            <h5><small>(*) <?= __('Vencimentos até'); ?> <?= date('t/m/Y'); ?></small></h5>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -469,7 +469,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <?= __('01.01 - Plano de Contas'); ?>
+                            01.01 - <?= __('Plano de Contas'); ?>
                         </td>
                         <td class="text-right">
                             <?= $this->Number->precision(1234.56, 2); ?>
@@ -477,7 +477,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <?= __('01.02 - Plano de Contas 2'); ?>
+                            01.02 - <?= __('Plano de Contas'); ?>
                         </td>
                         <td class="text-right">
                             <?= $this->Number->precision(1234.56, 2); ?>
@@ -506,16 +506,16 @@
                 <table class="table no-margin font-12" style="margin-bottom:0;">
                     <thead>
                         <tr>
-                            <th class="text-left"><?= __('Data'); ?></th>
-                            <th class="text-left"><?= __('Descrição'); ?></th>
-                            <th class="text-center"><?= __('Valor'); ?></th>
-                            <th class="text-center col-xs-1"><?= __('Ações'); ?></th>
+                            <th class="text-left col-xs-1 text-nowrap"><?= __('Data'); ?></th>
+                            <th class="text-left text-nowrap"><?= __('Descrição'); ?></th>
+                            <th class="text-center col-xs-1 text-nowrap"><?= __('Valor'); ?></th>
+                            <th class="text-center col-xs-1 text-nowrap"><?= __('Ações'); ?></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><?= date('d/m', strtotime('2020-01-01')); ?></td>
-                            <td><?= __('Histórico do lançamento'); ?></td>
+                            <td><?= __('Detalhamento do lançamento'); ?></td>
                             <td class="text-right"><?= $this->Number->precision(1234.56, 2); ?></td>
                             <td class="btn-actions-group">
                                 <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar')]); ?>
@@ -579,7 +579,7 @@
                                 <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Nova Conta a Pagar/Receber'), 'title' => __('Incluir Registro')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos Financeiros'), 'title' => __('Movimentos Financeiros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos Financeiros'), 'title' => __('Gerar Relatórios')]); ?>
                                 </div>
                             </div>
                         </li>
@@ -592,7 +592,7 @@
                                 <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Movimento de Caixa'), 'title' => __('Incluir Registro')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Caixa'), 'title' => __('Movimentos de Caixa')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Caixa'), 'title' => __('Gerar Relatórios')]); ?>
                                 </div>
                             </div>
                         </li>
@@ -605,7 +605,7 @@
                                 <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Movimento de Banco'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Banco'), 'title' => 'Movimentos de Banco']); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Banco'), 'title' => 'Gerar Relatórios']); ?>
                                 </div>
                             </div>
                         </li>
@@ -618,7 +618,7 @@
                                 <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => 'Novo Movimento de Cartões', 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Cartões'), 'title' => __('Movimentos de Cartões')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Cartões'), 'title' => __('Gerar Relatórios')]); ?>
                                 </div>
                             </div>
                         </li>
@@ -631,7 +631,7 @@
                                 <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => 'Nova Transferência', 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Transferência'), 'title' => __('Movimentos de Transferências')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Transferência'), 'title' => __('Gerar Relatórios')]); ?>
                                 </div>
                             </div>
                         </li>
@@ -642,8 +642,9 @@
                             <div class="row media-body">
                                 <div class="media-title"><?= __('PLANEJAMENTOS'); ?></div>
                                 <div>
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Incluir Registros'), 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Planejamento'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Planejamentos e Metas'), 'title' => __('Gerar Relatórios')]); ?>
                                 </div>
                             </div>
                         </li>
@@ -769,14 +770,14 @@
                 <table class="table no-margin font-12 table-striped table-condensed">
                     <thead>
                         <tr>
-                            <th class="text-left col-xs-1"><?= __('Ordem'); ?></th>
-                            <th class="text-center col-xs-1"><?= __('Programação'); ?></th>
-                            <th class="text-left"><?= __('Histórico'); ?></th>
-                            <th class="text-left col-xs-1"><?= __('Origem'); ?></th>
-                            <th class="text-left col-xs-1"><?= __('Destino'); ?></th>
+                            <th class="text-left col-xs-1 text-nowrap"><?= __('Ordem'); ?></th>
+                            <th class="text-center col-xs-1 text-nowrap"><?= __('Programação'); ?></th>
+                            <th class="text-left text-nowrap"><?= __('Histórico'); ?></th>
+                            <th class="text-left col-xs-1 text-nowrap"><?= __('Origem'); ?></th>
+                            <th class="text-left col-xs-1 text-nowrap"><?= __('Destino'); ?></th>
                             <th></th>
-                            <th class="text-right"><?= __('Valor'); ?></th>
-                            <th class="text-center col-xs-1"><?= __('Ações'); ?></th>
+                            <th class="text-right col-xs-1 text-nowrap"><?= __('Valor'); ?></th>
+                            <th class="text-center col-xs-1 text-nowrap"><?= __('Ações'); ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -787,9 +788,9 @@
                                     <?= date('d/m/Y', strtotime('2020-01-01')); ?>
                                 </span>
                             </td>
-                            <td class="text-left"><?= __('Histórico da transferência'); ?></td>
-                            <td class="text-left"><?= 'Nome do Banco de Origem'; ?></td>
-                            <td class="text-left"><?= 'Nome do Banco de Destino'; ?></td>
+                            <td class="text-left"><?= __('Detalhamento da transferência'); ?></td>
+                            <td class="text-left"><?= __('Nome do Banco de Origem'); ?></td>
+                            <td class="text-left"><?= __('Nome do Banco de Destino'); ?></td>
                             <td class="text-right text-nowrap"><i class="fa fa-calendar"></i></td>
                             <td class="text-right text-nowrap"><?= $this->Number->precision(1234.56, 2); ?></td>
                             <td class="btn-actions-group">
@@ -832,15 +833,15 @@
                 <table class="table no-margin font-12 table-striped table-condensed">
                     <thead>
                         <tr>
-                            <th class="text-left"><?= __('Ordem'); ?></th>
-                            <th class="text-left"><?= __('Vencimento'); ?></th>
-                            <th class="text-left"><?= __('Documento'); ?></th>
-                            <th class="text-left"><?= __('Cliente/Fornecedor'); ?></th>
-                            <th class="text-left"><?= __('Histórico'); ?></th>
-                            <th class="text-right"><?= __('Valor'); ?></th>
+                            <th class="text-left col-xs-1 text-nowrap"><?= __('Ordem'); ?></th>
+                            <th class="text-left col-xs-1 text-nowrap"><?= __('Vencimento'); ?></th>
+                            <th class="text-left col-xs-1 text-nowrap"><?= __('Documento'); ?></th>
+                            <th class="text-left col-xs-1 text-nowrap"><?= __('Cliente/Fornecedor'); ?></th>
+                            <th class="text-left text-nowrap"><?= __('Histórico'); ?></th>
+                            <th class="text-right col-xs-1 text-nowrap"><?= __('Valor'); ?></th>
                             <th class="text-center"></th>
-                            <th class="text-center col-xs-1"><?= __('Status'); ?></th>
-                            <th class="text-center col-xs-1"><?= __('Ações'); ?></th>
+                            <th class="text-center col-xs-1 text-nowrap"><?= __('Status'); ?></th>
+                            <th class="text-center col-xs-1 text-nowrap"><?= __('Ações'); ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -853,7 +854,7 @@
                             </td>
                             <td class="text-left"><?= __('Código de Referência'); ?></td>
                             <td class="text-left"><?= __('Nome do Cliente'); ?></td>
-                            <td class="text-left"><?= __('Histórico do lançamento'); ?></td>
+                            <td class="text-left"><?= __('Detalhamento do lançamento'); ?></td>
                             <td class="text-right text-nowrap"><?= $this->Number->precision(1234.56, 2); ?></td>
                             <td class="text-center">
                                 <i class="fa fa-plus-circle" style="color:lightblue;" title="<?= __('Crédito'); ?>"></i>
@@ -902,15 +903,15 @@
                 <table class="table no-margin font-12 table-striped table-condensed">
                     <thead>
                         <tr>
-                            <th class="text-left"><?= __('Ordem'); ?></th>
-                            <th class="text-left"><?= __('Vencimento'); ?></th>
-                            <th class="text-left"><?= __('Documento'); ?></th>
-                            <th class="text-left"><?= __('Cliente/Fornecedor'); ?></th>
-                            <th class="text-left"><?= __('Histórico'); ?></th>
-                            <th class="text-right"><?= __('Valor'); ?></th>
+                            <th class="text-left col-xs-1 text-nowrap"><?= __('Ordem'); ?></th>
+                            <th class="text-left col-xs-1 text-nowrap"><?= __('Vencimento'); ?></th>
+                            <th class="text-left col-xs-1 text-nowrap"><?= __('Documento'); ?></th>
+                            <th class="text-left col-xs-1 text-nowrap"><?= __('Cliente/Fornecedor'); ?></th>
+                            <th class="text-left text-nowrap"><?= __('Histórico'); ?></th>
+                            <th class="text-right col-xs-1 text-nowrap"><?= __('Valor'); ?></th>
                             <th class="text-center"></th>
-                            <th class="text-center col-xs-1"><?= __('Status'); ?></th>
-                            <th class="text-center col-xs-1"><?= __('Ações'); ?></th>
+                            <th class="text-center col-xs-1 text-nowrap"><?= __('Status'); ?></th>
+                            <th class="text-center col-xs-1 text-nowrap"><?= __('Ações'); ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -923,7 +924,7 @@
                             </td>
                             <td class="text-left"><?= __('Código de Referência'); ?></td>
                             <td class="text-left"><?= __('Nome do Fornecedor'); ?></td>
-                            <td class="text-left"><?= __('Histórico do lançamento'); ?></td>
+                            <td class="text-left"><?= __('Detalhamento'); ?></td>
                             <td class="text-right text-nowrap"><?= $this->Number->precision(1234.56, 2); ?></td>
                             <td class="text-center">
                                 <i class="fa fa-minus-circle" style="color:#e4b9c0;" title="<?= __('Débito'); ?>"></i>

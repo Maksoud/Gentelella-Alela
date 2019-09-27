@@ -12,6 +12,9 @@ msgstr "Logout"
 msgid "Carregando"
 msgstr "Loading"
 
+msgid "Carregando..."
+msgstr "Loading..."
+
 msgid "Mudar de Perfil"
 msgstr "Profile Change"
 
@@ -132,12 +135,146 @@ msgstr "IN OPEN EXPENSES"
 msgid "Dicas aleatórias de uso do sistema"
 msgstr "Random tips about the system use"
 
+msgid "CONTAS P/R"
+msgstr "EXPENSES/RECIPES"
+
+msgid "CAIXAS"
+msgstr "BOXES"
+
+msgid "BANCOS"
+msgstr "BANKS"
+
+msgid "CARTÕES"
+msgstr "CARDS"
+
+msgid "TRANSFERÊNCIAS"
+msgstr "TRANSFERS"
+
+msgid "PLANEJAMENTOS"
+msgstr "PLANS"
+
+msgid "FORNECEDORES"
+msgstr "PROVIDERS"
+
+msgid "CLIENTES"
+msgstr "CUSTOMERS"
+
+msgid "PLANO DE CONTAS"
+msgstr "ACCOUNT PLANS"
+
+msgid "CENTRO DE CUSTOS"
+msgstr "COSTS"
+
+msgid "Incluir Registros"
+msgstr "Add New Record"
+
+msgid "Listar Registros"
+msgstr "Index Records"
+
+msgid "Gerar Relatórios"
+msgstr "Reports"
+
+msgid "Nova Conta a Pagar/Receber"
+msgstr "New Expense/Recipe"
+
+msgid "Relatório - Movimentos Financeiros"
+msgstr "Report - Expenses/Recipes Launches"
+
+msgid "Novo Movimento de Caixa"
+msgstr "New Box Record"
+
+msgid "Relatório - Movimentos de Caixa"
+msgstr "Report - Boxes Launches"
+
+msgid "Novo Movimento de Banco"
+msgstr "New Bank Record"
+
+msgid "Relatório - Movimentos de Banco"
+msgstr "Report - Banks Launches"
+
+msgid "Novo Movimento de Cartões"
+msgstr "New Card Record"
+
+msgid "Nova Transferência"
+msgstr "New Transfer Record"
+
+msgid "Novo Planejamento"
+msgstr "New Achievement Record"
+
+msgid "Novo Fornecedor"
+msgstr "New Provider"
+
+msgid "Novo Cliente"
+msgstr "New Customer"
+
+msgid "Novo Banco"
+msgstr "New Bank"
+
+msgid "Novo Caixa"
+msgstr "New Box"
+
+msgid "Novo Cartão"
+msgstr "New Card"
+
+msgid "Novo Plano de Contas"
+msgstr "New Account Plans"
+
+msgid "Novo Centro de Custos"
+msgstr "New Costs"
+
+msgid "Limite"
+msgstr "Limit"
+
+msgid "Utilizado"
+msgstr "Used"
+
+msgid "Disponível"
+msgstr "Available"
+
+msgid "CRÉDITO DISPONÍVEL"
+msgstr "AVAILABLE CREDIT"
+
+msgid "CRÉDITO UTILIZADO"
+msgstr "USED CREDIT"
+
+msgid "Meta"
+msgstr "Target"
+
+msgid "Nome do Banco"
+msgstr "Bank's name"
+
+msgid "Nome do Caixa"
+msgstr "Box's name"
+
+msgid "Nome do Cartão"
+msgstr "Card's name"
+
+msgid "Detalhamento da transferência"
+msgstr "Transfer Details"
+
+msgid "Nome do Banco de Origem"
+msgstr "Source Bank's Name"
+
+msgid "Nome do Banco de Destino"
+msgstr "Destination Bank's Name"
+
+msgid "Código de Referência"
+msgstr "Refereer Code"
+
+msgid "Nome do Cliente"
+msgstr "Customer's Name"
+
+msgid "Nome do Fornecedor"
+msgstr "Provider's name"
+
+msgid "Detalhamento do lançamento"
+msgstr "Launch Detail"
+
 msgid ""
 msgstr ""
 
-
-
-
+msgid ""
+msgstr ""
 
 msgid "Validade do Sistema:"
 msgstr "System Valid Date:"
@@ -539,9 +676,6 @@ msgstr "Customers"
 msgid "Cliente"
 msgstr "Customer"
 
-msgid "Novo Cliente"
-msgstr "New Customer"
-
 msgid "Adicionar Cliente"
 msgstr "Add Customer"
 
@@ -636,9 +770,6 @@ msgstr "Providers"
 msgid "Fornecedor"
 msgstr "Provider"
 
-msgid "Novo Fornecedor"
-msgstr "New Provider"
-
 msgid "Adicionar Fornecedor"
 msgstr "Add Provider"
 
@@ -668,9 +799,6 @@ msgstr "Boxes"
 msgid "Caixa"
 msgstr "Box"
 
-msgid "Novo Caixa"
-msgstr "New Box"
-
 msgid "Adicionar Caixa"
 msgstr "Add Box"
 
@@ -680,9 +808,6 @@ msgstr "Add Box"
 
 msgid "Bancos"
 msgstr "Banks"
-
-msgid "Novo Banco"
-msgstr "New Bank"
 
 msgid "Adicionar Banco"
 msgstr "Add Bank"
@@ -742,9 +867,6 @@ msgstr "Cards"
 msgid "Cartão"
 msgstr "Card"
 
-msgid "Novo Cartão"
-msgstr "New Card"
-
 msgid "Adicionar Cartão"
 msgstr "Add Card"
 
@@ -779,9 +901,6 @@ msgstr "Account Plans"
 msgid "Plano de Contas"
 msgstr "Account Plans"
 
-msgid "Novo Plano de Contas"
-msgstr "New Account Plans"
-
 msgid "Adicionar Plano de Contas"
 msgstr "Add Account Plans"
 
@@ -800,9 +919,6 @@ msgstr "Costs"
 
 msgid "Centro de Custos"
 msgstr "Costs"
-
-msgid "Novo Centro de Custos"
-msgstr "New Costs"
 
 msgid "Adicionar Centro de Custos"
 msgstr "Add New Costs"
@@ -1014,9 +1130,6 @@ msgstr "Launch Date"
 msgid "Lançamentos CPR"
 msgstr "Launches of Exp/Rec"
 
-msgid "Nova Conta a Pagar/Receber"
-msgstr "New Expense/Recipe"
-
 msgid "Receita"
 msgstr "Recipe"
 
@@ -1213,7 +1326,7 @@ msgid "Registro Pago Parcialmente"
 msgstr "Partial Payment"
 
 /******************************************************************************/
-/*HINTS*/
+/* TITLES */
 /******************************************************************************/
 
 msgid "Legenda:"
@@ -1227,6 +1340,9 @@ msgstr "bills are due today and"
 
 msgid "Contas a Vencer."
 msgstr "bills not matured."
+
+msgid "Agendamentos de Resgates/Aplicações (Transferências)"
+msgstr "Schedules of Savings/Applications (Transfers)"
 
 msgid "Digite o nome do cliente ou adicione"
 msgstr "Input the client name or add one"
@@ -1253,9 +1369,6 @@ msgstr "Vinculated Types: CPR: Launches of Expenses/Recipes; TRN: Transfers"
 /*MOVIMENTOS DE CAIXAS*/
 /******************************************************************************/
 
-msgid "Movimentos de Caixa"
-msgstr "Boxes Moviments"
-
 msgid "Movimentos de Caixas"
 msgstr "Boxes Moviments"
 
@@ -1268,9 +1381,6 @@ msgstr "Boxes Mov."
 /******************************************************************************/
 /*MOVIMENTOS DE BANCOS*/
 /******************************************************************************/
-
-msgid "Movimentos de Banco"
-msgstr "Banks Moviments"
 
 msgid "Movimentos de Bancos"
 msgstr "Banks Moviments"
