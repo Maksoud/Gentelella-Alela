@@ -202,7 +202,7 @@
     <div class="box panel panel-default box-shadow" style="padding:0;">
         <div class="panel-heading box-header" id="numero2" style="background-color:#fcf8e3;">
             <span class="text-bold"><i class="fa fa-list-ul"></i><?= __('Extratos Financeiros'); ?>*</span>
-            <h5><small>(*) <?= __('Vencimento até'); ?> <?= date('t/m/Y'); ?></small></h5>
+            <h5><small>(*) <?= __('Vencimentos até'); ?> <?= date('t/m/Y'); ?></small></h5>
 
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse">
@@ -631,7 +631,7 @@
                                 <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => 'Nova Transferência', 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Transferência'), 'title' => __('Gerar Relatórios')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Transferências'), 'title' => __('Gerar Relatórios')]); ?>
                                 </div>
                             </div>
                         </li>
@@ -773,10 +773,10 @@
                             <th class="text-left col-xs-1 text-nowrap"><?= __('Ordem'); ?></th>
                             <th class="text-center col-xs-1 text-nowrap"><?= __('Programação'); ?></th>
                             <th class="text-left text-nowrap"><?= __('Histórico'); ?></th>
+                            <th class="text-center col-xs-1"></th>
+                            <th class="text-right col-xs-1 text-nowrap"><?= __('Valor'); ?></th>
                             <th class="text-left col-xs-1 text-nowrap"><?= __('Origem'); ?></th>
                             <th class="text-left col-xs-1 text-nowrap"><?= __('Destino'); ?></th>
-                            <th></th>
-                            <th class="text-right col-xs-1 text-nowrap"><?= __('Valor'); ?></th>
                             <th class="text-center col-xs-1 text-nowrap"><?= __('Ações'); ?></th>
                         </tr>
                     </thead>
@@ -789,10 +789,10 @@
                                 </span>
                             </td>
                             <td class="text-left"><?= __('Detalhamento da transferência'); ?></td>
-                            <td class="text-left"><?= __('Nome do Banco de Origem'); ?></td>
-                            <td class="text-left"><?= __('Nome do Banco de Destino'); ?></td>
                             <td class="text-right text-nowrap"><i class="fa fa-calendar"></i></td>
                             <td class="text-right text-nowrap"><?= $this->Number->precision(1234.56, 2); ?></td>
+                            <td class="text-left"><?= __('Nome do Banco de Origem'); ?></td>
+                            <td class="text-left"><?= __('Nome do Banco de Destino'); ?></td>
                             <td class="btn-actions-group">
                                 <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar')]); ?>
                                 <?= $this->Form->postLink('', ['controller' => 'Pages', 'action' => 'content'], ['confirm' => __('Você tem certeza que deseja confimar a transferência na data programada?'), 'class' => 'btn btn-actions fa fa-check', 'data-loading-text' => __('Carregando...'), 'title' => 'Confirmar']); ?>
@@ -839,7 +839,7 @@
                             <th class="text-left col-xs-1 text-nowrap"><?= __('Cliente/Fornecedor'); ?></th>
                             <th class="text-left text-nowrap"><?= __('Histórico'); ?></th>
                             <th class="text-right col-xs-1 text-nowrap"><?= __('Valor'); ?></th>
-                            <th class="text-center"></th>
+                            <th class="text-center col-xs-1"></th>
                             <th class="text-center col-xs-1 text-nowrap"><?= __('Status'); ?></th>
                             <th class="text-center col-xs-1 text-nowrap"><?= __('Ações'); ?></th>
                         </tr>
@@ -909,7 +909,7 @@
                             <th class="text-left col-xs-1 text-nowrap"><?= __('Cliente/Fornecedor'); ?></th>
                             <th class="text-left text-nowrap"><?= __('Histórico'); ?></th>
                             <th class="text-right col-xs-1 text-nowrap"><?= __('Valor'); ?></th>
-                            <th class="text-center"></th>
+                            <th class="text-center col-xs-1"></th>
                             <th class="text-center col-xs-1 text-nowrap"><?= __('Status'); ?></th>
                             <th class="text-center col-xs-1 text-nowrap"><?= __('Ações'); ?></th>
                         </tr>

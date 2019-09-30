@@ -51,7 +51,7 @@
                     <div class="<?= $double ?>">
                         <label class="<?= $label ?>">
                             <?= __('Valor do Pagamento') ?>
-                            <i class="fa fa-info-circle" data-toggle="tooltip" title="<?= __('Informe o valor do pago, considerando juros ou descontos.') ?>"></i>
+                            <i class="fa fa-info-circle" data-toggle="tooltip" title="<?= __('Informe o valor pago, considerando juros ou descontos.') ?>"></i>
                         </label>
                         <div class="input-group">
                             <span class="input-group-addon input-border-left"><?= __('R$') ?></span>
@@ -152,7 +152,7 @@
                         </label>
                         <div class="input-group">
                             <div class="input-group-addon input-border-left">
-                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-primary btn-custom fa fa-plus', 'data-loading-text' => '', 'data-title' => __('Nova Carteira'), 'title' => __('Adicionar Carteira'), 'escape' => false]) ?>
+                                <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-primary btn-custom fa fa-plus', 'data-loading-text' => '', 'data-title' => __('Novo Caixa'), 'title' => __('Adicionar Caixa'), 'escape' => false]) ?>
                             </div>
                             <input id="boxes_title" class="form-control input-border-right" type="text" autocomplete="off" placeholder="<?= __('Digite o nome da carteira ou adicione') ?>"><div class="loadingBoxes"></div>
                         </div>

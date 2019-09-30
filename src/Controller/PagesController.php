@@ -306,7 +306,7 @@ class PagesController extends AppController
 
             }//else if ($user)
             
-            $this->Flash->error(__('Usuário/senha incorreto, tente novamente'));
+            //$this->Flash->error(__('Usuário/senha incorreto, tente novamente'));
             return $this->redirect($this->Auth->logout());
         }
     }

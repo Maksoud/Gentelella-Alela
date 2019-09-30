@@ -57,9 +57,6 @@ msgstr "Credit Limit"
 msgid "Atalhos"
 msgstr "Shortcuts"
 
-msgid "Progresso dos Planejamentos"
-msgstr "Plannings Progress"
-
 msgid "Extratos Financeiros"
 msgstr "Financial Extracts"
 
@@ -68,9 +65,6 @@ msgstr "Credit Cards Payments"
 
 msgid "Títulos por Plano de Contas"
 msgstr "Payments by Account Plans"
-
-msgid "Planejamentos & Metas"
-msgstr "Plannings & Achievements"
 
 msgid "Saldos atualizados em"
 msgstr "Updated balances in"
@@ -123,9 +117,6 @@ msgstr "In Open"
 msgid "Programação"
 msgstr "Scheduled"
 
-msgid "TRANSFERÊNCIAS PROGRAMADAS"
-msgstr "SCHEDULED TRANSFERS"
-
 msgid "CONTAS A RECEBER"
 msgstr "IN OPEN RECIPES"
 
@@ -137,21 +128,6 @@ msgstr "Random tips about the system use"
 
 msgid "CONTAS P/R"
 msgstr "EXPENSES/RECIPES"
-
-msgid "CAIXAS"
-msgstr "BOXES"
-
-msgid "BANCOS"
-msgstr "BANKS"
-
-msgid "CARTÕES"
-msgstr "CARDS"
-
-msgid "TRANSFERÊNCIAS"
-msgstr "TRANSFERS"
-
-msgid "PLANEJAMENTOS"
-msgstr "PLANS"
 
 msgid "FORNECEDORES"
 msgstr "PROVIDERS"
@@ -177,44 +153,14 @@ msgstr "Reports"
 msgid "Nova Conta a Pagar/Receber"
 msgstr "New Expense/Recipe"
 
-msgid "Relatório - Movimentos Financeiros"
-msgstr "Report - Expenses/Recipes Launches"
-
-msgid "Novo Movimento de Caixa"
-msgstr "New Box Record"
-
-msgid "Relatório - Movimentos de Caixa"
-msgstr "Report - Boxes Launches"
-
-msgid "Novo Movimento de Banco"
-msgstr "New Bank Record"
-
-msgid "Relatório - Movimentos de Banco"
-msgstr "Report - Banks Launches"
-
 msgid "Novo Movimento de Cartões"
 msgstr "New Card Record"
-
-msgid "Nova Transferência"
-msgstr "New Transfer Record"
-
-msgid "Novo Planejamento"
-msgstr "New Achievement Record"
 
 msgid "Novo Fornecedor"
 msgstr "New Provider"
 
 msgid "Novo Cliente"
 msgstr "New Customer"
-
-msgid "Novo Banco"
-msgstr "New Bank"
-
-msgid "Novo Caixa"
-msgstr "New Box"
-
-msgid "Novo Cartão"
-msgstr "New Card"
 
 msgid "Novo Plano de Contas"
 msgstr "New Account Plans"
@@ -240,24 +186,6 @@ msgstr "USED CREDIT"
 msgid "Meta"
 msgstr "Target"
 
-msgid "Nome do Banco"
-msgstr "Bank's name"
-
-msgid "Nome do Caixa"
-msgstr "Box's name"
-
-msgid "Nome do Cartão"
-msgstr "Card's name"
-
-msgid "Detalhamento da transferência"
-msgstr "Transfer Details"
-
-msgid "Nome do Banco de Origem"
-msgstr "Source Bank's Name"
-
-msgid "Nome do Banco de Destino"
-msgstr "Destination Bank's Name"
-
 msgid "Código de Referência"
 msgstr "Refereer Code"
 
@@ -270,12 +198,6 @@ msgstr "Provider's name"
 msgid "Detalhamento do lançamento"
 msgstr "Launch Detail"
 
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
 msgid "Validade do Sistema:"
 msgstr "System Valid Date:"
 
@@ -287,24 +209,6 @@ msgstr "Selected Plan:"
 
 msgid "Não Selecionado"
 msgstr "Non-selected"
-
-msgid "Limitado"
-msgstr "Limited"
-
-msgid "Pessoal"
-msgstr "Personal"
-
-msgid "Simples"
-msgstr "Simple"
-
-msgid "Completo"
-msgstr "Full"
-
-msgid "Super-Administrador"
-msgstr "Super"
-
-msgid "Administrador"
-msgstr "Administrator"
 
 msgid "Usuário"
 msgstr "User"
@@ -366,9 +270,6 @@ msgstr "Payments in "
 msgid "Títulos recorrentes são gerados após o vencimento."
 msgstr "Recurring payments are generated after the pay day."
 
-msgid "Saldo"
-msgstr "Balance"
-
 msgid "Venc."
 msgstr "Pay Date"
 
@@ -412,21 +313,6 @@ msgstr "Financial Launches"
 msgid "Contas a Pagar/Receber"
 msgstr "Expenses and Recipes"
 
-msgid "Movimentos de Caixa"
-msgstr "Boxes Moviments"
-
-msgid "Movimentos de Banco"
-msgstr "Banks Moviments"
-
-msgid "Lançamentos de Cartão"
-msgstr "Cards Launches"
-
-msgid "Transferências"
-msgstr "Transfers"
-
-msgid "Planejamentos"
-msgstr "Plannings"
-
 msgid "Lançamentos de Estoque"
 msgstr "Stock Launches"
 
@@ -460,29 +346,11 @@ msgstr "Customers"
 msgid "Fornecedores"
 msgstr "Providers"
 
-msgid "Caixas"
-msgstr "Boxes"
-
-msgid "Bancos"
-msgstr "Banks"
-
-msgid "Cartões"
-msgstr "Cards"
-
 msgid "Planos de Contas"
 msgstr "Account Plans"
 
 msgid "Centro de Custos"
 msgstr "Costs"
-
-msgid "Relatórios"
-msgstr "Reports"
-
-msgid "Relatório Geral"
-msgstr "General Report"
-
-msgid "Relação de Pagamentos"
-msgstr "List of Payments"
 
 msgid "Chamados de Suporte"
 msgstr "Support Calls"
@@ -541,7 +409,7 @@ msgid "Usuário da Alteração"
 msgstr "Modified By"
 
 /******************************************************************************/
-/*CADASTROS*/
+/* RECORDS */
 /******************************************************************************/
 
 msgid "Data"
@@ -572,7 +440,7 @@ msgid "Descrição"
 msgstr "Description"
 
 /******************************************************************************/
-/*STATUS*/
+/* STATUS */
 /******************************************************************************/
 
 msgid "Automático"
@@ -627,7 +495,7 @@ msgid "Processando"
 msgstr "Processing"
 
 /******************************************************************************/
-/*MENU ACTIONS*/
+/* MENU ACTIONS */
 /******************************************************************************/
 
 msgid "Ações"
@@ -667,7 +535,7 @@ msgid "Avançar"
 msgstr "Forward"
 
 /******************************************************************************/
-/*CADASTROS*/
+/* RECORDS */
 /******************************************************************************/
 
 msgid "Clientes"
@@ -685,29 +553,11 @@ msgstr "Company"
 msgid "Pessoa Física"
 msgstr "Person"
 
-msgid "Nome/Razão Social"
-msgstr "Name/Company Name"
-
-msgid "Nome ou Razão Social"
-msgstr "Name or Company Name"
-
-msgid "Nome / Razão Social"
-msgstr "Name / Company Name"
-
-msgid "Nome Fantasia"
-msgstr "Company Name"
-
 msgid "RG/Insc. Estadual: "
 msgstr "ID Number: "
 
 msgid "RG/Insc. Estadual"
 msgstr "ID Number"
-
-msgid "E-mail: "
-msgstr "Email Address: "
-
-msgid "E-mail"
-msgstr "Email Address"
 
 msgid "Observações: "
 msgstr "Observations: "
@@ -715,44 +565,8 @@ msgstr "Observations: "
 msgid "Observações"
 msgstr "Observations"
 
-msgid "ENDEREÇO"
-msgstr "ADDRESS"
-
-msgid "Logradouro"
-msgstr "Street/Avenue"
-
 msgid "Ponto de Referência"
 msgstr "Reference Localization"
-
-msgid "Bairro"
-msgstr "District"
-
-msgid "Cidade"
-msgstr "City"
-
-msgid "Estado"
-msgstr "State"
-
-msgid "CEP"
-msgstr "Postal Address"
-
-msgid "CONTATO"
-msgstr "CONTACT"
-
-msgid "Telefone"
-msgstr "Phone Number"
-
-msgid "Telefone 1"
-msgstr "Phone Number 1"
-
-msgid "Telefone 2"
-msgstr "Phone Number 2"
-
-msgid "Telefone 3"
-msgstr "Phone Number 3"
-
-msgid "Telefone 4"
-msgstr "Phone Number 4"
 
 msgid "CPF/CNPJ"
 msgstr "Identification Documents"
@@ -761,7 +575,7 @@ msgid "Tipo"
 msgstr "Type"
 
 /******************************************************************************/
-/*FORNECEDORES*/
+/* PROVIDERS */
 /******************************************************************************/
 
 msgid "Fornecedores"
@@ -777,7 +591,7 @@ msgid "Cliente/Fornecedor"
 msgstr "Customer/Provider"
 
 /******************************************************************************/
-/*TRANSPORTADORAS*/
+/* TRANSPORTERS */
 /******************************************************************************/
 
 msgid "Transportadoras"
@@ -790,109 +604,88 @@ msgid "Novo Transportadora"
 msgstr "New Transporter"
 
 /******************************************************************************/
-/*CAIXAS*/
+/* BOXES */
 /******************************************************************************/
 
 msgid "Caixas"
 msgstr "Boxes"
 
+msgid "CAIXAS"
+msgstr "BOXES"
+
 msgid "Caixa"
 msgstr "Box"
+
+msgid "Novo Caixa"
+msgstr "New Box"
 
 msgid "Adicionar Caixa"
 msgstr "Add Box"
 
+msgid "Nome do Caixa"
+msgstr "Box's name"
+
 /******************************************************************************/
-/*BANCOS*/
+/* BANKS */
 /******************************************************************************/
 
 msgid "Bancos"
 msgstr "Banks"
 
-msgid "Adicionar Banco"
-msgstr "Add Bank"
+msgid "BANCOS"
+msgstr "BANKS"
 
 msgid "Banco"
 msgstr "Bank"
 
-msgid "BANCOS E/OU CAIXAS"
-msgstr "BANKS AND/OR BOXES"
+msgid "Novo Banco"
+msgstr "New Bank"
 
-msgid "DADOS DA CONTA"
-msgstr "ACCOUNT DATA"
+msgid "Adicionar Banco"
+msgstr "Add Bank"
 
-msgid "Nº Banco"
-msgstr "Bank Code"
+msgid "Bancos e Caixas"
+msgstr "Banks and Boxes"
 
-msgid "Agência"
-msgstr "Agency Bank"
+msgid "Nome do Banco"
+msgstr "Bank's name"
 
-msgid "Conta"
-msgstr "Account Number"
+msgid "Nome do Banco de Origem"
+msgstr "Source Bank's Name"
 
-msgid "Tipo de Conta"
-msgstr "Account Type"
+msgid "Nome do Banco de Destino"
+msgstr "Destination Bank's Name"
 
-msgid "Conta Corrente"
-msgstr "Checking Account"
-
-msgid "Corrente"
-msgstr "Checking Account"
-
-msgid "Conta Poupança"
-msgstr "Saving Account"
-
-msgid "Poupança"
-msgstr "Saving Account"
-
-msgid "Conta Aplicação"
-msgstr "Application Account"
-
-msgid "Aplicação"
-msgstr "Application Account"
-
-msgid "Conta Salário"
-msgstr "Salary Account"
-
-msgid "Salário"
-msgstr "Salary Account"
+msgid "Nome do Banco"
+msgstr "Bank's name"
 
 /******************************************************************************/
-/*CARTÕES*/
+/* CARDS */
 /******************************************************************************/
 
 msgid "Cartões"
 msgstr "Cards"
 
+msgid "CARTÕES"
+msgstr "CARDS"
+
 msgid "Cartão"
 msgstr "Card"
 
-msgid "Adicionar Cartão"
-msgstr "Add Card"
+msgid "Novo Cartão"
+msgstr "New Card"
 
-msgid "Editar Limite de Crédito"
-msgstr "Edit Credit Limit"
+msgid "Nome do Cartão"
+msgstr "Card's name"
 
-msgid "Limite de Crédito"
-msgstr "Credit Limit"
+msgid "Lançamentos de Cartão"
+msgstr "Cards Launches"
 
-msgid "Uso do Limite"
-msgstr "Used Limit"
-
-msgid "Bandeira"
-msgstr "Card Brand"
-
-msgid "Cartão de Crédito"
-msgstr "Credit Card"
-
-msgid "Dia de Vencimento"
-msgstr "Pay Day"
-
-msgid "Melhor dia de Compra"
-msgstr "Best Day to Buy"
+msgid "Limite de Cartões"
+msgstr "Cards Limit"
 
 /******************************************************************************/
-/*PLANOS DE CONTAS*/
+/* ACCOUNT PLANS */
 /******************************************************************************/
 
 msgid "Planos de Contas"
@@ -901,78 +694,34 @@ msgstr "Account Plans"
 msgid "Plano de Contas"
 msgstr "Account Plans"
 
-msgid "Adicionar Plano de Contas"
-msgstr "Add Account Plans"
-
-msgid "Classificação"
-msgstr "Classification"
-
-msgid "Grupo"
-msgstr "Group"
-
 /******************************************************************************/
-/*CENTROS DE CUSTOS*/
+/* COSTS */
 /******************************************************************************/
 
 msgid "Centros de Custos"
 msgstr "Costs"
 
-msgid "Centro de Custos"
-msgstr "Costs"
-
-msgid "Adicionar Centro de Custos"
-msgstr "Add New Costs"
+msgid "CENTRO DE CUSTOS"
+msgstr "COSTS"
 
 /******************************************************************************/
-/*TIPOS DE DOCUMENTOS*/
+/* PLANS */
 /******************************************************************************/
 
-msgid "Tipos de Documentos"
-msgstr "Document Types"
+msgid "PLANEJAMENTOS"
+msgstr "PLANS"
 
-msgid "Novo Tipo de Documentos"
-msgstr "New Document Types"
+msgid "Novo Planejamento"
+msgstr "New Achievement Record"
 
-msgid "Adicionar Tipo de Documentos"
-msgstr "Add Document Types"
+msgid "Progresso dos Planejamentos"
+msgstr "Plannings Progress"
 
-msgid "Tipo de Documento"
-msgstr "Document Type"
-
-msgid "Agrupa Pagamentos"
-msgstr "Agroup Payments"
-
-msgid "Duplica Documento"
-msgstr "Duplicate Document Number"
-
-/******************************************************************************/
-/*TIPOS DE EVENTOS*/
-/******************************************************************************/
-
-msgid "Tipos de Eventos"
-msgstr "Event Types"
-
-msgid "Novo Tipo de Eventos"
-msgstr "New Event Types"
-
-msgid "Adicionar Tipo de Eventos"
-msgstr "Add Event Types"
-
-msgid "Tipo de Evento"
-msgstr "Event Type"
-
-/******************************************************************************/
-/*PLANEJAMENTOS*/
-/******************************************************************************/
+msgid "Planejamentos & Metas"
+msgstr "Plannings & Achievements"
 
 msgid "Progresso"
 msgstr "Progress"
-
-msgid "Planejamento"
-msgstr "Planning"
-
-msgid "Concluído"
-msgstr "Finished"
 
 msgid "Total Poupado"
 msgstr "Saved Total"
@@ -981,56 +730,44 @@ msgid "TOTAL POUPADO"
 msgstr "SAVED TOTAL"
 
 /******************************************************************************/
-/*RELATÓRIOS*/
+/* REPORTS */
 /******************************************************************************/
 
-msgid "Relatório Geral"
-msgstr "Cash Flow"
+msgid "Gerar Relatórios"
+msgstr "Make Reports"
 
-msgid "Fluxo Diário"
-msgstr "Cash Flow"
+msgid "Relatórios"
+msgstr "Reports"
+
+msgid "Relatório Geral"
+msgstr "General Report"
 
 msgid "Relação de Pagamentos"
 msgstr "List of Payments"
 
-msgid "SELECIONE UM PERÍODO"
-msgstr "SELECT A PERIOD"
-
-msgid "OPCIONAIS"
-msgstr "OPTIONALS"
-
-msgid "FILTROS"
-msgstr "FILTERS"
-
-msgid "Data Inicial"
-msgstr "Initial Date"
-
-msgid "Data Final"
-msgstr "Final Date"
-
-msgid "Ambos"
-msgstr "Both"
-
-msgid "Todos"
-msgstr "All"
-
-msgid "Situação"
-msgstr "Situation"
-
 msgid "Detalhamento"
 msgstr "Details"
 
-msgid "Analítico"
-msgstr "Analytical"
+msgid "Relatório - Movimentos Financeiros"
+msgstr "Report - Expenses/Recipes Launches"
 
-msgid "Sintético"
-msgstr "Summary Report"
+msgid "Relatório - Movimentos de Caixa"
+msgstr "Report - Boxes Launches"
 
-msgid "Sintético (Plano de Contas)"
-msgstr "Summary Report (Account Plans)"
+msgid "Relatório - Movimentos de Banco"
+msgstr "Report - Banks Launches"
 
-msgid "Padrão"
-msgstr "Default"
+msgid "Relatório - Movimentos de Cartões"
+msgstr "Report - Cards Launches"
+
+msgid "Relatório - Transferências"
+msgstr "Report - Transfers"
+
+msgid "Relatório - Relação de Pagamentos"
+msgstr "Report - List of Payments"
+
+msgid "Relatório - Planejamento e Metas"
+msgstr "Report - Plannings and Achievements"
 
 /******************************************************************************/
 /* DATES */
@@ -1118,35 +855,85 @@ msgid "Dez"
 msgstr "Dec"
 
 /******************************************************************************/
-/*MOVIMENTOS*/
+/* INTERNAL PAGE */
+/******************************************************************************/
+
+msgid "Código"
+msgstr "Code"
+
+msgid "Código do Registro"
+msgstr "Record's code"
+
+msgid "Página Interna"
+msgstr "Internal Page"
+
+msgid "Excluir Selecionados"
+msgstr "Delete Selected"
+
+msgid "Prazo de Entrega"
+msgstr "Deliver Deadline"
+
+msgid "Total Geral"
+msgstr "Grand Total"
+
+msgid "Último"
+msgstr "Last"
+
+msgid "Finalizar Compra"
+msgstr "Finish"
+
+msgid "FINALIZADO"
+msgstr "Finished"
+
+msgid "NOME DO CLIENTE"
+msgstr "Customer's name"
+
+/******************************************************************************/
+/* MODAL */
+/******************************************************************************/
+
+msgid "Informe a data da requisição."
+msgstr ""
+
+msgid "Informe o código de pedido do cliente."
+msgstr ""
+
+msgid "Informe o valor do frete."
+msgstr ""
+
+msgid "Informe a data do limite para entrega da venda."
+msgstr ""
+
+msgid "Informe a forma de pagamento acertado ou adicione nas observações."
+msgstr ""
+
+msgid "Informe a data do limite para entrega da venda."
+msgstr ""
+
+msgid "Informe ao menos 3 caracteres do nome do produto para listar os itens."
+msgstr ""
+
+msgid "Informe a data do pagamento desse lançamento."
+msgstr ""
+
+msgid "Informe o valor pago, considerando juros ou descontos."
+msgstr ""
+
+/******************************************************************************/
+/* LAUNCHES */
 /******************************************************************************/
 
 msgid "Lançamentos"
 msgstr "Launches"
 
-msgid "Lançamento"
-msgstr "Launch Date"
-
 msgid "Lançamentos CPR"
 msgstr "Launches of Exp/Rec"
 
-msgid "Receita"
-msgstr "Recipe"
-
-msgid "Despesa"
-msgstr "Expense"
-
-msgid "Receitas"
-msgstr "Recipes"
-
 msgid "Despesas"
 msgstr "Expenses"
 
 msgid "Receitas"
 msgstr "Recipes"
-
-msgid "Despesas"
-msgstr "Expenses"
 
 msgid "Crédito"
 msgstr "Credit"
@@ -1238,9 +1025,6 @@ msgstr "Origin of Payment"
 msgid "Saldos de Bancos/Caixas"
 msgstr "Bank/Box Balances"
 
-msgid "Bancos e Caixas"
-msgstr "Banks and Boxes"
-
 msgid "SALDO TOTAL"
 msgstr "TOTAL BALANCE"
 
@@ -1289,15 +1073,6 @@ msgstr "Low Launches"
 msgid "Baixar"
 msgstr "Low"
 
-msgid "Reativar"
-msgstr "Reativate"
-
-msgid "Informar Cartão"
-msgstr "Card Information"
-
-msgid "Informar Pagamento"
-msgstr "Payment Information"
-
 msgid "R$"
 msgstr "US$"
 
@@ -1322,9 +1097,6 @@ msgstr "Total Payment"
 msgid "Pagamento Parcial"
 msgstr "Partial Payment"
 
-msgid "Registro Pago Parcialmente"
-msgstr "Partial Payment"
-
 /******************************************************************************/
 /* TITLES */
 /******************************************************************************/
@@ -1341,9 +1113,6 @@ msgstr "bills are due today and"
 msgid "Contas a Vencer."
 msgstr "bills not matured."
 
-msgid "Agendamentos de Resgates/Aplicações (Transferências)"
-msgstr "Schedules of Savings/Applications (Transfers)"
-
 msgid "Digite o nome do cliente ou adicione"
 msgstr "Input the client name or add one"
 
@@ -1359,57 +1128,57 @@ msgstr "Input the box name or add one"
 msgid "Lançamentos agendados, pendentes de aprovação."
 msgstr "Scheduled Launches, approval pending."
 
-msgid "Tipos de Vínculos: CPR: Contas a Pargar/Receber; TRN: Transferências"
-msgstr "Vinculated Types: CPR: Launches of Expenses/Recipes; TRN: Transfers"
-
-msgid "Tipos de Vínculos: CPR: Contas a Pargar/Receber; TRN: Transferências"
-msgstr "Vinculated Types: CPR: Launches of Expenses/Recipes; TRN: Transfers"
-
 /******************************************************************************/
-/*MOVIMENTOS DE CAIXAS*/
+/* BOXES LAUNCHES */
 /******************************************************************************/
 
-msgid "Movimentos de Caixas"
-msgstr "Boxes Moviments"
+msgid "Movimentos de Caixa"
+msgstr "Box's Launches"
 
-msgid "Mov. Caixa"
-msgstr "Boxes Mov."
-
-msgid "Mov. de Caixa"
-msgstr "Boxes Mov."
+msgid "Novo Movimento de Caixa"
+msgstr "New Box Record"
 
 /******************************************************************************/
-/*MOVIMENTOS DE BANCOS*/
+/* BANKS LAUNCHES */
 /******************************************************************************/
 
-msgid "Movimentos de Bancos"
-msgstr "Banks Moviments"
+msgid "Movimentos de Banco"
+msgstr "Bank's Launches"
 
-msgid "Mov. Banco"
-msgstr "Banks Mov."
-
-msgid "Mov. de Banco"
-msgstr "Banks Mov."
+msgid "Novo Movimento de Banco"
+msgstr "New Bank Record"
 
 /******************************************************************************/
-/*MOVIMENTOS DE CARTÕES*/
+/* CARDS LAUNCHES */
 /******************************************************************************/
 
 msgid "Movimentos de Cartão"
-msgstr "Cards Moviments"
-
-msgid "Movimentos de Cartão"
-msgstr "Cards Moviments"
+msgstr "Cards Launches"
 
 msgid "Mov. Cartão"
 msgstr "Cards Mov."
 
 /******************************************************************************/
-/*TRANSFERÊNCIAS*/
+/* TRANSFERS */
 /******************************************************************************/
 
 msgid "Transferências"
 msgstr "Transfers"
+
+msgid "TRANSFERÊNCIAS"
+msgstr "TRANSFERS"
+
+msgid "TRANSFERÊNCIAS PROGRAMADAS"
+msgstr "SCHEDULED TRANSFERS"
+
+msgid "Agendamentos de Resgates/Aplicações (Transferências)"
+msgstr "Schedules of Savings/Applications (Transfers)"
+
+msgid "Agendamentos que Vencem Hoje e"
+msgstr "Matured Schedules and"
+
+msgid "Agendamentos a Vencer."
+msgstr "Schedules on date."
 
 msgid "Origem"
 msgstr "Source"
@@ -1417,114 +1186,18 @@ msgstr "Source"
 msgid "Destino"
 msgstr "Destination"
 
+msgid "Detalhamento da transferência"
+msgstr "Transfer Details"
+
 /******************************************************************************/
-/*FLASHES*/
+/* FLASHES */
 /******************************************************************************/
-
-msgid "Registro inativo. Há movimentos vinculados em "
-msgstr "Record was inactivated. There are vinculated launches in "
-
-msgid "Registro inativado. Não pode ser excluído devido a movimentos vinculados"
-msgstr "Inativated record. Can't exclude this record because there some vinculated launches"
-
-msgid "O backup já foi gravado no servidor remoto anteriormente"
-msgstr "The backup file was already recorded in the remote server previously"
-
-msgid "Backup não foi gravado no servidor remoto"
-msgstr "The backup file wasn't recorded in the remote server"
-
-msgid "O backup foi gravado no servidor remoto com sucesso"
-msgstr "The backup was recorded in the remote server successfully"
-
-msgid "Backup completo realizado com sucesso"
-msgstr "The complete backup was executed successfully"
-
-msgid "Houve um problema ao realizar o backup do sistema. Entre em contato com o suporte"
-msgstr "There is a problem to execute the system backup. Contact the support"
-
-msgid "Backup realizado com sucesso "
-msgstr "The backup was executed successfully "
-
-msgid "Backup NÃO realizado, tente novamente"
-msgstr "The backup wasn't executed, try again"
-
-msgid "O backup local foi excluído com sucesso"
-msgstr "The local backup was excluded successfully"
-
-msgid "O backup local não foi excluído"
-msgstr "The local backup wasn't excluded"
-
-msgid "O backup remoto foi excluído com sucesso"
-msgstr "The remote backup was excluded successfully"
-
-msgid "O backup remoto não foi excluído"
-msgstr "The remote backup wasn't excluded"
-
-msgid "Registro NÃO excluído. Há movimentos vinculados em "
-msgstr "This record wasn't deleted. There are launches vinculated in "
 
 msgid "Documento baixado/cancelado, ação não permitida"
 msgstr "Document finished/cancelled status, this action wasn't allowed"
 
-msgid "Houve uma falha na consulta. Entre em contato com o suporte"
-msgstr "There are errors. Conctact the support"
-
-msgid "Registro com CPF/CNPJ já cadastrado"
-msgstr "There is a identification number already recorded into the system"
-
-msgid "Registro com descrição já cadastrada"
-msgstr "There is a description already recorded into the system"
-
-msgid "Registro nº de documento já cadastrado. Movimento "
-msgstr "There is a document number already recorded into the system. Order "
-
-msgid "Houve um erro ao gravar o registro"
-msgstr "There is a error to save this record, try again"
-
-msgid "Registro gravado com sucesso"
-msgstr "Record saved successfully"
-
-msgid "Desculpe, ocorreu um erro e o registro não foi salvo. Por favor, verifique os campos e tente novamente"
-msgstr "Sorry, there errors and this record wasn't saved. Please, verify all fields and try again"
-
-msgid "Desculpe, ocorreu um erro e o registro não foi salvo. Cartão não foi informado"
-msgstr "Sorry, there errors and this record wasn't saved. The card doesn't was informed"
-
-msgid "Desculpe, ocorreu um erro e o registro não foi salvo. Cliente não foi informado"
-msgstr "Sorry, there errors and this record wasn't saved. The client doesn't was informed"
-
-msgid "Desculpe, ocorreu um erro e o registro não foi salvo. Fornecedor não foi informado"
-msgstr "Sorry, there errors and this record wasn't saved. The provider doesn't was informed"
-
-msgid "Registro NÃO gravado, número da classificação duplicado"
-msgstr "Record wasn't recorded, classification number is duplicated"
-
 msgid "Nome do plano de contas já cadastrado"
 msgstr "Account Plans title already registered"
-
-msgid "Registro NÃO gravado, tente novamente"
-msgstr "Record wasn't recorded, try again"
-
-msgid "Houve um erro. Tente novamente"
-msgstr "There an error. Try again"
-
-msgid "Registro NÃO excluído, tente novamente"
-msgstr "Record wasn't deleted, try again"
-
-msgid "Registro NÃO cancelado, tente novamente"
-msgstr "Record wasn't cancelled, try again"
-
-msgid "Registro NÃO cancelado. O vínculo principal está baixado"
-msgstr "Record wasn't cancelled. The main vinculated launch is finished"
-
-msgid "Registro excluído com sucesso"
-msgstr "Record deleted successfully"
-
-msgid "Registros excluídos com sucesso"
-msgstr "Records deleted successfully"
-
-msgid "Registro cancelado com sucesso"
-msgstr "Record deleted successfully"
 
 msgid ", entre em contato com o suporte"
 msgstr ", contact the support"
@@ -1532,59 +1205,17 @@ msgstr ", contact the support"
 msgid ", entre em contato com o suporte urgente"
 msgstr ", contact the support urgentilly"
 
-msgid "Sistema fora de validade, entre em contato com o suporte"
-msgstr "This system is out of date, contact the support"
-
 msgid "O sistema irá expirar em "
 msgstr "This system will expire in "
 
-msgid "Usuário/senha incorreto, tente novamente"
-msgstr "Incorrect user/password, try again"
-
 msgid "Sessão Finalizada"
 msgstr "Session Finished"
-
-msgid "Sem permissão para realizar a operação solicitada"
-msgstr "You aren't allowed to execute this operation"
-
-msgid "Sem permissão para realizar a operação"
-msgstr "You aren't allowed to execute this operation"
-
-msgid "Senha alterada com sucesso"
-msgstr "Password changed successfully"
-
-msgid "Senha NÃO alterada, tente novamente"
-msgstr "Password wasn't changed, try again"
-
-msgid "E-mail enviado! Verifique sua caixa de entrada"
-msgstr "Email sent! Look for it in your mailbox"
-
-msgid "Email não encontrado!"
-msgstr "This email isn't found!"
-
-msgid "Ocorreu um erro. Entre em contato com o suporte."
-msgstr "Ops! We have some problems. Please contact the support."
-
-msgid "Desculpe, ocorreu um erro. Por favor, tente novamente"
-msgstr "Sorry, something wrong happened. Please, try again"
-
-msgid "Alterar a senha do e-mail: "
-msgstr "Change the password for this email: "
-
-msgid "Você não tem permissão para alterar essa senha!"
-msgstr "You don't allowed to change this password!"
-
-msgid "E-mail não encontrado!"
-msgstr "Email address wasn't found"
 
 msgid "Atualização realizada com sucesso"
 msgstr "The system was updated successfully"
 
 msgid "Sistema NÃO atualizado"
 msgstr "The system wasn't updated"
-
-msgid "Diretório inexistente ou não localizado"
-msgstr "Directory wasn't localized or doesn't exist"
 
 msgid "Modo DEBUG desativado!"
 msgstr "Debug mode inactive!"
@@ -1594,9 +1225,3 @@ msgstr "Debug mode active!"
 
 msgid "Modo Debug"
 msgstr "Debug Mode"
-
-msgid "Nenhum registro selecionado"
-msgstr "None of them was selected"
-
-msgid "Nenhuma requisição foi identificada"
-msgstr "Any requisition was identified"

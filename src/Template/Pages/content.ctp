@@ -55,7 +55,7 @@
     <?= $this->Form->postLink('') ?>
 	
         <div class="col-xs-12 panel" style="float: none;">
-            <div class="bottom-20"><?= $this->Form->button(' Excluir Selecionados', ['type' => 'submit', 'class' => 'btn btn-primary top-20 right-10 fa fa-trash-o', 'div' => false]) ?></div>
+            <div class="bottom-20"><?= $this->Form->button(__('Excluir Selecionados'), ['type' => 'submit', 'class' => 'btn btn-primary top-20 right-10 fa fa-trash-o', 'div' => false]) ?></div>
         </div>
 
         <div class="table-responsive">
@@ -97,9 +97,9 @@
                         <td class="text-left"><?= str_pad(1234, 6, '0', STR_PAD_LEFT) ?></td>
                         <td class="text-left"><?= $this->MyHtml->date(date('Y-m-d')) ?></td>
                         <td class="text-left"><?= $this->MyHtml->date(date('Y-m-d', strtotime('+1 day'))) ?></td>
-                        <td class="text-left"><?= 'Nome do Cliente 1' ?></td>
+                        <td class="text-left"><?= __('Nome do Cliente').' 1' ?></td>
                         <td class="text-left"><?= $this->Number->precision(1234.56, 2); ?></td>
-                        <td class="text-center"><?= 'Finalizado' ?></td>
+                        <td class="text-center"><?= __('Finalizado') ?></td>
                         <td class="btn-actions-group">
                             <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar'), 'escape' => false]) ?>                         
                             <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-pencil', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Editar Cadastro'), 'title' => __('Editar'), 'escape' => false]) ?>
@@ -122,9 +122,9 @@
                         <td class="text-left"><?= str_pad(1235, 6, '0', STR_PAD_LEFT) ?></td>
                         <td class="text-left"><?= $this->MyHtml->date(date('Y-m-d')) ?></td>
                         <td class="text-left"><?= $this->MyHtml->date(date('Y-m-d', strtotime('+2 days'))) ?></td>
-                        <td class="text-left"><?= 'Nome do Cliente 2' ?></td>
+                        <td class="text-left"><?= __('Nome do Cliente').' 2' ?></td>
                         <td class="text-left"><?= $this->Number->precision(2469.12, 2); ?></td>
-                        <td class="text-center"><?= 'Finalizado' ?></td>
+                        <td class="text-center"><?= __('Finalizado') ?></td>
                         <td class="btn-actions-group">
                             <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar'), 'escape' => false]) ?>                         
                             <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-pencil', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Editar Cadastro'), 'title' => __('Editar'), 'escape' => false]) ?>
@@ -147,9 +147,9 @@
                         <td class="text-left"><?= str_pad(1236, 6, '0', STR_PAD_LEFT) ?></td>
                         <td class="text-left"><?= $this->MyHtml->date(date('Y-m-d')) ?></td>
                         <td class="text-left"><?= $this->MyHtml->date(date('Y-m-d', strtotime('+3 days'))) ?></td>
-                        <td class="text-left"><?= 'Nome do Cliente 3' ?></td>
+                        <td class="text-left"><?= __('Nome do Cliente').' 3' ?></td>
                         <td class="text-left"><?= $this->Number->precision(3703.68, 2); ?></td>
-                        <td class="text-center"><?= 'Finalizado' ?></td>
+                        <td class="text-center"><?= __('Finalizado') ?></td>
                         <td class="btn-actions-group">
                             <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-eye', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'title' => __('Visualizar'), 'escape' => false]) ?>                         
                             <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-pencil', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Editar Cadastro'), 'title' => __('Editar'), 'escape' => false]) ?>
@@ -162,7 +162,7 @@
         </div>
 
         <div class="col-xs-12 panel" style="float: none;">
-            <div class="bottom-20"><?= $this->Form->button(' Excluir Selecionados', ['type' => 'submit', 'class' => 'btn btn-primary top-20 right-10 fa fa-trash-o', 'div' => false]) ?></div>
+            <div class="bottom-20"><?= $this->Form->button(__('Excluir Selecionados'), ['type' => 'submit', 'class' => 'btn btn-primary top-20 right-10 fa fa-trash-o', 'div' => false]) ?></div>
         </div>
 
     <?= $this->Form->end() ?>

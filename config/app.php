@@ -42,7 +42,7 @@ return [
     'App' => [
         'namespace' => 'App',
         'encoding' => env('APP_ENCODING', 'UTF-8'),
-        'defaultLocale' => env('APP_DEFAULT_LOCALE', 'pt_BR'),
+        'defaultLocale' => env('APP_DEFAULT_LOCALE', 'en_US'),//pt_BR
         'defaultTimezone' => env('APP_DEFAULT_TIMEZONE', 'Europe/Ireland'),
         'base' => false,
         'dir' => 'src',

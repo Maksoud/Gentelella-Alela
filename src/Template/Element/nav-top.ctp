@@ -91,17 +91,17 @@
       </li>
 
       <?php
-      if ($this->request->Session()->read('locale') == 'pt_BR') {
+      if ($this->request->Session()->read('locale') == 'en_US') {
 
         $locale = 'brz.png';
         $text_idioma = ' Mudar Idioma';
 
-      } elseif ($this->request->Session()->read('locale') == 'en_US') {
+      } elseif ($this->request->Session()->read('locale') == 'pt_BR') {
 
         $locale = 'usa.png';
         $text_idioma = ' Change Idiom';
 
-      }//elseif ($this->request->Session()->read('locale') == 'en_US')
+      }//elseif ($this->request->Session()->read('locale') == 'pt_BR')
       ?>
 
       <!-- Control Sidebar Toggle Button -->
