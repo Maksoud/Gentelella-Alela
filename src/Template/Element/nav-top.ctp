@@ -123,7 +123,7 @@
           </li>
         </ul>
       </li>
-      <li><?= $this->Html->link('<i class="fa fa-sign-out"></i>', ['controller' => 'Pages', 'action' => 'logout'], ['title' => 'Sair', 'escape' => false]) ?></li>
+      <li><?= $this->Html->link('<i class="fa fa-sign-out"></i>', ['controller' => 'Pages', 'action' => 'logout'], ['title' => __('Sair'), 'escape' => false]) ?></li>
     </ul>
   </div>
 </nav>

@@ -120,7 +120,7 @@
                     <div class="<?= $double ?>">
                         <label class="<?= $label ?>">
                             <?= __('Data de Embarque') ?>
-                            <i class="fa fa-info-circle" data-toggle="tooltip" title="<?= __('Informe a data do limite para entrega da venda.') ?>"></i>
+                            <i class="fa fa-info-circle" data-toggle="tooltip" title="<?= __('Informe a data limite para entrega da venda.') ?>"></i>
                         </label>
                         <?= $this->Form->control('shipment', ['label' => false, 'autocomplete' => 'off', 'type' => 'text', 'class' => $input . ' datepicker datemask controldate', 'placeholder' => __('Ex. 01/01/2020'), 'required' => true]) ?>
                     </div>
@@ -136,7 +136,7 @@
                     <div class="<?= $double ?>">
                         <label class="<?= $label ?>">
                             <?= __('Prazo de Entrega') ?>
-                            <i class="fa fa-info-circle" data-toggle="tooltip" title="<?= __('Informe a data do limite para entrega da venda.') ?>"></i>
+                            <i class="fa fa-info-circle" data-toggle="tooltip" title="<?= __('Informe a data limite para entrega da venda.') ?>"></i>
                         </label>
                         <?= $this->Form->control('deadline', ['label' => false, 'autocomplete' => 'off', 'type' => 'text', 'class' => $input . ' datepicker datemask controldate', 'placeholder' => __('Ex. 01/01/2020'), 'required' => true]) ?>
                     </div>

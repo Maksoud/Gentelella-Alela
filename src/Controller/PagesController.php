@@ -30,7 +30,7 @@ class PagesController extends AppController
     public function home()
     {
         //Carrega janela com informações sobre a validade do sistema
-        $this->validade();
+        $this->expireDate();
 
         /**********************************************************************/
 
@@ -41,238 +41,238 @@ class PagesController extends AppController
 
         /* SAÚDE FINANCEIRA NO MÊS ATUAL */
         
-        //Valor variável
-        $receitas               = round(3500, 8500);
-        $despesas               = round(1500, 3750);
+        //Progressive variable values for presentation in the graphs
+        $recipes                     = round(3500, 8500);
+        $expenses                    = round(1500, 3750);
         
-        //Orçado
-        $receitas_mes_orcado    = $receitas + ($receitas * 0.6);
-        $despesas_mes_orcado    = $despesas + ($despesas * 0.4);
+        //Budgeted
+        $recipes_month_budgeted      = $recipes + ($recipes * 0.6);
+        $expenses_month_budgeted     = $expenses + ($expenses * 0.4);
         
-        //Realizado
-        $receitas_mes_realizado = $receitas_mes_orcado - ($receitas_mes_orcado * 0.7);
-        $despesas_mes_realizado = $despesas_mes_orcado - ($despesas_mes_orcado * 0.4);
+        //Accomplished
+        $recipes_month_accomplished  = $recipes_month_budgeted - ($recipes_month_budgeted * 0.7);
+        $expenses_month_accomplished = $expenses_month_budgeted - ($expenses_month_budgeted * 0.4);
         
         //Em aberto
-        $receitas_mes_aberto    = $receitas_mes_orcado - $receitas_mes_realizado;
-        $despesas_mes_aberto    = $despesas_mes_orcado - $despesas_mes_realizado;
+        $recipes_month_opened        = $recipes_month_budgeted - $recipes_month_accomplished;
+        $expenses_month_opened       = $expenses_month_budgeted - $expenses_month_accomplished;
         
         /********/
         
         //CÁLCULO DO PERCENTUAL DA SAÚDE FINANCEIRA DO MÊS
-        if ($receitas > 0 && $despesas > 0) {
+        if ($recipes > 0 && $expenses > 0) {
             
-            $percent = 100 - (($despesas * 100) / $receitas);
+            $percent = 100 - (($expenses * 100) / $recipes);
 
         } else {
             
-            if ($receitas > 0) {$percent = 100;}
-            if ($despesas > 0) {$percent = 0;}
-            if ($receitas == 0 && $despesas == 0) {$percent = 0;}
-            if ($receitas < 0 && $despesas < 0) {$percent = 0;} //Falha
+            if ($recipes > 0) {$percent = 100;}
+            if ($expenses > 0) {$percent = 0;}
+            if ($recipes == 0 && $expenses == 0) {$percent = 0;}
+            if ($recipes < 0 && $expenses < 0) {$percent = 0;} //In case of failure
 
-        }//else if ($receitas > 0 && $despesas > 0)
+        }//else if ($recipes > 0 && $expenses > 0)
         
         /********/
         
         //CÁLCULO DO PERCENTUAL ORÇADO
-        if ($receitas_mes_orcado > 0 && $despesas_mes_orcado > 0) {
+        if ($recipes_month_budgeted > 0 && $expenses_month_budgeted > 0) {
             
-            $per_orcado = 100 - (($despesas_mes_orcado * 100) / $receitas_mes_orcado);
+            $per_budgeted = 100 - (($expenses_month_budgeted * 100) / $recipes_month_budgeted);
 
         } else {
             
-            if ($receitas_mes_orcado > 0) {$per_orcado = 100;}
-            if ($despesas_mes_orcado > 0) {$per_orcado = 0;}
-            if ($receitas_mes_orcado == 0 && $despesas_mes_orcado == 0) {$per_orcado = 0;}
-            if ($receitas_mes_orcado < 0 && $despesas_mes_orcado < 0) {$per_orcado = 0;} //Falha
+            if ($recipes_month_budgeted > 0) {$per_budgeted = 100;}
+            if ($expenses_month_budgeted > 0) {$per_budgeted = 0;}
+            if ($recipes_month_budgeted == 0 && $expenses_month_budgeted == 0) {$per_budgeted = 0;}
+            if ($recipes_month_budgeted < 0 && $expenses_month_budgeted < 0) {$per_budgeted = 0;} //In case of failure
 
-        }//else if ($receitas_mes_orcado > 0 && $despesas_mes_orcado > 0)
+        }//else if ($recipes_month_budgeted > 0 && $expenses_month_budgeted > 0)
         
         /********/
         
         //CÁLCULO DO PERCENTUAL REALIZADO
-        if ($receitas_mes_realizado > 0 && $despesas_mes_realizado > 0) {
+        if ($recipes_month_accomplished > 0 && $expenses_month_accomplished > 0) {
             
-            $per_realizado = 100 - (($despesas_mes_realizado * 100) / $receitas_mes_realizado);
+            $per_accomplished = 100 - (($expenses_month_accomplished * 100) / $recipes_month_accomplished);
 
         } else {
             
-            if ($receitas_mes_realizado > 0) {$per_realizado = 100;}
-            if ($despesas_mes_realizado > 0) {$per_realizado = 0;}
-            if ($receitas_mes_realizado == 0 && $despesas_mes_realizado == 0) {$per_realizado = 0;}
-            if ($receitas_mes_realizado < 0 && $despesas_mes_realizado < 0) {$per_realizado = 0;} //Falha
+            if ($recipes_month_accomplished > 0) {$per_accomplished = 100;}
+            if ($expenses_month_accomplished > 0) {$per_accomplished = 0;}
+            if ($recipes_month_accomplished == 0 && $expenses_month_accomplished == 0) {$per_accomplished = 0;}
+            if ($recipes_month_accomplished < 0 && $expenses_month_accomplished < 0) {$per_accomplished = 0;} //In case of failure
 
-        }//else if ($receitas_mes_realizado > 0 && $despesas_mes_realizado > 0)
+        }//else if ($recipes_month_accomplished > 0 && $expenses_month_accomplished > 0)
         
         /********/
         
         //CÁLCULO DO PERCENTUAL EM ABERTO
-        if ($receitas_mes_aberto > 0 && $despesas_mes_aberto > 0) {
+        if ($recipes_month_opened > 0 && $expenses_month_opened > 0) {
 
-            $per_aberto = 100 - (($despesas_mes_aberto * 100) / $receitas_mes_aberto);
+            $per_opened = 100 - (($expenses_month_opened * 100) / $recipes_month_opened);
 
         } else {
 
-            if ($receitas_mes_aberto > 0) {$per_aberto = 100;}
-            if ($despesas_mes_aberto > 0) {$per_aberto = 0;}
-            if ($receitas_mes_aberto == 0 && $despesas_mes_aberto == 0) {$per_aberto = 0;}
-            if ($receitas_mes_aberto < 0 && $despesas_mes_aberto < 0) {$per_aberto = 0;} //Falha
+            if ($recipes_month_opened > 0) {$per_opened = 100;}
+            if ($expenses_month_opened > 0) {$per_opened = 0;}
+            if ($recipes_month_opened == 0 && $expenses_month_opened == 0) {$per_opened = 0;}
+            if ($recipes_month_opened < 0 && $expenses_month_opened < 0) {$per_opened = 0;} //In case of failure
 
-        }//else if ($receitas_mes_aberto > 0 && $despesas_mes_aberto > 0)
+        }//else if ($recipes_month_opened > 0 && $expenses_month_opened > 0)
         
         /********/
 
-        // echo 'Valor variável:<br>';
-        // echo $receitas.'<br>';
-        // echo $despesas.'<br>';
+        // echo 'Progressive Variable:<br>';
+        // echo $recipes.'<br>';
+        // echo $expenses.'<br>';
         
         // echo 'Orçado:<br>';
-        // echo $receitas_mes_orcado.'<br>';
-        // echo $despesas_mes_orcado.'<br>';
+        // echo $recipes_month_budgeted.'<br>';
+        // echo $expenses_month_budgeted.'<br>';
         
         // echo 'Realizado:<br>';
-        // echo $receitas_mes_realizado.'<br>';
-        // echo $despesas_mes_realizado.'<br>';
+        // echo $recipes_month_accomplished.'<br>';
+        // echo $expenses_month_accomplished.'<br>';
         
-        // echo 'Em aberto:<br>';
-        // echo $receitas_mes_aberto.'<br>';
-        // echo $despesas_mes_aberto.'<br>';
+        // echo 'Em Aberto:<br>';
+        // echo $recipes_month_opened.'<br>';
+        // echo $expenses_month_opened.'<br>';
 
         /********/
 
         $this->set('percent', number_format($percent, 0));
-        $this->set('per_orcado', number_format($per_orcado, 0));
-        $this->set('per_realizado', number_format($per_realizado, 0));
-        $this->set('per_aberto', number_format($per_aberto, 0));
+        $this->set('per_budgeted', number_format($per_budgeted, 0));
+        $this->set('per_accomplished', number_format($per_accomplished, 0));
+        $this->set('per_opened', number_format($per_opened, 0));
 
-        $this->set('receitas', $receitas);
-        $this->set('despesas', $despesas);
+        $this->set('recipes', $recipes);
+        $this->set('expenses', $expenses);
 
-        $this->set('receitas_mes_orcado', $receitas_mes_orcado);
-        $this->set('despesas_mes_orcado', $despesas_mes_orcado);
+        $this->set('recipes_month_budgeted', $recipes_month_budgeted);
+        $this->set('expenses_month_budgeted', $expenses_month_budgeted);
 
-        $this->set('receitas_mes_realizado', $receitas_mes_realizado);
-        $this->set('despesas_mes_realizado', $despesas_mes_realizado);
+        $this->set('recipes_month_accomplished', $recipes_month_accomplished);
+        $this->set('expenses_month_accomplished', $expenses_month_accomplished);
 
-        $this->set('receitas_mes_aberto', $receitas_mes_aberto);
-        $this->set('despesas_mes_aberto', $despesas_mes_aberto);
+        $this->set('recipes_month_opened', $recipes_month_opened);
+        $this->set('expenses_month_opened', $expenses_month_opened);
 
         /**********************************************************************/
 
-        /* SAÚDE FINANCEIRA - GRÁFICO */
+        /* FINANCIAL HEALTH - GRAPH */
         
         $variable = 1;
         for ($m = 1; $m <= 12; $m++) {
 
-            //Valor aleatório
+            //Progressive variable value for presentation in the graphs
             $variable = $variable + (rand(0, $m));
 
-            //Mês atual
+            //Current Month
             if ($m == date('m')) {
 
-                //Receitas
-                $receitas_orcado[$m]    = $receitas_mes_orcado;
-                $receitas_realizado[$m] = $receitas_mes_realizado;
+                //Recipes
+                $recipes_budgeted[$m]    = $recipes_month_budgeted;
+                $recipes_accomplished[$m] = $recipes_month_accomplished;
 
-                //Despesas
-                $despesas_orcado[$m]    = $despesas_mes_orcado;
-                $despesas_realizado[$m] = $despesas_mes_realizado;
+                //Expenses
+                $expenses_budgeted[$m]    = $expenses_month_budgeted;
+                $expenses_accomplished[$m] = $expenses_month_accomplished;
 
             } else {
 
-                //Receitas
-                $receitas_orcado[$m]    = $variable + (rand(0, 35));
-                $receitas_realizado[$m] = $variable + (rand(0, 35) / 2);
+                //Recipes
+                $recipes_budgeted[$m]    = $variable + (rand(0, 35));
+                $recipes_accomplished[$m] = $variable + (rand(0, 35) / 2);
 
-                //Despesas
-                $despesas_orcado[$m]    = $variable + (rand(0, 15));
-                $despesas_realizado[$m] = $variable + (rand(0, 15) / 2);
+                //Expenses
+                $expenses_budgeted[$m]    = $variable + (rand(0, 15));
+                $expenses_accomplished[$m] = $variable + (rand(0, 15) / 2);
 
             }//else if ($m == date('m'))
         
             /********/
 
-            //Resultado
-            $saude_orcado[$m]    = $receitas_orcado[$m] - $despesas[$m];
-            $saude_realizado[$m] = $receitas_realizado[$m] - $despesas_realizado[$m];
+            //Result
+            $health_budgeted[$m]    = $recipes_budgeted[$m] - $expenses[$m];
+            $health_accomplished[$m] = $recipes_accomplished[$m] - $expenses_accomplished[$m];
 
-            //Saúde Média anual realizada
-            $saude_media_ano[$m] = $receitas_realizado[$m] - $despesas_realizado[$m];
+            //Annual Average Accomplished
+            $health_average_year[$m] = $recipes_accomplished[$m] - $expenses_accomplished[$m];
         
             /********/
 
-            //Orçado
-            if ($receitas_orcado[$m] > 0 && $despesas_orcado[$m] > 0) {
+            //Budgeted
+            if ($recipes_budgeted[$m] > 0 && $expenses_budgeted[$m] > 0) {
                 
-                $saude_orcado[$m] = number_format((100 - ($despesas_orcado[$m] * 100) / $receitas_orcado[$m]), 0, '.', '');
+                $health_budgeted[$m] = number_format((100 - ($expenses_budgeted[$m] * 100) / $recipes_budgeted[$m]), 0, '.', '');
 
             } else {
                 
-                //Ajusta do gráfico
-                if ($receitas_orcado[$m] > 0) {$saude_orcado[$m] = 100;}
-                if ($despesas_orcado[$m] > 0) {$saude_orcado[$m] = -100;}
+                //Better presentation on graph
+                if ($recipes_budgeted[$m] > 0) {$health_budgeted[$m] = 100;}
+                if ($expenses_budgeted[$m] > 0) {$health_budgeted[$m] = -100;}
 
-            }//else if ($receitas_orcado[$m] > 0 && $despesas_orcado[$m] > 0)
+            }//else if ($recipes_budgeted[$m] > 0 && $expenses_budgeted[$m] > 0)
         
             /********/
             
-            //Realizado
-            if ($receitas_realizado[$m] > 0 && $despesas_realizado[$m] > 0) {
+            //Accomplished
+            if ($recipes_accomplished[$m] > 0 && $expenses_accomplished[$m] > 0) {
                 
-                $saude_realizado[$m] = number_format((100 - ($despesas_realizado[$m] * 100) / $receitas_realizado[$m]), 0, '.', '');
+                $health_accomplished[$m] = number_format((100 - ($expenses_accomplished[$m] * 100) / $recipes_accomplished[$m]), 0, '.', '');
 
             } else {
                 
-                //Ajusta do gráfico
-                if ($receitas_realizado[$m] > 0) {$saude_realizado[$m] = 100;}
-                if ($despesas_realizado[$m] > 0) {$saude_realizado[$m] = 0;}
+                //Better presentation on graph
+                if ($recipes_accomplished[$m] > 0) {$health_accomplished[$m] = 100;}
+                if ($expenses_accomplished[$m] > 0) {$health_accomplished[$m] = 0;}
 
-            }//else if ($receitas_realizado[$m] > 0 && $despesas_realizado[$m] > 0)
+            }//else if ($recipes_accomplished[$m] > 0 && $expenses_accomplished[$m] > 0)
 
         }//for ($m = 0; $m <= 12; $m++)
         
         /********/
 
-        //Saúde média anual realizada
-        $saude_media_ano = array_filter($saude_media_ano);
-        $saude_media_ano = array_sum($saude_media_ano) / count($saude_media_ano);
+        //Annual Average Accomplished
+        $health_average_year = array_filter($health_average_year);
+        $health_average_year = array_sum($health_average_year) / count($health_average_year);
         
         /********/
 
         // echo 'Receitas Orçadas: <br>';
-        // print_r($receitas_orcado);
+        // print_r($recipes_budgeted);
         // echo '<br>';
 
         // echo 'Receitas Realizadas: <br>';
-        // print_r($receitas_realizado);
+        // print_r($recipes_accomplished);
         // echo '<br>';
 
         // echo 'Despesas Orçadas: <br>';
-        // print_r($despesas_orcado);
+        // print_r($expenses_budgeted);
         // echo '<br>';
 
         // echo 'Despesas Realizadas: <br>';
-        // print_r($despesas_realizado);
+        // print_r($expenses_accomplished);
         // echo '<br>';
 
         // echo 'Resultado Orçado: <br>';
-        // print_r($saude_orcado);
+        // print_r($health_budgeted);
         // echo '<br>';
 
         // echo 'Resultado Realizado: <br>';
-        // print_r($saude_realizado);
+        // print_r($health_accomplished);
         // echo '<br>';
 
         // echo 'Saúde Média anual realizada: <br>';
-        // echo $saude_media_ano;
+        // echo $health_average_year;
         // echo '<br>';
 
         /********/
         
-        $this->set('saude_orcado', $saude_orcado);
-        $this->set('saude_realizado', $saude_realizado);
-        $this->set('saude_media_ano', round($saude_media_ano, 0));
+        $this->set('health_budgeted', $health_budgeted);
+        $this->set('health_accomplished', $health_accomplished);
+        $this->set('health_average_year', round($health_average_year, 0));
         
     }
 

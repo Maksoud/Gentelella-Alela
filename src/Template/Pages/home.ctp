@@ -290,22 +290,21 @@
             <div class="progress" style="background-color:#777777;">
             <?php 
                 //APRESENTA MENSAGEM
-                if ($saude_media_ano < 0) {
-                    echo "<div class='progress-bar progress-bar-danger' title='".__('Média Anual')."' style='width:".($saude_media_ano*-1)."%;max-width:100%;'></div>";
-                } elseif ($saude_media_ano >= 0 && $saude_media_ano <= 20) {
-                    echo "<div class='progress-bar progress-bar-warning' title='".__('Média Anual')."' style='width:".$saude_media_ano."%;max-width:100%;'></div>";
-                } elseif ($saude_media_ano > 20) {
-                    echo "<div class='progress-bar progress-bar-info' title='".__('Média Anual')."' style='width:".$saude_media_ano."%;max-width:100%;'></div>";
-                }//elseif ($saude_media_ano > 20)
-                echo "<div style='width:100%;position:absolute;text-align:center;color:white;'>".$saude_media_ano."%</div>";
+                if ($health_average_year < 0) {
+                    echo "<div class='progress-bar progress-bar-danger' title='".__('Média Anual')."' style='width:".($health_average_year*-1)."%;max-width:100%;'></div>";
+                } elseif ($health_average_year >= 0 && $health_average_year <= 20) {
+                    echo "<div class='progress-bar progress-bar-warning' title='".__('Média Anual')."' style='width:".$health_average_year."%;max-width:100%;'></div>";
+                } elseif ($health_average_year > 20) {
+                    echo "<div class='progress-bar progress-bar-info' title='".__('Média Anual')."' style='width:".$health_average_year."%;max-width:100%;'></div>";
+                }//elseif ($health_average_year > 20)
+                echo "<div style='width:100%;position:absolute;text-align:center;color:white;'>".$health_average_year."%</div>";
             ?>
             </div>
             
-            <!-- GRÁFICO -->
+            <!-- GRAPH -->
             <div class="top-10 panel">
                 <canvas id="myChart" width="386" height="275"></canvas>
             </div>
-            <!-- GRÁFICO -->
             
             <script>
                 var ctx = document.getElementById("myChart");
@@ -343,7 +342,7 @@
                             pointHoverBorderWidth: 2,
                             pointRadius: 1,
                             pointHitRadius: 10,
-                            data: [<?= implode(', ', $saude_realizado); ?>]
+                            data: [<?= implode(', ', $health_accomplished); ?>]
                         },{
                             label: '<?= __('Orçado') ?>',
                             backgroundColor: "rgba(179,181,198,0.2)",
@@ -352,7 +351,7 @@
                             pointBorderColor: "#fff",
                             pointHoverBackgroundColor: "#fff",
                             pointHoverBorderColor: "rgba(179,181,198,1)",
-                            data: [<?= implode(', ', $saude_orcado); ?>]
+                            data: [<?= implode(', ', $health_budgeted); ?>]
                         }]
                     },
                     options: {
@@ -367,7 +366,7 @@
                     }
                 });
             </script>
-            <!-- GRÁFICO -->
+            <!-- GRAPH -->
             
             <div class="col-xs-12 no-padding-lat bottom-0 font-9">
                 <div class="table-responsive">
@@ -383,21 +382,21 @@
                         <tbody>
                             <tr>
                                 <th><?= __('RECEITAS'); ?></th>
-                                <th class="text-right"><label><?= $this->Number->precision($receitas_mes_orcado, 2); ?></label></th>
-                                <th class="text-right"><label><?= $this->Number->precision($receitas_mes_realizado, 2); ?></label></th>
-                                <th class="text-right"><label><?= $this->Number->precision($receitas_mes_aberto, 2); ?></label></th>
+                                <th class="text-right"><label><?= $this->Number->precision($recipes_month_budgeted, 2); ?></label></th>
+                                <th class="text-right"><label><?= $this->Number->precision($recipes_month_accomplished, 2); ?></label></th>
+                                <th class="text-right"><label><?= $this->Number->precision($recipes_month_opened, 2); ?></label></th>
                             </tr>
                             <tr>
                                 <th><?= __('DESPESAS'); ?></th>
-                                <th class="text-right"><label><?= $this->Number->precision($despesas_mes_orcado, 2); ?></label></th>
-                                <th class="text-right"><label><?= $this->Number->precision($despesas_mes_realizado, 2); ?></label></th>
-                                <th class="text-right"><label><?= $this->Number->precision($despesas_mes_aberto, 2); ?></label></th>
+                                <th class="text-right"><label><?= $this->Number->precision($expenses_month_budgeted, 2); ?></label></th>
+                                <th class="text-right"><label><?= $this->Number->precision($expenses_month_accomplished, 2); ?></label></th>
+                                <th class="text-right"><label><?= $this->Number->precision($expenses_month_opened, 2); ?></label></th>
                             </tr>
                             <tr style="color:#777;">
                                 <th><?= __('RESULTADOS'); ?></th>
-                                <th class="text-right" title="<?= $this->Number->precision($receitas_mes_orcado - $despesas_mes_orcado, 2); ?>"><?= $per_orcado; ?>%</th>
-                                <th class="text-right" title="<?= $this->Number->precision($receitas_mes_realizado - $despesas_mes_realizado, 2); ?>"><?= $per_realizado; ?>%</th>
-                                <th class="text-right" title="<?= $this->Number->precision($receitas_mes_aberto - $despesas_mes_aberto, 2); ?>"><?= $per_aberto; ?>%</th>
+                                <th class="text-right" title="<?= $this->Number->precision($recipes_month_budgeted - $expenses_month_budgeted, 2); ?>"><?= $per_budgeted; ?>%</th>
+                                <th class="text-right" title="<?= $this->Number->precision($recipes_month_accomplished - $expenses_month_accomplished, 2); ?>"><?= $per_accomplished; ?>%</th>
+                                <th class="text-right" title="<?= $this->Number->precision($recipes_month_opened - $expenses_month_opened, 2); ?>"><?= $per_opened; ?>%</th>
                             </tr>
                         </tbody>
                     </table>
@@ -577,7 +576,7 @@
                             <div class="row media-body">
                                 <div class="media-title"><?= __('CONTAS P/R'); ?></div>
                                 <div>
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Nova Conta a Pagar/Receber'), 'title' => __('Incluir Registro')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Nova Conta a Pagar/Receber'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos Financeiros'), 'title' => __('Gerar Relatórios')]); ?>
                                 </div>
@@ -590,7 +589,7 @@
                             <div class="row media-body">
                                 <div class="media-title"><?= __('CAIXAS'); ?></div>
                                 <div>
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Movimento de Caixa'), 'title' => __('Incluir Registro')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Movimento de Caixa'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Caixa'), 'title' => __('Gerar Relatórios')]); ?>
                                 </div>
@@ -605,7 +604,7 @@
                                 <div>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Movimento de Banco'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Banco'), 'title' => 'Gerar Relatórios']); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Banco'), 'title' => __('Gerar Relatórios')]); ?>
                                 </div>
                             </div>
                         </li>
@@ -616,7 +615,7 @@
                             <div class="row media-body">
                                 <div class="media-title"><?= __('CARTÕES'); ?></div>
                                 <div>
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => 'Novo Movimento de Cartões', 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Novo Movimento de Cartões'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Movimentos de Cartões'), 'title' => __('Gerar Relatórios')]); ?>
                                 </div>
@@ -629,7 +628,7 @@
                             <div class="row media-body">
                                 <div class="media-title"><?= __('TRANSFERÊNCIAS'); ?></div>
                                 <div>
-                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => 'Nova Transferência', 'title' => __('Incluir Registros')]); ?>
+                                    <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-plus', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Nova Transferência'), 'title' => __('Incluir Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'content'], ['class' => 'btn btn-actions fa fa-search', 'data-loading-text' => __('Carregando...'), 'title' => __('Listar Registros')]); ?>
                                     <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modalContent'], ['class' => 'btn btn-actions btn_modal fa fa-file-text-o', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Relatório - Transferências'), 'title' => __('Gerar Relatórios')]); ?>
                                 </div>

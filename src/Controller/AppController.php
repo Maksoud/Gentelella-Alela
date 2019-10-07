@@ -74,7 +74,7 @@ class AppController extends Controller
                                           'brand'           => 'Reiniciando Sistemas',
                                           'debug'           => Configure::read('debug'),
                                           'version'         => '90.20-2019',
-                                          'validade'        => date('Y-m-d', strtotime('+ 5 days')),
+                                          'expireDate'      => date('Y-m-d', strtotime('+ 5 days')),
                                           'plan'            => __('Completo'),
                                           'Session.timeout' => 30,
                                           'debug'           => true
@@ -89,12 +89,12 @@ class AppController extends Controller
 
     }
     
-    public function validade()
+    public function expireDate()
     {   
-        $validade = date('d/m/Y', strtotime($this->request->Session()->read('validade')));
-        $inverse  = implode("-", array_reverse(explode("/", $validade)));
-        $dtalerta = date('Y-m-d', strtotime(date('Y-m-d')) + 604800);// ALERTA EM 7 DIAS
-        $dtaviso  = date('Y-m-d', strtotime(date('Y-m-d')) + 259200);// AVISO EM 3 DIAS
+        $expireDate = date('d/m/Y', strtotime($this->request->Session()->read('expireDate')));
+        $inverse    = implode("-", array_reverse(explode("/", $expireDate)));
+        $dtalerta   = date('Y-m-d', strtotime(date('Y-m-d')) + 604800);// ALERTA EM 7 DIAS
+        $dtaviso    = date('Y-m-d', strtotime(date('Y-m-d')) + 259200);// AVISO EM 3 DIAS
         
         /******************************************************************/
         
@@ -102,17 +102,17 @@ class AppController extends Controller
         if (($inverse <= $dtalerta) && ($inverse > $dtaviso) && ($inverse >= date('Y-m-d'))) {
             
             //Sistema próximo de expirar
-            $this->Flash->warning(__('O sistema irá expirar em ') . $validade . __(', entre em contato com o suporte'));
+            $this->Flash->warning(__('O sistema irá expirar em ') . $expireDate . __(', entre em contato com o suporte'));
             
         } elseif (($inverse <= $dtalerta) && ($inverse <= $dtaviso) && ($inverse >= date('Y-m-d'))) {
             
             //Sistema muito próximo de expirar
-            $this->Flash->error(__('O sistema irá expirar em ') . $validade . __(', entre em contato com o suporte urgente'));
+            $this->Flash->error(__('O sistema irá expirar em ') . $expireDate . __(', entre em contato com o suporte urgente'));
             
         } elseif ($inverse < date('Y-m-d')) {
 
-            //Sistema fora de validade
-            $this->Flash->error(__('O sistema expirou em ') . $validade . __(', entre em contato pelo e-mail suporte@reiniciando.com.br'));
+            //Set the expiration date of the system
+            $this->Flash->error(__('O sistema expirou em ') . $expireDate . __(', entre em contato pelo e-mail suporte@reiniciando.com.br'));
 
             //Finaliza a execução da função
             return false;
@@ -122,6 +122,6 @@ class AppController extends Controller
         /******************************************************************/
         
         //Finaliza a execução da função
-        return $validade;
+        return $expireDate;
     }
 }

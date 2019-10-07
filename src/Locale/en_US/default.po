@@ -6,7 +6,7 @@
 msgid "Início"
 msgstr "Dashboard"
 
-msgid "Sair do Sistema"
+msgid "Sair"
 msgstr "Logout"
 
 msgid "Carregando"
@@ -45,14 +45,29 @@ msgstr "System Update"
 msgid "Saldos de Bancos e Caixas"
 msgstr "Bank and Box Balances"
 
+msgid "Saldos atualizados em"
+msgstr "Updated balances in"
+
 msgid "Receitas x Despesas"
 msgstr "Recipes x Expenses"
 
-msgid "Você Sabia?"
-msgstr "Knowledge"
+msgid "Receitas"
+msgstr "Recipes"
 
-msgid "Limite de Cartões"
-msgstr "Credit Limit"
+msgid "RECEITAS"
+msgstr "RECIPES"
+
+msgid "Despesas"
+msgstr "Expenses"
+
+msgid "DESPESAS"
+msgstr "EXPENSES"
+
+msgid "RESULTADOS"
+msgstr "RESULTS"
+
+msgid "Você Sabia?"
+msgstr "Do you know?"
 
 msgid "Atalhos"
 msgstr "Shortcuts"
@@ -66,9 +81,6 @@ msgstr "Credit Cards Payments"
 msgid "Títulos por Plano de Contas"
 msgstr "Payments by Account Plans"
 
-msgid "Saldos atualizados em"
-msgstr "Updated balances in"
-
 msgid "Vencimentos até"
 msgstr "Payments until"
 
@@ -77,15 +89,6 @@ msgstr "Accounting payments in "
 
 msgid "provisionando os movimentos recorrentes."
 msgstr "provisioning the recurrent launches."
-
-msgid "Em Atraso"
-msgstr "Overdue"
-
-msgid "Hoje"
-msgstr "Today"
-
-msgid "A Vencer"
-msgstr "In Open"
 
 msgid "Saúde Financeira"
 msgstr "Financial Health"
@@ -102,44 +105,14 @@ msgstr "Budgeted"
 msgid "Em aberto"
 msgstr "In Open"
 
-msgid "RECEITAS"
-msgstr "RECIPES"
+msgid "Contas que Vencem Hoje e"
+msgstr "bills are due today and"
 
-msgid "DESPESAS"
-msgstr "EXPENSES"
-
-msgid "RESULTADOS"
-msgstr "RESULTS"
-
-msgid "Em Aberto"
-msgstr "In Open"
-
-msgid "Programação"
-msgstr "Scheduled"
-
-msgid "CONTAS A RECEBER"
-msgstr "IN OPEN RECIPES"
-
-msgid "CONTAS A PAGAR"
-msgstr "IN OPEN EXPENSES"
+msgid "Contas a Vencer."
+msgstr "bills not matured."
 
 msgid "Dicas aleatórias de uso do sistema"
 msgstr "Random tips about the system use"
-
-msgid "CONTAS P/R"
-msgstr "EXPENSES/RECIPES"
-
-msgid "FORNECEDORES"
-msgstr "PROVIDERS"
-
-msgid "CLIENTES"
-msgstr "CUSTOMERS"
-
-msgid "PLANO DE CONTAS"
-msgstr "ACCOUNT PLANS"
-
-msgid "CENTRO DE CUSTOS"
-msgstr "COSTS"
 
 msgid "Incluir Registros"
 msgstr "Add New Record"
@@ -147,80 +120,19 @@ msgstr "Add New Record"
 msgid "Listar Registros"
 msgstr "Index Records"
 
-msgid "Gerar Relatórios"
-msgstr "Reports"
+msgid "Código do Registro"
+msgstr "Record's code"
 
-msgid "Nova Conta a Pagar/Receber"
-msgstr "New Expense/Recipe"
-
-msgid "Novo Movimento de Cartões"
-msgstr "New Card Record"
-
-msgid "Novo Fornecedor"
-msgstr "New Provider"
-
-msgid "Novo Cliente"
-msgstr "New Customer"
-
-msgid "Novo Plano de Contas"
-msgstr "New Account Plans"
-
-msgid "Novo Centro de Custos"
-msgstr "New Costs"
-
-msgid "Limite"
-msgstr "Limit"
-
-msgid "Utilizado"
-msgstr "Used"
-
-msgid "Disponível"
-msgstr "Available"
-
-msgid "CRÉDITO DISPONÍVEL"
-msgstr "AVAILABLE CREDIT"
-
-msgid "CRÉDITO UTILIZADO"
-msgstr "USED CREDIT"
-
-msgid "Meta"
-msgstr "Target"
+/******/
 
 msgid "Código de Referência"
 msgstr "Refereer Code"
 
-msgid "Nome do Cliente"
-msgstr "Customer's Name"
-
-msgid "Nome do Fornecedor"
-msgstr "Provider's name"
-
 msgid "Detalhamento do lançamento"
 msgstr "Launch Detail"
 
-msgid "Validade do Sistema:"
-msgstr "System Valid Date:"
-
-msgid "Versão do Sistema:"
-msgstr "System Version:"
-
-msgid "Plano Atual:"
-msgstr "Selected Plan:"
-
 msgid "Não Selecionado"
 msgstr "Non-selected"
-
-msgid "Usuário"
-msgstr "User"
-
-msgid "Limitado"
-msgstr "Limited"
-
-msgid "Visitante"
-msgstr "Visiting"
-
-msgid "Contador"
-msgstr "Accountant"
 
 msgid "Especial"
 msgstr "Especial"
@@ -233,9 +145,6 @@ msgstr "Add New"
 
 msgid "Gravar"
 msgstr "Save"
-
-msgid "Gerar Relatório"
-msgstr "Create Report"
 
 msgid "Cancelar"
 msgstr "Cancel"
@@ -261,23 +170,11 @@ msgstr "CREDIT LIMIT AVAILABLE"
 msgid "LIMITE DE CRÉDITO UTILIZADO"
 msgstr "CREDIT LIMIT USED"
 
-msgid "Média Anual"
-msgstr "Yearly Average"
-
-msgid "Vencimentos em "
-msgstr "Payments in "
-
 msgid "Títulos recorrentes são gerados após o vencimento."
 msgstr "Recurring payments are generated after the pay day."
 
 msgid "Venc."
 msgstr "Pay Date"
-
-msgid "RECEITAS EM ABERTO"
-msgstr "OPENED RECIPES"
-
-msgid "DESPESAS EM ABERTO"
-msgstr "OPENED EXPENSES"
 
 msgid "Pagamentos do Sistema"
 msgstr "System Payments"
@@ -291,12 +188,6 @@ msgstr "Add Balances"
 msgid "Relatório de Saldos"
 msgstr "Balances Report"
 
-msgid "Gerar Recorrentes"
-msgstr "Generate Recurrents"
-
-msgid "Você Sabia?"
-msgstr "Do you know?"
-
 msgid "Chamado de Suporte"
 msgstr "Support Calls"
 
@@ -309,9 +200,6 @@ msgstr "Customers' report sent by email"
 
 msgid "Lançamentos Financeiros"
 msgstr "Financial Launches"
-
-msgid "Contas a Pagar/Receber"
-msgstr "Expenses and Recipes"
 
 msgid "Lançamentos de Estoque"
 msgstr "Stock Launches"
@@ -340,41 +228,8 @@ msgstr "Inventories"
 msgid "Cadastros"
 msgstr "Registrations"
 
-msgid "Clientes"
-msgstr "Customers"
-
-msgid "Fornecedores"
-msgstr "Providers"
-
-msgid "Planos de Contas"
-msgstr "Account Plans"
-
-msgid "Centro de Custos"
-msgstr "Costs"
-
 msgid "Chamados de Suporte"
 msgstr "Support Calls"
-
-msgid "Sistema"
-msgstr "System"
-
-msgid "Validade: "
-msgstr "Expiration Date: "
-
-msgid "Plano: "
-msgstr "Plan: "
-
-msgid "Completo"
-msgstr "Full"
-
-msgid "Versão: "
-msgstr "Version: "
-
-msgid "Res. Janela: "
-msgstr "Window Res. "
-
-msgid "Res. Monitor: "
-msgstr "Screen Res. "
 
 /******************************************************************************/
 /* PAGINATOR */
@@ -393,20 +248,23 @@ msgid "Último"
 msgstr "Last"
 
 /******************************************************************************/
-/* DATA */
+/* EXPENSES/RECIPES */
 /******************************************************************************/
 
-msgid "Data do Cadastro"
-msgstr "Created Date"
+msgid "Nova Conta a Pagar/Receber"
+msgstr "New Expense/Recipe"
 
-msgid "Data do Lançamento"
-msgstr "Created Date"
+msgid "CONTAS P/R"
+msgstr "EXPENSES/RECIPES"
 
-msgid "Última Alteração"
-msgstr "Modified Date"
+msgid "CONTAS A RECEBER"
+msgstr "IN OPEN RECIPES"
 
-msgid "Usuário da Alteração"
-msgstr "Modified By"
+msgid "CONTAS A PAGAR"
+msgstr "IN OPEN EXPENSES"
+
+msgid "Contas a Pagar/Receber"
+msgstr "Expenses and Recipes"
 
 /******************************************************************************/
 /* RECORDS */
@@ -415,16 +273,10 @@ msgstr "Modified By"
 msgid "Data"
 msgstr "Date"
 
-msgid "Nº Parcelas"
-msgstr "Quant. Parcels"
-
 msgid "Valor Total"
 msgstr "Total"
 
 msgid "Título"
-msgstr "Title"
-
-msgid "Título do Registro"
 msgstr "Title"
 
 msgid "Histórico"
@@ -438,6 +290,33 @@ msgstr "Best Day to Buy"
 
 msgid "Descrição"
 msgstr "Description"
+
+msgid "Pessoa Jurídica"
+msgstr "Company"
+
+msgid "Pessoa Física"
+msgstr "Person"
+
+msgid "RG/Insc. Estadual: "
+msgstr "ID Number: "
+
+msgid "RG/Insc. Estadual"
+msgstr "ID Number"
+
+msgid "Observações: "
+msgstr "Observations: "
+
+msgid "Observações"
+msgstr "Observations"
+
+msgid "Ponto de Referência"
+msgstr "Reference Localization"
+
+msgid "CPF/CNPJ"
+msgstr "Identification Documents"
+
+msgid "Tipo"
+msgstr "Type"
 
 /******************************************************************************/
 /* STATUS */
@@ -463,9 +342,6 @@ msgstr "Partial P."
 
 msgid "Parcial"
 msgstr "Partial"
-
-msgid "Programado"
-msgstr "Programmed"
 
 msgid "Agrupado"
 msgstr "Grouped"
@@ -502,16 +378,13 @@ msgid "Ações"
 msgstr "Actions"
 
 msgid "Você tem certeza que deseja EXCLUIR o registro?"
-msgstr "Do you wanna delete this register?"
+msgstr "Do you want to delete this register?"
 
-msgid "Você tem certeza que deseja CANCELAR o registro?"
-msgstr "Do you wanna cancel this register?"
-
-msgid "Você tem certeza que deseja reativar o registro?"
-msgstr "Do you wanna reativate this register?"
+msgid "Você tem certeza que deseja FINALIZAR o registro?"
+msgstr "Do you want to finish this register?"
 
 msgid "Você tem certeza que deseja confimar a transferência na data programada?"
-msgstr "Do you wanna confirm this programmed transfer?"
+msgstr "Do you want to confirm the payment for this scheduled transfer?"
 
 msgid "Visualizar"
 msgstr "View"
@@ -535,7 +408,23 @@ msgid "Avançar"
 msgstr "Forward"
 
 /******************************************************************************/
-/* RECORDS */
+/* PROVIDERS */
+/******************************************************************************/
+
+msgid "Fornecedores"
+msgstr "Providers"
+
+msgid "FORNECEDORES"
+msgstr "PROVIDERS"
+
+msgid "Nome do Fornecedor"
+msgstr "Provider's name"
+
+msgid "Novo Fornecedor"
+msgstr "New Provider"
+
+/******************************************************************************/
+/* CUSTOMERS */
 /******************************************************************************/
 
 msgid "Clientes"
@@ -544,64 +433,20 @@ msgstr "Customers"
 msgid "Cliente"
 msgstr "Customer"
 
+msgid "CLIENTES"
+msgstr "CUSTOMERS"
+
+msgid "Novo Cliente"
+msgstr "New Customer"
+
 msgid "Adicionar Cliente"
 msgstr "Add Customer"
 
-msgid "Pessoa Jurídica"
-msgstr "Company"
-
-msgid "Pessoa Física"
-msgstr "Person"
-
-msgid "RG/Insc. Estadual: "
-msgstr "ID Number: "
-
-msgid "RG/Insc. Estadual"
-msgstr "ID Number"
-
-msgid "Observações: "
-msgstr "Observations: "
-
-msgid "Observações"
-msgstr "Observations"
-
-msgid "Ponto de Referência"
-msgstr "Reference Localization"
-
-msgid "CPF/CNPJ"
-msgstr "Identification Documents"
-
-msgid "Tipo"
-msgstr "Type"
-
-/******************************************************************************/
-/* PROVIDERS */
-/******************************************************************************/
-
-msgid "Fornecedores"
-msgstr "Providers"
-
-msgid "Fornecedor"
-msgstr "Provider"
-
-msgid "Adicionar Fornecedor"
-msgstr "Add Provider"
+msgid "Nome do Cliente"
+msgstr "Customer's Name"
 
 msgid "Cliente/Fornecedor"
 msgstr "Customer/Provider"
-
-/******************************************************************************/
-/* TRANSPORTERS */
-/******************************************************************************/
-
-msgid "Transportadoras"
-msgstr "Transporters"
-
-msgid "Transportadoras"
-msgstr "Transporters"
-
-msgid "Novo Transportadora"
-msgstr "New Transporter"
 
 /******************************************************************************/
 /* BOXES */
@@ -684,6 +529,21 @@ msgstr "Cards Launches"
 msgid "Limite de Cartões"
 msgstr "Cards Limit"
 
+msgid "Limite"
+msgstr "Limit"
+
+msgid "Utilizado"
+msgstr "Used"
+
+msgid "Disponível"
+msgstr "Available"
+
+msgid "CRÉDITO DISPONÍVEL"
+msgstr "AVAILABLE CREDIT"
+
+msgid "CRÉDITO UTILIZADO"
+msgstr "USED CREDIT"
+
 /******************************************************************************/
 /* ACCOUNT PLANS */
 /******************************************************************************/
@@ -693,6 +553,12 @@ msgstr "Account Plans"
 
 msgid "Plano de Contas"
 msgstr "Account Plans"
+
+msgid "Novo Plano de Contas"
+msgstr "New Account Plans"
+
+msgid "PLANO DE CONTAS"
+msgstr "ACCOUNT PLANS"
 
 /******************************************************************************/
 /* COSTS */
@@ -704,8 +570,11 @@ msgstr "Costs"
 msgid "CENTRO DE CUSTOS"
 msgstr "COSTS"
 
+msgid "Novo Centro de Custos"
+msgstr "New Costs"
+
 /******************************************************************************/
-/* PLANS */
+/* PLANNINGS AND ACHIEVEMENTS */
 /******************************************************************************/
 
 msgid "PLANEJAMENTOS"
@@ -728,6 +597,9 @@ msgstr "Saved Total"
 
 msgid "TOTAL POUPADO"
 msgstr "SAVED TOTAL"
+
+msgid "Meta"
+msgstr "Target"
 
 /******************************************************************************/
 /* REPORTS */
@@ -773,11 +645,14 @@ msgstr "Report - Plannings and Achievements"
 /* DATES */
 /******************************************************************************/
 
-msgid "Hoje "
-msgstr "Today "
+msgid "Em Atraso"
+msgstr "Overdue"
 
-msgid "Ontem "
-msgstr "Yesterday "
+msgid "Hoje"
+msgstr "Today"
+
+msgid "A Vencer"
+msgstr "In Open"
 
 msgid "Janeiro"
 msgstr "January"
@@ -861,9 +736,6 @@ msgstr "Dec"
 msgid "Código"
 msgstr "Code"
 
-msgid "Código do Registro"
-msgstr "Record's code"
-
 msgid "Página Interna"
 msgstr "Internal Page"
 
@@ -893,31 +765,37 @@ msgstr "Customer's name"
 /******************************************************************************/
 
 msgid "Informe a data da requisição."
-msgstr ""
+msgstr "Enter the date of the request."
 
 msgid "Informe o código de pedido do cliente."
-msgstr ""
+msgstr "Enter customer order code"
 
 msgid "Informe o valor do frete."
-msgstr ""
+msgstr "Enter the shipping amount."
 
-msgid "Informe a data do limite para entrega da venda."
-msgstr ""
+msgid "Informe a data limite para entrega da venda."
+msgstr "Enter the deadline for delivery of the sale"
 
 msgid "Informe a forma de pagamento acertado ou adicione nas observações."
-msgstr ""
-
-msgid "Informe a data do limite para entrega da venda."
-msgstr ""
+msgstr "Enter the correct payment method or add in the observations."
 
 msgid "Informe ao menos 3 caracteres do nome do produto para listar os itens."
-msgstr ""
+msgstr "Enter at least 3 characters of product name to list items."
 
 msgid "Informe a data do pagamento desse lançamento."
-msgstr ""
+msgstr "Enter the payment date for this launch."
 
 msgid "Informe o valor pago, considerando juros ou descontos."
-msgstr ""
+msgstr "Enter the amount paid considering fees or discounts."
+
+msgid "Data do Cadastro"
+msgstr "Created Date"
+
+msgid "Última Alteração"
+msgstr "Modified Date"
+
+msgid "Usuário da Alteração"
+msgstr "Modified By"
 
 /******************************************************************************/
 /* LAUNCHES */
@@ -929,38 +807,20 @@ msgstr "Launches"
 msgid "Lançamentos CPR"
 msgstr "Launches of Exp/Rec"
 
-msgid "Despesas"
-msgstr "Expenses"
-
-msgid "Receitas"
-msgstr "Recipes"
-
 msgid "Crédito"
 msgstr "Credit"
 
 msgid "Débito"
 msgstr "Debit"
 
-msgid "Contas a Pagar"
-msgstr "Expenses"
-
-msgid "Contas a Receber"
-msgstr "Recipes"
+msgid "Vencimento"
+msgstr "Pay Date"
 
 msgid "Data do Vencimento"
 msgstr "Pay Date"
 
-msgid "Vencimento"
-msgstr "Pay Date"
-
-msgid "Data do Documento"
-msgstr "Document Date"
-
 msgid "Data do Lançamento"
-msgstr "Payment Date"
-
-msgid "Nº de Parcelas"
-msgstr "Nº of Parcels"
+msgstr "Created Date"
 
 msgid "Periodicidade"
 msgstr "Periodicity"
@@ -1028,12 +888,6 @@ msgstr "Bank/Box Balances"
 msgid "SALDO TOTAL"
 msgstr "TOTAL BALANCE"
 
-msgid "Saldos de Cartões"
-msgstr "Cards Balances"
-
-msgid "Saldos de Cartões"
-msgstr "Cards Balances"
-
 msgid "SELECIONE OS TÍTULOS PARA VÍNCULO NESTA FATURA"
 msgstr "SELECT THESE PAYMENTS TO VINCULATE INTO THIS PAYMENT"
 
@@ -1048,9 +902,6 @@ msgstr "Order"
 
 msgid "Ordem de Vínculo"
 msgstr "Vinculated Order"
-
-msgid "Nº de Ordem"
-msgstr "Order Number"
 
 msgid "Valor"
 msgstr "Value"
@@ -1107,12 +958,6 @@ msgstr "Label:"
 msgid "Datas de Contas Vencidas,"
 msgstr "Overdue bills date,"
 
-msgid "Contas que Vencem Hoje e"
-msgstr "bills are due today and"
-
-msgid "Contas a Vencer."
-msgstr "bills not matured."
-
 msgid "Digite o nome do cliente ou adicione"
 msgstr "Input the client name or add one"
 
@@ -1158,6 +1003,15 @@ msgstr "Cards Launches"
 msgid "Mov. Cartão"
 msgstr "Cards Mov."
 
+msgid "Novo Movimento de Cartões"
+msgstr "New Card Record"
+
+msgid "Saldos de Cartões"
+msgstr "Cards Balances"
+
+msgid "Saldos de Cartões"
+msgstr "Cards Balances"
+
 /******************************************************************************/
 /* TRANSFERS */
 /******************************************************************************/
@@ -1167,6 +1021,9 @@ msgstr "Transfers"
 
 msgid "TRANSFERÊNCIAS"
 msgstr "TRANSFERS"
+
+msgid "Nova Transferência"
+msgstr "New Transfer"
 
 msgid "TRANSFERÊNCIAS PROGRAMADAS"
 msgstr "SCHEDULED TRANSFERS"
@@ -1180,6 +1037,9 @@ msgstr "Matured Schedules and"
 msgid "Agendamentos a Vencer."
 msgstr "Schedules on date."
 
+msgid "Programação"
+msgstr "Scheduled"
+
 msgid "Origem"
 msgstr "Source"
 
@@ -1188,6 +1048,52 @@ msgstr "Destination"
 
 msgid "Detalhamento da transferência"
 msgstr "Transfer Details"
+
+/******************************************************************************/
+/* SYSTEM */
+/******************************************************************************/
+
+msgid "Sistema"
+msgstr "System"
+
+msgid "Validade: "
+msgstr "Expiration Date: "
+
+msgid "Plano: "
+msgstr "Plan: "
+
+msgid "Completo"
+msgstr "Full"
+
+msgid "Versão: "
+msgstr "Version: "
+
+msgid "Res. Janela: "
+msgstr "Window Res. "
+
+msgid "Res. Monitor: "
+msgstr "Screen Res. "
+
+msgid "Validade do Sistema:"
+msgstr "System Valid Date:"
+
+msgid "Versão do Sistema:"
+msgstr "System Version:"
+
+msgid "Plano Atual:"
+msgstr "Selected Plan:"
+
+msgid "Usuário"
+msgstr "User"
+
+msgid "Limitado"
+msgstr "Limited"
+
+msgid "Visitante"
+msgstr "Visiting"
+
+msgid "Contador"
+msgstr "Accountant"
 
 /******************************************************************************/
 /* FLASHES */
