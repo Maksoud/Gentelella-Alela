@@ -420,36 +420,37 @@
     text-decoration:none;
 }
 
-/* MENU DE ATALHOS */
+/* Panel Shortcuts */
 
-ul.top_profiles {
+.panel-shortcuts ul.top_profiles {
     width: 100%;
 }
-ul.top_profiles li {
+.panel-shortcuts ul.top_profiles li {
     margin: 0;
     padding-top: 5px;
 }
-.list-unstyled {
+.panel-shortcuts .list-unstyled {
     padding: 4px;
     list-style: none;
 }
-.media-body, .media-left, .media-right {
+.panel-shortcuts .media-body, .media-left, .media-right {
     display: table-cell;
     vertical-align: top;
 }
-.media {
+.panel-shortcuts .media {
     height: 60px;
     display: inline-table;
     padding: 7px;
 }
-.media .media-body .media-title {
+.panel-shortcuts .media .media-body .media-title {
     font-size: 12px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: 800;
 }
-.media .media-body .btn-actions {
+
+.panel-shortcuts .media .media-body .btn-actions {
     border-radius: 50%;
     padding: 5px;
     width: 24px;
@@ -457,10 +458,12 @@ ul.top_profiles li {
     margin-top: 3px;
     margin-right: 3px;
 }
-.media .event {
+
+.panel-shortcuts .media .event {
     margin-top: 3px;
 }
-.media .profile_thumb {
+
+.panel-shortcuts .media .profile_thumb {
     border: 1px solid;
     width: 50px;
     height: 50px;
@@ -469,9 +472,41 @@ ul.top_profiles li {
     padding: 12px 12px;
     text-align: center;
 }
-.media .profile_thumb i {
+
+.panel-shortcuts .media .profile_thumb i {
     font-size: 25px;
 }
+
 .blue {
     color: #3498DB;
+}
+
+@media screen and (max-width: 1200px) {
+    .panel-shortcuts .media .media-body .media-title {
+        font-size: 10px;
+    }
+
+    .panel-shortcuts .media .profile_thumb {
+        width: 30px;
+        height: 30px;
+        position: relative;
+    }
+
+    .panel-shortcuts .media .profile_thumb i {
+        font-size: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .panel-shortcuts .media .profile_thumb i::before {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .panel-shortcuts .media .profile_thumb {
+        display: none;
+    }
 }

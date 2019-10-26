@@ -552,7 +552,7 @@
     
     <!-- /////////////////////////////////////////////////////////////////// -->
     
-    <div class="box panel panel-default box-shadow" style="padding:0;">
+    <div class="box panel panel-default box-shadow panel-shortcuts" style="padding:0;">
         <div class="panel-heading box-header" id="numero5" style="background-color:#fcf8e3">
             <span class="text-bold"><i class="fa fa-bolt"></i><?= __('Atalhos'); ?></span>
 
