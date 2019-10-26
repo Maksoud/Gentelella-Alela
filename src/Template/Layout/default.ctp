@@ -31,33 +31,19 @@ use Cake\Core\Configure;
             <header class="main-header">
 
                 <!-- Logo -->
+                <!-- This content is important to identify the current page when necessary -->
                 <!--<a href="<?= $this->Url->build('/'); ?>" class="logo" style="background-color:#ecf0f5;">-->
+
                 <span class="logo" style="background-color:#ecf0f5;">
                     <span class="logo-mini">
-                        <?= $this->Html->link($this->Html->image("Reiniciando.png", ['alt'   => 'logomarca',
-                                                                                     'style' => 'margin:-10px;width:138px;clip-path:inset(0px 108px 0px 0px); -webkit-clip-path: inset(0px 108px 0px 0px);'
-                                                                                    ]), 
-                                                                                    ['controller' => 'Pages', 
-                                                                                     'action'     => 'modalContent'
-                                                                                    ], 
-                                                                                    ['class'             => 'btn btn_modal font-16', 
-                                                                                     'data-loading-text' => '', 
-                                                                                     'data-title'        => __('Mudar de Perfil'),
-                                                                                     'escape'            => false
-                                                                                    ]); ?>
+                        <?= $this->Html->image("Reiniciando.png", ['alt'   => 'logomarca',
+                                                                   'style' => 'margin:-10px;width:138px;clip-path:inset(0px 108px 0px 0px); -webkit-clip-path: inset(0px 108px 0px 0px);'
+                                                                  ]); ?>
                     </span>
                     <span class="logo-lg">
-                        <?= $this->Html->link($this->Html->image("Reiniciando.png", ['alt'   => 'logomarca',
-                                                                                     'style' => 'width:142px;margin-top:-13px;'
-                                                                                    ]), 
-                                                                                    ['controller' => 'Pages', 
-                                                                                     'action'     => 'modalContent'
-                                                                                    ], 
-                                                                                    ['class'             => 'btn btn_modal font-16', 
-                                                                                     'data-loading-text' => '', 
-                                                                                     'data-title'        => __('Mudar de Perfil'),
-                                                                                     'escape'            => false
-                                                                                    ]); ?>
+                        <?= $this->Html->image("Reiniciando.png", ['alt'   => 'logomarca',
+                                                                   'style' => 'width:142px;margin-top:-13px;'
+                                                                  ]); ?>
                     </span>
                 </span>
                 <span id="logo" data-url="<?= $this->Url->build('/', true)?>"></span>

@@ -123,10 +123,10 @@ msgstr "Index Records"
 msgid "Código do Registro"
 msgstr "Record's code"
 
-/******/
-
 msgid "Código de Referência"
 msgstr "Refereer Code"
+
+/******/
 
 msgid "Detalhamento do lançamento"
 msgstr "Launch Detail"
@@ -273,9 +273,6 @@ msgstr "Expenses and Recipes"
 msgid "Data"
 msgstr "Date"
 
-msgid "Valor Total"
-msgstr "Total"
-
 msgid "Título"
 msgstr "Title"
 
@@ -287,9 +284,6 @@ msgstr "Document or Title"
 
 msgid "Melhor Dia de Compra"
 msgstr "Best Day to Buy"
-
-msgid "Descrição"
-msgstr "Description"
 
 msgid "Pessoa Jurídica"
 msgstr "Company"
@@ -303,20 +297,11 @@ msgstr "ID Number: "
 msgid "RG/Insc. Estadual"
 msgstr "ID Number"
 
-msgid "Observações: "
-msgstr "Observations: "
-
-msgid "Observações"
-msgstr "Observations"
-
 msgid "Ponto de Referência"
 msgstr "Reference Localization"
 
 msgid "CPF/CNPJ"
 msgstr "Identification Documents"
-
-msgid "Tipo"
-msgstr "Type"
 
 /******************************************************************************/
 /* STATUS */
@@ -373,9 +358,6 @@ msgstr "Processing"
 /******************************************************************************/
 /* MENU ACTIONS */
 /******************************************************************************/
-
-msgid "Ações"
-msgstr "Actions"
 
 msgid "Você tem certeza que deseja EXCLUIR o registro?"
 msgstr "Do you want to delete this register?"
@@ -788,14 +770,71 @@ msgstr "Enter the payment date for this launch."
 msgid "Informe o valor pago, considerando juros ou descontos."
 msgstr "Enter the amount paid considering fees or discounts."
 
-msgid "Data do Cadastro"
-msgstr "Created Date"
+msgid "Data do Lançamento"
+msgstr "Launch Date"
+
+msgid "Data de Embarque"
+msgstr "Delivery Date"
+
+msgid "Data do Pagamento"
+msgstr "Payment Date"
 
 msgid "Última Alteração"
 msgstr "Modified Date"
 
 msgid "Usuário da Alteração"
 msgstr "Modified By"
+
+msgid "Pedido do Cliente"
+msgstr "Customer's Code"
+
+msgid "Valor Frete"
+msgstr "Shipment Costs"
+
+msgid "Valor do Pagamento"
+msgstr "Payment Value"
+
+msgid "Tipo Frete"
+msgstr "Shipment"
+
+msgid "Tipo de Pagamento"
+msgstr "Payment Type"
+
+msgid "Descrição"
+msgstr "Description"
+
+msgid "Unidade"
+msgstr "Unity"
+
+msgid "Unitário"
+msgstr "Unitary"
+
+msgid "Quantidade"
+msgstr "Quantity"
+
+msgid "Ações"
+msgstr "Actions"
+
+msgid "Observações"
+msgstr "Observations"
+
+msgid "Desconto"
+msgstr "Discount"
+
+msgid "Desconto Total"
+msgstr "Grand Discount"
+
+msgid "TOTAIS"
+msgstr "Grand Total"
+
+msgid "Desconto/Juros Aplicado: "
+msgstr "Discount/Fee Aplied: "
+
+msgid "restantes"
+msgstr "remaining"
+
+msgid "Visualizar Lançamento"
+msgstr "Launch View"
 
 /******************************************************************************/
 /* LAUNCHES */
@@ -815,12 +854,6 @@ msgstr "Debit"
 
 msgid "Vencimento"
 msgstr "Pay Date"
-
-msgid "Data do Vencimento"
-msgstr "Pay Date"
-
-msgid "Data do Lançamento"
-msgstr "Created Date"
 
 msgid "Periodicidade"
 msgstr "Periodicity"
@@ -849,35 +882,14 @@ msgstr "Semiannual"
 msgid "Anual"
 msgstr "Yearly"
 
-msgid "Valor da Parcela"
-msgstr "Value of Parcel"
-
-msgid "Valor Parcela"
-msgstr "Value of Parcel"
-
 msgid "Documento"
 msgstr "Document"
 
 msgid "Contábil"
 msgstr "Accounting"
 
-msgid "Não Contábil"
-msgstr "Non-Accounting"
-
-msgid "Data do Pagamento"
-msgstr "Payment Date"
-
 msgid "Pagamento"
 msgstr "Payment Date"
-
-msgid "Valor do Pagamento"
-msgstr "Payment Value"
-
-msgid "Valor Pago"
-msgstr "Payment Value"
-
-msgid "Tipo do Pagamento"
-msgstr "Payment Type"
 
 msgid "Fonte do Pagamento"
 msgstr "Origin of Payment"
@@ -906,12 +918,6 @@ msgstr "Vinculated Order"
 msgid "Valor"
 msgstr "Value"
 
-msgid "Valor do Título"
-msgstr "Value"
-
-msgid "Valor em Reais"
-msgstr "Value in Dollars"
-
 msgid "Agrupar"
 msgstr "Agroup"
 
@@ -939,9 +945,6 @@ msgstr "0.00"
 msgid "Acréscimo Aplicado"
 msgstr "Interest Added"
 
-msgid "Desconto Aplicado"
-msgstr "Discount Added"
-
 msgid "Pagamento Total"
 msgstr "Total Payment"
 
@@ -954,6 +957,9 @@ msgstr "Partial Payment"
 
 msgid "Legenda:"
 msgstr "Label:"
+
+msgid "Datas de Agendamentos Vencidos,"
+msgstr "Overdue scheduled bills date,"
 
 msgid "Datas de Contas Vencidas,"
 msgstr "Overdue bills date,"
@@ -972,6 +978,33 @@ msgstr "Input the box name or add one"
 
 msgid "Lançamentos agendados, pendentes de aprovação."
 msgstr "Scheduled Launches, approval pending."
+
+msgid "Código única com 6 dígitos para identificação do registro."
+msgstr ""
+
+msgid "Informe a data da requisição."
+msgstr ""
+
+msgid "Informe o código de pedido do cliente."
+msgstr ""
+
+msgid "Digite o nome do cliente ou adicione."
+msgstr ""
+
+msgid "CIF - Pago pelo fornecedor, FOB - Pago pelo cliente."
+msgstr ""
+
+msgid "Informe o valor do frete."
+msgstr ""
+
+msgid "Informe a data limite para entrega da venda."
+msgstr ""
+
+msgid "Informe a forma de pagamento acertado ou adicione nas observações."
+msgstr ""
+
+msgid "Informe ao menos 3 caracteres do nome do produto para listar os itens."
+msgstr ""
 
 /******************************************************************************/
 /* BOXES LAUNCHES */

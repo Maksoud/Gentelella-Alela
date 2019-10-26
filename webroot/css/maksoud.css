@@ -372,9 +372,6 @@
 .modal { /*Corrige escurecimento demasiado no modal pelo AdminLTE*/
     background: unset;
 }
-.sidebar-menu {
-    font-size: 13px;
-}
 
 .pull-bottom-developed {
     font-size: 9px;

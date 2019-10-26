@@ -29,17 +29,17 @@ class PagesController extends AppController
     
     public function home()
     {
-        //Carrega janela com informações sobre a validade do sistema
+        //Shows current expiration date of the system
         $this->expireDate();
 
         /**********************************************************************/
 
-        //Variáveis:
+        //Variables:
         $this->set('id', 0);
 
         /**********************************************************************/
 
-        /* SAÚDE FINANCEIRA NO MÊS ATUAL */
+        /* FINANCIAL HEALTH OF CURRENT MONTH */
         
         //Progressive variable values for presentation in the graphs
         $recipes                     = round(3500, 8500);
@@ -53,13 +53,13 @@ class PagesController extends AppController
         $recipes_month_accomplished  = $recipes_month_budgeted - ($recipes_month_budgeted * 0.7);
         $expenses_month_accomplished = $expenses_month_budgeted - ($expenses_month_budgeted * 0.4);
         
-        //Em aberto
+        //Opened
         $recipes_month_opened        = $recipes_month_budgeted - $recipes_month_accomplished;
         $expenses_month_opened       = $expenses_month_budgeted - $expenses_month_accomplished;
         
         /********/
         
-        //CÁLCULO DO PERCENTUAL DA SAÚDE FINANCEIRA DO MÊS
+        //MONTH'S HEALTH PERCENT CALCULATION
         if ($recipes > 0 && $expenses > 0) {
             
             $percent = 100 - (($expenses * 100) / $recipes);
@@ -75,7 +75,7 @@ class PagesController extends AppController
         
         /********/
         
-        //CÁLCULO DO PERCENTUAL ORÇADO
+        //BUDGETED PERCENT CALCULATION
         if ($recipes_month_budgeted > 0 && $expenses_month_budgeted > 0) {
             
             $per_budgeted = 100 - (($expenses_month_budgeted * 100) / $recipes_month_budgeted);
@@ -91,7 +91,7 @@ class PagesController extends AppController
         
         /********/
         
-        //CÁLCULO DO PERCENTUAL REALIZADO
+        //ACCOMPLISHED PERCENT CALCULATION
         if ($recipes_month_accomplished > 0 && $expenses_month_accomplished > 0) {
             
             $per_accomplished = 100 - (($expenses_month_accomplished * 100) / $recipes_month_accomplished);
@@ -107,7 +107,7 @@ class PagesController extends AppController
         
         /********/
         
-        //CÁLCULO DO PERCENTUAL EM ABERTO
+        //OPENED PERCENT CALCULATION
         if ($recipes_month_opened > 0 && $expenses_month_opened > 0) {
 
             $per_opened = 100 - (($expenses_month_opened * 100) / $recipes_month_opened);
@@ -127,15 +127,15 @@ class PagesController extends AppController
         // echo $recipes.'<br>';
         // echo $expenses.'<br>';
         
-        // echo 'Orçado:<br>';
+        // echo 'budgeted:<br>';
         // echo $recipes_month_budgeted.'<br>';
         // echo $expenses_month_budgeted.'<br>';
         
-        // echo 'Realizado:<br>';
+        // echo 'accomplished:<br>';
         // echo $recipes_month_accomplished.'<br>';
         // echo $expenses_month_accomplished.'<br>';
         
-        // echo 'Em Aberto:<br>';
+        // echo 'Opened:<br>';
         // echo $recipes_month_opened.'<br>';
         // echo $expenses_month_opened.'<br>';
 

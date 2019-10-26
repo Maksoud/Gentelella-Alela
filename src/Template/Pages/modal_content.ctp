@@ -90,7 +90,7 @@
                             <div class="input-group-addon input-border-left">
                                 <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modal2'], ['class' => 'btn_modal2 btn btn-primary btn-custom fa fa-plus', 'data-loading-text' => '', 'data-title' => __('Novo Cliente'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Adicionar Cliente'), 'escape' => false]) ?>
                             </div>
-                            <input id="customers_title" class="form-control input-border-right" type="text" autocomplete="off" placeholder="<?= __('Digite o nome do cliente ou adicione') ?>"><div class="loadingCustomers"></div>
+                            <input id="customers_title" class="form-control input-border-right" type="text" autocomplete="off" placeholder="<?= __('Digite o nome do cliente ou adicione.') ?>"><div class="loadingCustomers"></div>
                         </div>
                         <input name="customers_id" id="customers_id" type="hidden">
                     </div>
@@ -332,7 +332,7 @@
                     <div class="<?= $single ?>">
                         <label class="<?= $label ?>"><?= __('Observações') ?></label>
                         <?= $this->Form->textarea('obs', ['label' => false, 'id' => 'text', 'maxlength' => '300', 'type' => 'textarea', 'class' => 'form-control form-group']) ?>
-                        <h6 class="pull-right" id="count_message" style="margin-top:-12px;"></h6>
+                        <span class="pull-right" style="margin-top:-12px;font-size:10px;"><span id="count_message"></span> <?= __('restantes') ?></span>
                     </div>
                 </div>
             </div>
