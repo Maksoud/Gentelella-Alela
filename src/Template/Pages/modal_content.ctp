@@ -25,29 +25,29 @@
     $label  = 'control-label text-nowrap';
     $input  = 'form-control';
     
-    //Ordenado por importância
-    $unidades = ['UN' => 'UN',  //Unidade
-                 'PÇ' => 'PÇ',  //Peça
-                 'PR' => 'PR',  //Par
-                 'RL' => 'RL',  //Rolo
-                 'PT' => 'PT',  //Pacote
-                 'CT' => 'CT',  //Cartela
-                 'CX' => 'CX',  //Caixa
-                 'ML' => 'ML',  //Mililitro
-                 'L'  => 'L',   //Litros
-                 'TN' => 'TN',  //Toneladas
-                 'KG' => 'KG',  //Kilograma
-                 'G'  => 'G',   //Grama
-                 'MM' => 'MM',  //Milímetro
-                 'CM' => 'CM',  //Centímetro
-                 'M'  => 'M',   //Metro
-                 'KM' => 'KM',  //Kilômetro
-                 'MM²'=> 'MM²', //Milímetro quadrado
-                 'CM²'=> 'CM²', //Centímetro quadrado
-                 'M²' => 'M²',  //Metro quadrado
-                 'MM³'=> 'MM³', //Milímetro cúbico
-                 'CM³'=> 'CM³', //Centímetro cúbico
-                 'M³' => 'M³',  //Metro cúbico
+    //Classified by importance
+    $unidades = ['UN' => 'UN',  //Unity
+                 'PÇ' => 'PÇ',  //Piece
+                 'PR' => 'PR',  //Pair
+                 'RL' => 'RL',  //Roll
+                 'PT' => 'PT',  //Package
+                 'CT' => 'CT',  //Card
+                 'CX' => 'CX',  //Box
+                 'ML' => 'ML',  //Mililiters
+                 'L'  => 'L',   //Liters
+                 'TN' => 'TN',  //Tons
+                 'KG' => 'KG',  //Kilogram
+                 'G'  => 'G',   //Gram
+                 'MM' => 'MM',  //Millimeters
+                 'CM' => 'CM',  //Centimeters
+                 'M'  => 'M',   //Meters
+                 'KM' => 'KM',  //Kilometers
+                 'MM²'=> 'MM²', //Square Millimeter
+                 'CM²'=> 'CM²', //Square Centimeter
+                 'M²' => 'M²',  //Square Meter
+                 'MM³'=> 'MM³', //Cubin Millimiter
+                 'CM³'=> 'CM³', //Cubic Centimeter
+                 'M³' => 'M³',  //Cubic Meter
                 ];
 ?>
 
@@ -62,7 +62,7 @@
                     <div class="<?= $double ?>">
                         <label class="<?= $label ?>">
                             <?= __('Código') ?>
-                            <i class="fa fa-info-circle" data-toggle="tooltip" title="<?= __('Código única com 6 dígitos para identificação do registro.') ?>"></i>
+                            <i class="fa fa-info-circle" data-toggle="tooltip" title="<?= __('Código único com 6 dígitos para identificação do registro.') ?>"></i>
                         </label>
                         <?= $this->Form->control('code', ['label' => false, 'type' => 'text', 'maxlength' => '6', 'class' => $input, 'value' => str_pad(1234, 6, '0', STR_PAD_LEFT), 'disabled' => true]) ?>
                     </div>
@@ -71,7 +71,7 @@
                             <?= __('Data do Lançamento') ?>
                             <i class="fa fa-info-circle" data-toggle="tooltip" title="<?= __('Informe a data da requisição.') ?>"></i>
                         </label>
-                        <?= $this->Form->control('date', ['label' => false, 'autocomplete' => 'off', 'type' => 'text', 'value' => date('d/m/Y'), 'class' => $input . ' focus datepicker datemask controldate', 'placeholder' => __('Ex. 01/01/2020'), 'required' => true]) ?>
+                        <?= $this->Form->control('date', ['label' => false, 'autocomplete' => 'off', 'type' => 'text', 'value' => date('d/m/Y'), 'class' => $input . ' focus datepicker datemask controldate', 'placeholder' => __('Ex. 31/12/2020'), 'required' => true]) ?>
                     </div>
                 </div>
                 <div class="row">
@@ -90,7 +90,7 @@
                             <div class="input-group-addon input-border-left">
                                 <?= $this->Html->link('', ['controller' => 'Pages', 'action' => 'modal2'], ['class' => 'btn_modal2 btn btn-primary btn-custom fa fa-plus', 'data-loading-text' => '', 'data-title' => __('Novo Cliente'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Adicionar Cliente'), 'escape' => false]) ?>
                             </div>
-                            <input id="customers_title" class="form-control input-border-right" type="text" autocomplete="off" placeholder="<?= __('Digite o nome do cliente ou adicione.') ?>"><div class="loadingCustomers"></div>
+                            <input id="customers_title" class="form-control input-border-right" type="text" autocomplete="off" placeholder="<?= __('Digite o nome do cliente ou adicione') ?>"><div class="loadingCustomers"></div>
                         </div>
                         <input name="customers_id" id="customers_id" type="hidden">
                     </div>
@@ -122,7 +122,7 @@
                             <?= __('Data de Embarque') ?>
                             <i class="fa fa-info-circle" data-toggle="tooltip" title="<?= __('Informe a data limite para entrega da venda.') ?>"></i>
                         </label>
-                        <?= $this->Form->control('shipment', ['label' => false, 'autocomplete' => 'off', 'type' => 'text', 'class' => $input . ' datepicker datemask controldate', 'placeholder' => __('Ex. 01/01/2020'), 'required' => true]) ?>
+                        <?= $this->Form->control('shipment', ['label' => false, 'autocomplete' => 'off', 'type' => 'text', 'class' => $input . ' datepicker datemask controldate', 'placeholder' => __('Ex. 31/12/2020'), 'required' => true]) ?>
                     </div>
                 </div>
                 <div class="row">
@@ -138,7 +138,7 @@
                             <?= __('Prazo de Entrega') ?>
                             <i class="fa fa-info-circle" data-toggle="tooltip" title="<?= __('Informe a data limite para entrega da venda.') ?>"></i>
                         </label>
-                        <?= $this->Form->control('deadline', ['label' => false, 'autocomplete' => 'off', 'type' => 'text', 'class' => $input . ' datepicker datemask controldate', 'placeholder' => __('Ex. 01/01/2020'), 'required' => true]) ?>
+                        <?= $this->Form->control('deadline', ['label' => false, 'autocomplete' => 'off', 'type' => 'text', 'class' => $input . ' datepicker datemask controldate', 'placeholder' => __('Ex. 31/12/2020'), 'required' => true]) ?>
                     </div>
                 </div>
             </div>
@@ -338,7 +338,7 @@
             </div>
         </div>
     </div>
-</div> <!-- É para encerrar o corpo do modal e poder iniciar o rodape do modal aqui -->
+</div> <!-- This tag finishes the modal body and starts the modal's footer here -->
 
 <div class="col-xs-12 box text-left">
     <?= $this->Html->link(__('Visualizar Lançamento'), ['controller' => 'Pages', 'action' => 'modal2'], ['class' => 'btn_modal2 box-shadow scroll-modal btn btn-warning btn-shortcut fa fa-eye ', 'role' => 'button', 'data-loading-text' => __('Carregando...'), 'data-title' => __('Dados do Cadastro'), 'data-toggle' => 'modal', 'data-target' => '#myModal2', 'data-size' => 'lg', 'title' => __('Visualizar'), 'escape' => false]) ?>

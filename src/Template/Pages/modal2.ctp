@@ -35,7 +35,7 @@
                             <?= __('Data do Pagamento') ?>
                             <i class="fa fa-info-circle" data-toggle="tooltip" title="<?= __('Informe a data do pagamento desse lançamento.') ?>"></i>
                         </label>
-                        <?= $this->Form->control('dtbaixa', ['label' => false, 'autocomplete' => 'off', 'type' => 'text', 'value' => date('d/m/Y'), 'class' => $input.' focus datepicker datemask controldate', 'placeholder' => __('Ex. 01/01/2020'), 'required' => true]) ?>
+                        <?= $this->Form->control('dtbaixa', ['label' => false, 'autocomplete' => 'off', 'type' => 'text', 'value' => date('d/m/Y'), 'class' => $input.' focus datepicker datemask controldate', 'placeholder' => __('Ex. 31/12/2020'), 'required' => true]) ?>
                     </div>
                     
                     <div class="<?= $double ?>">
@@ -43,7 +43,7 @@
                             <?= __('Vencimento') ?>
                             <i class="fa fa-info-circle" data-toggle="tooltip" title="<?= __('Em caso de não informar o vencimento, este será preenchido considerando a periodicidade e a data do documento.') ?>"></i>
                         </label>
-                        <?= $this->Form->control('vencimento', ['label' => false, 'autocomplete' => 'off', 'type' => 'text', 'class' => $input.' datepicker datemask', 'placeholder' => __('Ex. 01/01/2020'), 'required' => true]) ?>
+                        <?= $this->Form->control('vencimento', ['label' => false, 'autocomplete' => 'off', 'type' => 'text', 'class' => $input.' datepicker datemask', 'placeholder' => __('Ex. 31/12/2020'), 'required' => true]) ?>
                     </div>
                 </div>
                 

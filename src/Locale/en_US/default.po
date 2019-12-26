@@ -359,15 +359,6 @@ msgstr "Processing"
 /* MENU ACTIONS */
 /******************************************************************************/
 
-msgid "Você tem certeza que deseja EXCLUIR o registro?"
-msgstr "Do you want to delete this register?"
-
-msgid "Você tem certeza que deseja FINALIZAR o registro?"
-msgstr "Do you want to finish this register?"
-
-msgid "Você tem certeza que deseja confimar a transferência na data programada?"
-msgstr "Do you want to confirm the payment for this scheduled transfer?"
-
 msgid "Visualizar"
 msgstr "View"
 
@@ -743,14 +734,20 @@ msgid "NOME DO CLIENTE"
 msgstr "Customer's name"
 
 /******************************************************************************/
-/* MODAL */
+/* PLACEHOLDERS */
 /******************************************************************************/
+
+msgid "Código único com 6 dígitos para identificação do registro."
+msgstr "Unique code with 6 digits for record identification."
 
 msgid "Informe a data da requisição."
 msgstr "Enter the date of the request."
 
 msgid "Informe o código de pedido do cliente."
-msgstr "Enter customer order code"
+msgstr "Enter the customer's order code"
+
+msgid "CIF - Pago pelo fornecedor, FOB - Pago pelo cliente."
+msgstr "CIF - Paid by the provider, FOB - Paid by customer."
 
 msgid "Informe o valor do frete."
 msgstr "Enter the shipping amount."
@@ -758,17 +755,72 @@ msgstr "Enter the shipping amount."
 msgid "Informe a data limite para entrega da venda."
 msgstr "Enter the deadline for delivery of the sale"
 
-msgid "Informe a forma de pagamento acertado ou adicione nas observações."
-msgstr "Enter the correct payment method or add in the observations."
-
 msgid "Informe ao menos 3 caracteres do nome do produto para listar os itens."
 msgstr "Enter at least 3 characters of product name to list items."
+
+msgid "Uso e Consumo/Imobilizado: Estes produtos não consideram o valor do IPI para base de cálculo do ICMS."
+msgstr "Use the imobilized classification for products that not consideer IPI tax for ICMS tax calculation basis."
 
 msgid "Informe a data do pagamento desse lançamento."
 msgstr "Enter the payment date for this launch."
 
+msgid "Em caso de não informar o vencimento, este será preenchido considerando a periodicidade e a data do documento."
+msgstr "In case of not informing the due date, it will be filled considering the periodicity and the date of the document."
+
+msgid "Não é obrigatório a alteração da descrição do lançamento."
+msgstr "Changing the description of the launch is not required."
+
+msgid "Esse campo é obrigatório, caso o pagamento tenha sido realizado através de um dos bancos cadastrados."
+msgstr "This is a required field in case of the payment has been made through one of the registered banks."
+
+msgid "Esse campo é obrigatório, caso o pagamento tenha sido realizado através de um das carteiras cadastradas."
+msgstr "This is a required field in case of the payment has been made through one of the registered boxes/wallets."
+
+msgid "Digite o nome do cliente ou adicione"
+msgstr "Enter the customer's name or add a new one"
+
+msgid "Digite o nome do produto ou adicione"
+msgstr "Enter the product's name or add a new one"
+
+msgid "Digite o nome da carteira ou adicione"
+msgstr "Enter the box/wallet's name or add a new one"
+
+msgid "Digite o nome do cliente ou adicione"
+msgstr "Enter the customer's name or add a new one"
+
+msgid "Digite o nome do fornecedor ou adicione"
+msgstr "Enter the provider's name or add a new one"
+
+msgid "Digite o nome do banco ou adicione"
+msgstr "Enter the bank's name or add a new one"
+
+msgid "Digite o nome do caixa ou adicione"
+msgstr "Enter the box/wallet's name or add a new one"
+
+msgid "Lançamentos agendados, pendentes de aprovação."
+msgstr "Scheduled Launches, approval pending."
+
+msgid "Você tem certeza que deseja EXCLUIR o registro?"
+msgstr "Do you want to delete this register?"
+
+msgid "Você tem certeza que deseja FINALIZAR o registro?"
+msgstr "Do you want to finish this register?"
+
+msgid "Você tem certeza que deseja confimar a transferência na data programada?"
+msgstr "Do you want to confirm the payment for this scheduled transfer?"
+
+msgid "Informe a forma de pagamento acertado ou adicione nas observações."
+msgstr "Enter the correct payment method or add in the observations."
+
 msgid "Informe o valor pago, considerando juros ou descontos."
 msgstr "Enter the amount paid considering fees or discounts."
+
+/******************************************************************************/
+/* MODAL */
+/******************************************************************************/
+
+msgid "Novo Cadastro"
+msgstr "New Record"
 
 msgid "Data do Lançamento"
 msgstr "Launch Date"
@@ -789,13 +841,13 @@ msgid "Pedido do Cliente"
 msgstr "Customer's Code"
 
 msgid "Valor Frete"
-msgstr "Shipment Costs"
+msgstr "Ship.Costs"
 
 msgid "Valor do Pagamento"
 msgstr "Payment Value"
 
 msgid "Tipo Frete"
-msgstr "Shipment"
+msgstr "Ship.Type"
 
 msgid "Tipo de Pagamento"
 msgstr "Payment Type"
@@ -829,6 +881,12 @@ msgstr "Grand Total"
 
 msgid "Desconto/Juros Aplicado: "
 msgstr "Discount/Fee Aplied: "
+
+msgid "Total dos Pagamentos Anteriores: "
+msgstr "Total of Previous Payments: "
+
+msgid "Total dos Títulos Vinculados: "
+msgstr "Total of Vinculated Launches: "
 
 msgid "restantes"
 msgstr "remaining"
@@ -933,11 +991,11 @@ msgstr "Low"
 msgid "R$"
 msgstr "US$"
 
-msgid "Ex. 01/01/2020"
-msgstr "Eg. 12/31/2020"
+msgid "Ex. 31/12/2020"
+msgstr "Ex. 31/12/2020"
 
 msgid "Ex. Dinheiro"
-msgstr "Eg. Cash"
+msgstr "Ex. Cash"
 
 msgid "0,00"
 msgstr "0.00"
@@ -952,7 +1010,7 @@ msgid "Pagamento Parcial"
 msgstr "Partial Payment"
 
 /******************************************************************************/
-/* TITLES */
+/* SUBTITLES */
 /******************************************************************************/
 
 msgid "Legenda:"
@@ -963,48 +1021,6 @@ msgstr "Overdue scheduled bills date,"
 
 msgid "Datas de Contas Vencidas,"
 msgstr "Overdue bills date,"
-
-msgid "Digite o nome do cliente ou adicione"
-msgstr "Input the client name or add one"
-
-msgid "Digite o nome do fornecedor ou adicione"
-msgstr "Input the provider name or add one"
-
-msgid "Digite o nome do banco ou adicione"
-msgstr "Input the bank name or add one"
-
-msgid "Digite o nome do caixa ou adicione"
-msgstr "Input the box name or add one"
-
-msgid "Lançamentos agendados, pendentes de aprovação."
-msgstr "Scheduled Launches, approval pending."
-
-msgid "Código única com 6 dígitos para identificação do registro."
-msgstr ""
-
-msgid "Informe a data da requisição."
-msgstr ""
-
-msgid "Informe o código de pedido do cliente."
-msgstr ""
-
-msgid "Digite o nome do cliente ou adicione."
-msgstr ""
-
-msgid "CIF - Pago pelo fornecedor, FOB - Pago pelo cliente."
-msgstr ""
-
-msgid "Informe o valor do frete."
-msgstr ""
-
-msgid "Informe a data limite para entrega da venda."
-msgstr ""
-
-msgid "Informe a forma de pagamento acertado ou adicione nas observações."
-msgstr ""
-
-msgid "Informe ao menos 3 caracteres do nome do produto para listar os itens."
-msgstr ""
 
 /******************************************************************************/
 /* BOXES LAUNCHES */
