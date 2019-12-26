@@ -951,5 +951,10 @@
 </div>
 
 <div class="col-xs-12 bottom-40">
-    &nbsp;<!-- /////////////////////////////////////////////////////////////////// -->
+    <div class="box panel panel-default bg-danger box-shadow" style="padding:20px;text-align:justify;">
+        "Esse é o prótótipo do sistema financeiro e controle de estoques criado em 2017 e melhorado em 2019. Este protótipo possui seu código publicado no GitHub no endereço (https://github.com/Maksoud/Gentelella-Alela). O tema Gentelella-Alela foi adaptado para trabalhar no CakePHP 3.x e este protótipo foi desenvolvido para servir de portifólio e aulixiar na criação de novos projetos utilizando esse layout."
+    </div>
+    <div class="box panel panel-default bg-danger box-shadow" style="padding:20px;text-align:justify;">
+        "This is a prototype of a financial and inventory control system created in 2017 and improved in 2019. This prototype has its code published in GitHub on (https://github.com/Maksoud/Gentelella-Alela). The Gentelella-Alela theme has been adapted to work on CakePHP 3.x and this prototype was developed to serve as a portfolio and help in the creation of new projects using this layout."
+    </div>
 </div>

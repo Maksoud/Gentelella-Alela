@@ -352,6 +352,12 @@ msgstr "No"
 msgid "Pendente"
 msgstr "Pending"
 
+msgid "Em Entrega"
+msgstr "Delivering"
+
+msgid "Partial Delivered"
+msgstr "Partial Delivered"
+
 msgid "Processando"
 msgstr "Processing"
 
@@ -718,8 +724,14 @@ msgstr "Delete Selected"
 msgid "Prazo de Entrega"
 msgstr "Deliver Deadline"
 
+msgid "Total Produtos"
+msgstr "Products Total"
+
 msgid "Total Geral"
 msgstr "Grand Total"
+
+msgid "(Produtos + IPI)"
+msgstr "(Products + Tax)"
 
 msgid "Último"
 msgstr "Last"
@@ -879,20 +891,32 @@ msgstr "Grand Discount"
 msgid "TOTAIS"
 msgstr "Grand Total"
 
-msgid "Desconto/Juros Aplicado: "
-msgstr "Discount/Fee Aplied: "
-
-msgid "Total dos Pagamentos Anteriores: "
-msgstr "Total of Previous Payments: "
-
-msgid "Total dos Títulos Vinculados: "
-msgstr "Total of Vinculated Launches: "
-
 msgid "restantes"
 msgstr "remaining"
 
 msgid "Visualizar Lançamento"
 msgstr "Launch View"
+
+msgid "Produtos"
+msgstr "Products"
+
+msgid "ITENS DO PEDIDO"
+msgstr "ORDERED ITEMS"
+
+msgid "RESUMO"
+msgstr "RESUME"
+
+msgid "Total da Fatura: "
+msgstr "Total Ordered: "
+
+msgid "Total dos Pagamentos Anteriores: "
+msgstr "Total of Previous Payments: "
+
+msgid "Desconto/Juros Aplicado: "
+msgstr "Discount/Fee Aplied: "
+
+msgid "Total dos Títulos Vinculados: "
+msgstr "Total of Vinculated Launches: "
 
 /******************************************************************************/
 /* LAUNCHES */
